@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
     @FindBy(xpath = "//a[contains(text(), 'Login or register')]")
-    WebElement loginRegisterBtn;
+    WebElement btnLoginRegister;
 
     public HomePage(WebDriver givenDriver){
         super(givenDriver);
     }
 
     public LoginPage clkLoginBtn(){
-        loginRegisterBtn.click();
+        btnLoginRegister.click();
         return new LoginPage(driver);
     }
 

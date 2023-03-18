@@ -26,6 +26,7 @@ public class BasePage {
         js = (JavascriptExecutor) driver;
 
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 15), this);
+//        PageFactory.initElements(driver, this);
     }
 
     public void click(WebElement element){
@@ -51,12 +52,28 @@ public class BasePage {
         actions.moveToElement(element);
     }
 
+    public void scrollIntoView(WebElement element){
+        js.executeScript("arguments[0].scrollIntoView()", element);
+    }
+
+    public void pause(int n){
+        try{
+            Thread.sleep(n);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public void doubleClick(By locator){
         actions.doubleClick(findElement(locator)).perform();
     }
 
     public WebElement findElement(By locator){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public void waitForPresence(By locator){
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     public void waitForVisibility(By locator){

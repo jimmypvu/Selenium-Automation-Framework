@@ -2,22 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="TestNG" parallel="tests" thread-count="3" data-provider-thread-count="1">
-    <test name="Chrome Tests" parallel="methods" thread-count="3" preserve-order="false" enabled="true">
+    <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="tests.RegistrationTests" />
         </classes>
     </test>
-    <test name="Firefox Tests" parallel="methods" thread-count="3" preserve-order="false" enabled="true">
+    <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="tests.RegistrationTests" />
         </classes>
     </test>
-    <test name="Edge Tests" preserve-order="false" enabled="false">
-        <parameter name="browser" value="edge" />
+    <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+        <parameter name="browser" value="MicrosoftEdge" />
         <classes>
-
+            <class name="tests.RegistrationTests" />
         </classes>
     </test>
 </suite>
