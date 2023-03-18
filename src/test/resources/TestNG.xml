@@ -6,18 +6,21 @@
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="tests.RegistrationTests" />
+            <class name="tests.LoginTests" />
         </classes>
     </test>
     <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="tests.RegistrationTests" />
+            <class name="tests.LoginTests" />
         </classes>
     </test>
     <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="MicrosoftEdge" />
         <classes>
             <class name="tests.RegistrationTests" />
+            <class name="tests.LoginTests" />
         </classes>
     </test>
 </suite>

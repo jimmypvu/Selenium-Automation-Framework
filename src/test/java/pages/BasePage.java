@@ -72,12 +72,12 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void waitForPresence(By locator){
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    public WebElement waitForPresence(By locator){
+        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    public void waitForVisibility(By locator){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    public WebElement waitForVisibility(By locator){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public void moveToElement(By locator){

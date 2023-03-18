@@ -14,9 +14,18 @@ public class LoginPage extends BasePage{
     WebElement txtPassword;
     @FindBy(xpath = "//button[@title='Login']")
     WebElement btnLogin;
+    @FindBy(xpath = "//span[contains(text(), 'Account Logout')]")
+    WebElement hdrAccLogout;
 
     public LoginPage(WebDriver givenDriver){
         super(givenDriver);
+    }
+
+    public AccountPage login(String username, String password){
+        setUsername(username);
+        setPassword(password);
+        clkLoginBtn();
+        return new AccountPage(driver);
     }
 
     public LoginPage setUsername(String username){
@@ -29,9 +38,9 @@ public class LoginPage extends BasePage{
         return this;
     }
 
-    public LoginPage clkLoginBtn(){
+    public AccountPage clkLoginBtn(){
         btnLogin.click();
-        return this;
+        return new AccountPage(driver);
     }
 
     public RegistrationPage clkRegisterBtn(){
