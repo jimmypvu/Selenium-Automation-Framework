@@ -23,7 +23,8 @@ public class BaseTest {
     @BeforeMethod
     @Parameters({"browser"})
     public void launchBrowser(String browser) throws MalformedURLException{
-        WebDriver threadDriver = setBrowser(browser);
+//        WebDriver threadDriver = pickBrowser(System.getProperty("browser"));
+        WebDriver threadDriver = pickBrowser(browser);
         threadLocal.set(threadDriver);
         manageBrowser();
         getDriver().get(URL);
@@ -44,7 +45,7 @@ public class BaseTest {
         getDriver().manage().deleteAllCookies();
     }
 
-    public WebDriver setBrowser(String browser) throws MalformedURLException {
+    public WebDriver pickBrowser(String browser) throws MalformedURLException {
         WebDriver driver;
         DesiredCapabilities caps = new DesiredCapabilities();
         //java -jar selenium-server-4.8.0.jar standalone

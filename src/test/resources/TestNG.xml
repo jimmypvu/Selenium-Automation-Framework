@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestNG" parallel="false" thread-count="1" data-provider-thread-count="1">
-    <test name="Chrome tests" preserve-order="false" enabled="true">
+<suite name="TestNG" parallel="tests" thread-count="3" data-provider-thread-count="1">
+    <test name="Chrome Tests" parallel="methods" thread-count="3" preserve-order="false" enabled="true">
         <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="tests.RegistrationTests" />
+        </classes>
+    </test>
+    <test name="Firefox Tests" parallel="methods" thread-count="3" preserve-order="false" enabled="true">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="tests.RegistrationTests" />
+        </classes>
+    </test>
+    <test name="Edge Tests" preserve-order="false" enabled="false">
+        <parameter name="browser" value="edge" />
         <classes>
 
         </classes>
