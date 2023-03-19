@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ExcelReader {
-    private static final String TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/testdata.xlsx";
+    private static final String TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/testdataprovider.xlsx";
     private static Workbook book;
     private static Sheet sheet;
 
@@ -24,7 +24,7 @@ public class ExcelReader {
 
             for (int i = 0; i < sheet.getLastRowNum(); i++) {
                 for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
-                    data[i][j] =sheet.getRow(i + 1).getCell(j).toString();
+                    data[i][j] =sheet.getRow(i + 1).getCell(j).toString().trim();
                 }
             }
         } catch (IOException e) {

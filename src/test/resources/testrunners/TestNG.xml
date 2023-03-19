@@ -11,7 +11,7 @@
 <!--                    <include name="loginEmptyPassword" />-->
 <!--                    <include name="loginInvalidPassword" />-->
 <!--                    <include name="logoutSuccess" />-->
-                    <include name="loginTests" />
+                    <include name="invalidLoginTests" />
                 </methods>
             </class>
             <class name="tests.RegistrationTests">
@@ -20,7 +20,7 @@
                     <!--                    <include name="loginEmptyPassword" />-->
                     <!--                    <include name="loginInvalidPassword" />-->
                     <!--                    <include name="logoutSuccess" />-->
-                    <include name="regTests01" />
+                    <include name="invalidRegistrationTests" />
                 </methods>
             </class>
         </classes>

@@ -9,7 +9,7 @@ public class DataProviders {
      ****************************/
     @DataProvider(name = "InvalidRegistrationProviders")
     public static Object[][] getInvalidRegistrationData(){
-        Object[][] data = ExcelReader.getTestData("invalid_registration");
+        Object[][] data = ExcelReader.getTestData("registration");
         return data;
     }
 
@@ -18,7 +18,7 @@ public class DataProviders {
      **********************/
     @DataProvider(name = "InvalidLoginProviders")
     public static Object[][] getInvalidLogins(){
-        Object[][] data = ExcelReader.getTestData("invalid_login");
+        Object[][] data = ExcelReader.getTestData("login");
         return data;
     }
 }
