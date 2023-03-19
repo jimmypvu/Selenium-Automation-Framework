@@ -10,15 +10,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.seleniumhq.selenium:selenium-java:4.7.2'
-    implementation 'org.jetbrains:annotations:23.0.0'
-    testImplementation 'org.testng:testng:7.6.1'
-    implementation 'io.github.bonigarcia:webdrivermanager:5.3.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.8.1'
+    implementation 'org.jetbrains:annotations:23.1.0'
+    testImplementation 'org.testng:testng:7.7.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
 }
 
 test {
     useTestNG(){
-        suites"src/test/resources/TestNG.xml"
-//        systemProperty "browser", System.getProperty("browser")
+        suites"src/test/resources/testrunners/TestNG.xml"
+        systemProperty "browser", System.getProperty("browser")
     }
 }

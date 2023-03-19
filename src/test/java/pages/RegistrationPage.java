@@ -1,15 +1,14 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
+import utility.ExcelReader;
 
+import java.util.List;
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class RegistrationPage extends BasePage{
     @FindBy(xpath = "//input[@name='firstname']")
@@ -80,6 +79,7 @@ public class RegistrationPage extends BasePage{
     }
 
     public RegistrationPage selectCountry(String country){
+        scrollIntoView(sddCountry);
         Select countries = new Select(sddCountry);
         countries.selectByVisibleText(country);
         return this;
@@ -91,39 +91,42 @@ public class RegistrationPage extends BasePage{
         }catch(Exception e){
             e.printStackTrace();
         }
-
+        scrollIntoView(sddState);
         Select states = new Select(sddState);
         states.selectByVisibleText(state);
         return this;
     }
 
     public RegistrationPage setZip(String zip){
+        scrollIntoView(txtZipcode);
         txtZipcode.sendKeys(zip);
         return this;
     }
 
     public RegistrationPage setUsername(String username){
+        scrollIntoView(txtUsername);
         txtUsername.sendKeys(username);
         return this;
     }
 
     public RegistrationPage setPassword(String password){
+        scrollIntoView(txtConfirmPassword);
         txtNewPassword.sendKeys(password);
         txtConfirmPassword.sendKeys(password);
         return this;
     }
 
     public RegistrationPage clkPrivacy(){
+        scrollIntoView(chkPrivacy);
         chkPrivacy.click();
         return this;
     }
 
     public RegistrationPage clkContinue(){
+        scrollIntoView(btnContinue);
         btnContinue.click();
         return this;
     }
-
-
 
     public String genString(int n, boolean abc, boolean nums, boolean special){
         String chars = "";
@@ -145,4 +148,5 @@ public class RegistrationPage extends BasePage{
 
         return sb.toString();
     }
+
 }

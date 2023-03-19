@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
     protected WebDriver driver;
@@ -52,8 +53,40 @@ public class BasePage {
         actions.moveToElement(element);
     }
 
+    public List<WebElement> getElements(By locator){
+        return driver.findElements(locator);
+    }
+
     public void scrollIntoView(WebElement element){
         js.executeScript("arguments[0].scrollIntoView()", element);
+    }
+
+    public void scrollToEnd(){
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    }
+
+    public void scrollToTop(){
+        js.executeScript("window.scrollBy(0,0)");
+    }
+
+    public void scrollToMiddle(){
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight/2)");
+    }
+
+    public void refreshPage(){
+        js.executeScript("history.go(0)");
+    }
+
+    public void navigateBack(){
+        js.executeScript("history.go(-1)");
+    }
+
+    public void navigateForward(){
+        js.executeScript("history.go(1)");
+    }
+
+    public String getPageTitle() {
+        return js.executeScript("return document.title;").toString();
     }
 
     public void pause(int n){

@@ -10,21 +10,25 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import utility.ExcelReader;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+
+import static utility.ExcelReader.getTestData;
 
 public class BaseTest {
     protected static final String URL = "https://automationteststore.com/";
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
     @BeforeMethod
-    @Parameters({"browser"})
-    public void launchBrowser(String browser) throws MalformedURLException{
-//        WebDriver threadDriver = pickBrowser(System.getProperty("browser"));
-        WebDriver threadDriver = pickBrowser(browser);
+//    @Parameters({"browser"})
+    public void launchBrowser(/*String browser*/) throws MalformedURLException{
+        WebDriver threadDriver = setDriver(System.getProperty("browser"));
+//        WebDriver threadDriver = pickBrowser(browser);
         threadLocal.set(threadDriver);
         manageBrowser();
         getDriver().get(URL);
@@ -45,7 +49,7 @@ public class BaseTest {
         getDriver().manage().deleteAllCookies();
     }
 
-    public WebDriver pickBrowser(String browser) throws MalformedURLException {
+    public WebDriver setDriver(String browser) throws MalformedURLException {
         WebDriver driver;
         DesiredCapabilities caps = new DesiredCapabilities();
         //java -jar selenium-server-4.8.0.jar standalone
@@ -79,12 +83,12 @@ public class BaseTest {
         String hubURL = "https://jimmypvu:vygtZr8rY1Zejji0D6x0n7sWm2VOwb3uchbBYRbpDcKJ4v5SQu@hub.lambdatest.com/wd/hub";
 
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("browserName", "safari");
+        caps.setCapability("browserName", "Safari");
         caps.setCapability("browserVersion", "16.0");
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
         ltOptions.put("user", "jimmypvu");
         ltOptions.put("accessKey", "vygtZr8rY1Zejji0D6x0n7sWm2VOwb3uchbBYRbpDcKJ4v5SQu");
-        ltOptions.put("build", "Selenium 4");   //build name
+        ltOptions.put("build", "Safari Tests");   //build name
         ltOptions.put("platformName", "MacOS Ventura");
         ltOptions.put("name", this.getClass().getName());   //test name
         ltOptions.put("video", true);   //enable video recording
@@ -96,5 +100,27 @@ public class BaseTest {
         caps.setCapability("LT:Options", ltOptions);
 
         return new RemoteWebDriver(new URL(hubURL), caps);
+    }
+
+    /*****************
+     * DATA PROVIDERS
+     ****************/
+
+    @DataProvider(name = "InvalidRegDP")
+    public static Object[][] getInvalid(){
+        Object[][] data = ExcelReader.getTestData("badRegistration");
+        return data;
+    }
+
+    @DataProvider(name = "ValidRegistrationProviders")
+    public static Object[][] getDataFromValRegProviders(){
+        Object[][] data = ExcelReader.getTestData("goodRegistration");
+        return data;
+    }
+
+    @DataProvider(name = "LoginProviders")
+    public static Object[][] getLoginProviders(){
+        Object[][] data = ExcelReader.getTestData("login");
+        return data;
     }
 }
