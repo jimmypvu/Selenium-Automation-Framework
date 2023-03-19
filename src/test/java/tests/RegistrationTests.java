@@ -1,5 +1,6 @@
 package tests;
 
+import dataproviders.DataProviders;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -121,35 +122,48 @@ public class RegistrationTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 
-    @Test(description = "register with invalid info", dataProvider = "InvalidRegDP", enabled = true)
-    public void regTests01(/*String firstname, String lastname, String email, String address, String city, String state, String zip, String country, String username, String password*/){
-        HomePage homePage = new HomePage(getDriver());
-        homePage.clkLoginBtn();
-        Assert.assertFalse(getDriver().getCurrentUrl().isBlank());
-    }
-
-    @Test(description = "register with valid info", dataProvider = "ValidRegistrationProviders", dataProviderClass = BaseTest.class, enabled = true)
-    public void registrationTests02(String firstname, String lastname, String email, String address, String city, String state, String zip, String country, String username, String password){
+    @Test(description = "register with invalid info", dataProvider = "InvalidRegistrationProviders", dataProviderClass = DataProviders.class, enabled = true)
+    public void regTests01(String firstname, String lastname, String email, String address, String city, String state, String zip, String country, String username, String password){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = homePage.clkLoginBtn();
         RegistrationPage regPage = loginPage.clkRegisterBtn();
 
         regPage.setFirstName(firstname)
                 .setLastName(lastname)
-                .setEmail(email);
-        regPage.pause(2000);
-        regPage.setAddress(address)
+                .setEmail(email)
+                .setAddress(address)
                 .setCity(city)
                 .selectCountry(country)
                 .selectState(state)
                 .setZip(zip)
                 .setUsername(username)
                 .setPassword(password)
-                .clkPrivacy();
+                .clkPrivacy()
+                .clkContinue()
+                .waitForPresence(By.xpath("//div[@class='alert alert-error alert-danger']"));
+//                .waitForPresence(By.xpath("//span[contains(text(),'Your Account Has Been Created!')]"));
 
-        regPage.pause(2000);
+        Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
+    }
 
-        regPage.clkContinue()
+    @Test(description = "register with valid info", dataProvider = "ValidRegDP", dataProviderClass = DataProviders.class, enabled = true)
+    public void regTests02(String firstname, String lastname, String email, String address, String city, String state, String zip, String country, String username, String password){
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage = homePage.clkLoginBtn();
+        RegistrationPage regPage = loginPage.clkRegisterBtn();
+
+        regPage.setFirstName(firstname)
+                .setLastName(lastname)
+                .setEmail(email)
+                .setAddress(address)
+                .setCity(city)
+                .selectCountry(country)
+                .selectState(state)
+                .setZip(zip)
+                .setUsername(username)
+                .setPassword(password)
+                .clkPrivacy()
+                .clkContinue()
                 .waitForPresence(By.xpath("//div[@class='alert alert-error alert-danger']"));
 //                .waitForPresence(By.xpath("//span[contains(text(),'Your Account Has Been Created!')]"));
 

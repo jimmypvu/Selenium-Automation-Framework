@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ExcelReader {
-    private static final String TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/testdataproviders5.xlsx";
+    private static final String TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/testdata.xlsx";
     private static Workbook book;
     private static Sheet sheet;
 

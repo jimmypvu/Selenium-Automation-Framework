@@ -18,8 +18,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 
-import static utility.ExcelReader.getTestData;
-
 public class BaseTest {
     protected static final String URL = "https://automationteststore.com/";
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
@@ -102,25 +100,4 @@ public class BaseTest {
         return new RemoteWebDriver(new URL(hubURL), caps);
     }
 
-    /*****************
-     * DATA PROVIDERS
-     ****************/
-
-    @DataProvider(name = "InvalidRegDP")
-    public static Object[][] getInvalid(){
-        Object[][] data = ExcelReader.getTestData("badRegistration");
-        return data;
-    }
-
-    @DataProvider(name = "ValidRegistrationProviders")
-    public static Object[][] getDataFromValRegProviders(){
-        Object[][] data = ExcelReader.getTestData("goodRegistration");
-        return data;
-    }
-
-    @DataProvider(name = "LoginProviders")
-    public static Object[][] getLoginProviders(){
-        Object[][] data = ExcelReader.getTestData("login");
-        return data;
-    }
 }

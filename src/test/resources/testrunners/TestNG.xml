@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestNG" parallel="tests" thread-count="3" data-provider-thread-count="1">
+<suite name="TestNG" parallel="false" thread-count="3">
     <test name="Chrome Tests" preserve-order="false" parallel="false" thread-count="3" enabled="true">
 <!--        <parameter name="browser" value="chrome" />-->
         <classes>
-            <class name="tests.RegistrationTests">
-                <methods>
-                    <include name="registerValidInfo" />
-<!--                    <include name="registerInvalidEmail" />-->
-<!--                    <include name="registerUsernameTaken" />-->
-                    <include name="regTests01" />
-                    <include name="registrationTests02" />
-                </methods>
-            </class>
             <class name="tests.LoginTests">
                 <methods>
 <!--                    <include name="loginValidCredentials" />-->
@@ -21,6 +12,15 @@
 <!--                    <include name="loginInvalidPassword" />-->
 <!--                    <include name="logoutSuccess" />-->
                     <include name="loginTests" />
+                </methods>
+            </class>
+            <class name="tests.RegistrationTests">
+                <methods>
+                    <!--                    <include name="loginValidCredentials" />-->
+                    <!--                    <include name="loginEmptyPassword" />-->
+                    <!--                    <include name="loginInvalidPassword" />-->
+                    <!--                    <include name="logoutSuccess" />-->
+                    <include name="regTests01" />
                 </methods>
             </class>
         </classes>
