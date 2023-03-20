@@ -12,7 +12,7 @@ public class HomePage extends BasePage{
         super(givenDriver);
     }
 
-    public LoginPage clkLoginBtn(){
+    public LoginPage clickLoginBtn(){
         btnLoginRegister.click();
         return new LoginPage(driver);
     }

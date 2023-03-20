@@ -21,12 +21,12 @@ public class BasePage {
 
     public BasePage(WebDriver threadDriver){
         this.driver = threadDriver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15), Duration.ofMillis(500));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3), Duration.ofMillis(500));
         wait.pollingEvery(Duration.ofMillis(500));
         actions = new Actions(driver);
         js = (JavascriptExecutor) driver;
 
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 15), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 3), this);
 //        PageFactory.initElements(driver, this);
     }
 
@@ -120,11 +120,5 @@ public class BasePage {
     public void click(By locator){
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
-
-
-
-
-
-
 
 }

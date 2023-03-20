@@ -10,10 +10,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import utility.ExcelReader;
 
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -26,7 +24,7 @@ public class BaseTest {
 //    @Parameters({"browser"})
     public void launchBrowser(/*String browser*/) throws MalformedURLException{
         WebDriver threadDriver = setDriver(System.getProperty("browser"));
-//        WebDriver threadDriver = pickBrowser(browser);
+//        WebDriver threadDriver = setDriver(browser);
         threadLocal.set(threadDriver);
         manageBrowser();
         getDriver().get(URL);
@@ -38,7 +36,11 @@ public class BaseTest {
         threadLocal.remove();
     }
 
-    public WebDriver getDriver(){
+    public String getMethodName(Method method){
+        return method.getName().toString();
+    }
+
+    public static WebDriver getDriver(){
         return threadLocal.get();
     }
 

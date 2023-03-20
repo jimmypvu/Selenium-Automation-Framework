@@ -7,7 +7,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelReader {
+public class ExcelFileReader {
     private static final String TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/testdataprovider.xlsx";
     private static Workbook book;
     private static Sheet sheet;

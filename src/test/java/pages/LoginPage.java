@@ -24,7 +24,7 @@ public class LoginPage extends BasePage{
     public AccountPage login(String username, String password){
         setUsername(username);
         setPassword(password);
-        clkLoginBtn();
+        clickLoginBtn();
         return new AccountPage(driver);
     }
 
@@ -38,12 +38,12 @@ public class LoginPage extends BasePage{
         return this;
     }
 
-    public AccountPage clkLoginBtn(){
+    public AccountPage clickLoginBtn(){
         btnLogin.click();
         return new AccountPage(driver);
     }
 
-    public RegistrationPage clkRegisterBtn(){
+    public RegistrationPage clickRegisterBtn(){
         btnContinueRegister.click();
         return new RegistrationPage(driver);
     }

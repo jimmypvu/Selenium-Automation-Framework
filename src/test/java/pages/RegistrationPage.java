@@ -4,10 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.DataProvider;
-import utility.ExcelReader;
 
-import java.util.List;
 import java.util.Random;
 
 public class RegistrationPage extends BasePage{
@@ -110,22 +107,52 @@ public class RegistrationPage extends BasePage{
     }
 
     public RegistrationPage setPassword(String password){
-        scrollIntoView(txtConfirmPassword);
+        scrollIntoView(txtNewPassword);
         txtNewPassword.sendKeys(password);
         txtConfirmPassword.sendKeys(password);
         return this;
     }
 
-    public RegistrationPage clkPrivacy(){
+    public RegistrationPage clickPrivacy(){
         scrollIntoView(chkPrivacy);
         chkPrivacy.click();
         return this;
     }
 
-    public RegistrationPage clkContinue(){
+    public RegistrationPage clickContinue(){
         scrollIntoView(btnContinue);
         btnContinue.click();
         return this;
+    }
+
+    public RegistrationPage registerNewUser(String fn, String ln, String email, String addy, String city, String state, String country, String zip, String username, String pw){
+        setFirstName(fn)
+                .setLastName(ln)
+                .setEmail(email)
+                .setAddress(addy)
+                .setCity(city)
+                .selectCountry(country)
+                .selectState(state)
+                .setZip(zip)
+                .setUsername(username)
+                .setPassword(pw)
+                .clickPrivacy()
+                .clickContinue();
+        return this;
+    }
+
+    public String getRandomEmail(){
+        Random rand = new Random();
+        return "t" + System.currentTimeMillis() + rand.nextInt(1000) + "@gmail.com";
+    }
+
+    public String getInvalidEmail(){
+        return genString(10, false, true, true) + "@gmail.com";
+    }
+
+    public String getRandomUsername(){
+        Random rand = new Random();
+        return "t" + System.currentTimeMillis() + rand.nextInt(1000);
     }
 
     public String genString(int n, boolean abc, boolean nums, boolean special){
