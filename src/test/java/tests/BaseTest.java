@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -36,10 +35,6 @@ public class BaseTest {
         threadLocal.remove();
     }
 
-    public String getMethodName(Method method){
-        return method.getName().toString();
-    }
-
     public static WebDriver getDriver(){
         return threadLocal.get();
     }
@@ -53,7 +48,7 @@ public class BaseTest {
         WebDriver driver;
         DesiredCapabilities caps = new DesiredCapabilities();
         //java -jar selenium-server-4.8.0.jar standalone
-        String gridURL = "http://192.168.1.160:4444";
+        String gridURL = "http://192.168.0.163:4444";
 
         switch(browser){
             case("firefox"):
@@ -75,6 +70,9 @@ public class BaseTest {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
+//                options.addArguments("--window-size=1920,1080");
+//                options.addArguments("--start-maximized");
+//                options.addArguments("--headless");
                 return driver = new ChromeDriver(options);
         }
     }

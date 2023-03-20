@@ -5,7 +5,7 @@ import org.testng.ITestResult;
 import tests.BaseTest;
 import utility.ScreenshotTaker;
 
-public class TestListener extends BaseTest implements ITestListener {
+public class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result){

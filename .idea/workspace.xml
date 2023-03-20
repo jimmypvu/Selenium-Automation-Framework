@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1051487e-e988-4657-8d43-964cc76cad5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utility/ScreenshotTaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/RetryAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataproviders/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataproviders/DataProviders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utility/ExcelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/ExcelFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utility/ScreenshotTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/ScreenshotTaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/registerValidInfo 23-03-19 18-38-25-968.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/registerValidInfo 23-03-19 18-38-28-548.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/registerValidInfo 23-03-19 18-43-32-263.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

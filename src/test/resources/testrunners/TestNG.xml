@@ -5,6 +5,7 @@
 
     <listeners>
         <listener class-name="listeners.TestListener" />
+        <listener class-name="listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="2" enabled="true">
