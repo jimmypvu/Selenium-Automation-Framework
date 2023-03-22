@@ -1,58 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestNG" parallel="false" thread-count="3">
+<suite name="TestNG" parallel="tests" thread-count="3">
 
     <listeners>
         <listener class-name="listeners.TestListener" />
         <listener class-name="listeners.AnnotationTransformer" />
     </listeners>
 
-    <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="2" enabled="true">
-<!--        <parameter name="browser" value="chrome" />-->
+    <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+        <parameter name="browser" value="chrome" />
         <classes>
-            <class name="tests.LoginTests">
-                <methods>
-                    <include name="loginValidCredentials" />
-<!--                    <include name="loginEmptyPassword" />-->
-<!--                    <include name="loginInvalidPassword" />-->
-<!--                    <include name="logoutSuccess" />-->
-<!--                    <include name="invalidLoginTests" />-->
-                </methods>
-            </class>
             <class name="tests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                     <include name="registerInvalidEmail" />
-<!--                    <include name="registerEmailTaken" />-->
-<!--                    <include name="registerUsernameTaken" />-->
-<!--                    <include name="registerRequiredFieldsEmpty" />-->
-<!--                    <include name="invalidRegistrationTests" />-->
+                    <include name="registerEmailTaken" />
+                    <include name="registerUsernameTaken" />
+                    <include name="registerRequiredFieldsEmpty" />
+                    <include name="invalidRegistrationTests" />
+                </methods>
+            </class>
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name="loginValidCredentials" />
+                    <include name="loginEmptyPassword" />
+                    <include name="loginInvalidPassword" />
+                    <include name="logoutSuccess" />
+                    <include name="invalidLoginTests" />
                 </methods>
             </class>
         </classes>
     </test>
 
-    <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="2" enabled="false">
-<!--        <parameter name="browser" value="firefox" />-->
+    <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+        <parameter name="browser" value="firefox" />
         <classes>
             <class name="tests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
+                    <include name="registerInvalidEmail" />
+                    <include name="registerEmailTaken" />
+                    <include name="registerUsernameTaken" />
+                    <include name="registerRequiredFieldsEmpty" />
+                    <include name="invalidRegistrationTests" />
                 </methods>
             </class>
             <class name="tests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
+                    <include name="loginEmptyPassword" />
+                    <include name="loginInvalidPassword" />
+                    <include name="logoutSuccess" />
+                    <include name="invalidLoginTests" />
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="2" enabled="false">
-<!--        <parameter name="browser" value="MicrosoftEdge" />-->
+    <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+        <parameter name="browser" value="MicrosoftEdge" />
         <classes>
-            <class name="tests.RegistrationTests" />
-            <class name="tests.LoginTests" />
+            <class name="tests.RegistrationTests">
+                <methods>
+                    <include name="registerValidInfo" />
+                    <include name="registerInvalidEmail" />
+                    <include name="registerEmailTaken" />
+                    <include name="registerUsernameTaken" />
+                    <include name="registerRequiredFieldsEmpty" />
+                    <include name="invalidRegistrationTests" />
+                </methods>
+            </class>
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name="loginValidCredentials" />
+                    <include name="loginEmptyPassword" />
+                    <include name="loginInvalidPassword" />
+                    <include name="logoutSuccess" />
+                    <include name="invalidLoginTests" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

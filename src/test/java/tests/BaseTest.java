@@ -5,29 +5,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-
-import static extentreports.ExtentTestManager.startTest;
 
 public class BaseTest {
     protected static final String URL = "https://automationteststore.com/";
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
     @BeforeMethod
-//    @Parameters({"browser"})
-    public void launchBrowser(/*String browser*/) throws MalformedURLException{
-        WebDriver threadDriver = setDriver(System.getProperty("browser"));
-//        WebDriver threadDriver = setDriver(browser);
+    @Parameters({"browser"})
+    public void launchBrowser(String browser, ITestContext context) throws MalformedURLException{
+//        WebDriver threadDriver = setDriver(System.getProperty("browser"));
+        WebDriver threadDriver = setDriver(browser);
         threadLocal.set(threadDriver);
+
+        context.setAttribute("WebDriver", getDriver());
+        context.setAttribute("ThreadID", Thread.currentThread().getId());
+
         manageBrowser();
         getDriver().get(URL);
     }
@@ -55,9 +60,16 @@ public class BaseTest {
 
         switch(browser){
             case("firefox"):
-                return driver = new FirefoxDriver();
+                FirefoxOptions fo = new FirefoxOptions();
+                fo.addArguments("-width=1920");
+                fo.addArguments("-height=1080");
+                fo.addArguments("--headless");
+                return driver = new FirefoxDriver(fo);
             case("MicrosoftEdge"):
-                return driver = new EdgeDriver();
+                EdgeOptions eo = new EdgeOptions();
+                eo.addArguments("--headless=new");
+                eo.addArguments("--window-size=1920,1080");
+                return driver = new EdgeDriver(eo);
             case("grid-chrome"):
                 caps.setCapability("browser", "chrome");
                 return driver = new RemoteWebDriver(new URL(gridURL), caps);
@@ -71,12 +83,12 @@ public class BaseTest {
                 return lambdaTest();
             default:
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--remote-allow-origins=*");
-//                options.addArguments("--window-size=1920,1080");
-//                options.addArguments("--start-maximized");
-//                options.addArguments("--headless");
-                return driver = new ChromeDriver(options);
+                ChromeOptions co = new ChromeOptions();
+                co.addArguments("--remote-allow-origins=*");
+                co.addArguments("--window-size=1920,1080");
+                co.addArguments("--start-maximized");
+                co.addArguments("--headless");
+                return driver = new ChromeDriver(co);
         }
     }
 

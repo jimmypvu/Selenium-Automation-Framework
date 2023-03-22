@@ -8,10 +8,6 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.RegistrationPage;
 
-import java.lang.reflect.Method;
-
-import static extentreports.ExtentTestManager.startTest;
-
 public class RegistrationTests extends BaseTest{
 
     @Test(description = "valid registration test", enabled = true)
@@ -42,7 +38,7 @@ public class RegistrationTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 
-    @Test(description = "invalid registration test - email already taken", enabled = false)
+    @Test(description = "invalid registration test - email already taken", enabled = true)
     public void registerEmailTaken(){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = homePage.clickLoginBtn();
@@ -55,7 +51,7 @@ public class RegistrationTests extends BaseTest{
 
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
-    @Test(description = "invalid registration test - username already taken", enabled = false)
+    @Test(description = "invalid registration test - username already taken", enabled = true)
     public void registerUsernameTaken(){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = homePage.clickLoginBtn();
@@ -70,7 +66,7 @@ public class RegistrationTests extends BaseTest{
                 "This login name is not available. Try different login name!");
     }
 
-    @Test(description = "invalid registration test - required fields empty", enabled = false)
+    @Test(description = "invalid registration test - required fields empty", enabled = true)
     public void registerRequiredFieldsEmpty(){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = homePage.clickLoginBtn();
@@ -83,7 +79,7 @@ public class RegistrationTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 
-    @Test(description = "register with invalid info", dataProvider = "InvalidRegistrations", dataProviderClass = DataProviders.class, enabled = false)
+    @Test(description = "register with invalid info", dataProvider = "InvalidRegistrations", dataProviderClass = DataProviders.class, enabled = true)
     public void invalidRegistrationTests(String firstname, String lastname, String email, String address, String city, String state, String zip, String country, String username, String password){
         HomePage homePage = new HomePage(getDriver());
         LoginPage loginPage = homePage.clickLoginBtn();
