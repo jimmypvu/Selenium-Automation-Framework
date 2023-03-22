@@ -23,7 +23,7 @@
             <class name="tests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
-<!--                    <include name="registerInvalidEmail" />-->
+                    <include name="registerInvalidEmail" />
 <!--                    <include name="registerEmailTaken" />-->
 <!--                    <include name="registerUsernameTaken" />-->
 <!--                    <include name="registerRequiredFieldsEmpty" />-->

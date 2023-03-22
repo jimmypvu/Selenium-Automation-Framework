@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1051487e-e988-4657-8d43-964cc76cad5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/AnnotationTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/RetryAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/extentreports/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/extentreports/ExtentTestManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/registerValidInfo_03-19-23_21-04-19-964.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/registerValidInfo_03-19-23_21-14-38-239.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/registerValidInfo_03-19-23_21-21-17-083.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/registerValidInfo_03-19-23_21-25-21-153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/registerValidInfo_03-19-23_21-30-11-281.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/registerValidInfo_03-19-23_21-34-48-047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dataproviders/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataproviders/DataProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/listeners/RetryAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/listeners/RetryAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utility/ScreenshotTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/ScreenshotTaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/registerValidInfo 23-03-19 18-38-25-968.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/registerValidInfo 23-03-19 18-38-28-548.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/registerValidInfo 23-03-19 18-43-32-263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utility/ExcelFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/ExcelFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utility/ScreenshotTaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Screenshotter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +82,30 @@
       <recent name="C:\Users\jimmy\OneDrive\Desktop\code\QA-Automation-Framework\src\test\resources\testrunners" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests.registerValidInfo">
+  <component name="RunManager" selected="Gradle.RegistrationTests">
+    <configuration name="RegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.RegistrationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="RegistrationTests.invalidRegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -98,7 +129,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registerEmailTaken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationTests.registerInvalidEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -111,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RegistrationTests.registerEmailTaken&quot;" />
+            <option value="&quot;tests.RegistrationTests.registerInvalidEmail&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,29 +166,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;tests.RegistrationTests.registerRequiredFieldsEmpty&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationTests.registerUsernameTaken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.RegistrationTests.registerUsernameTaken&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RegistrationTests" />
+        <item itemvalue="Gradle.RegistrationTests.registerInvalidEmail" />
         <item itemvalue="Gradle.RegistrationTests.registerValidInfo" />
         <item itemvalue="Gradle.RegistrationTests.invalidRegistrationTests" />
         <item itemvalue="Gradle.RegistrationTests.registerRequiredFieldsEmpty" />
-        <item itemvalue="Gradle.RegistrationTests.registerUsernameTaken" />
-        <item itemvalue="Gradle.RegistrationTests.registerEmailTaken" />
       </list>
     </recent_temporary>
   </component>

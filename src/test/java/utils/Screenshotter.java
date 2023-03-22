@@ -1,4 +1,4 @@
-package utility;
+package utils;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,12 +10,12 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class ScreenshotTaker extends BaseTest {
+public class Screenshotter extends BaseTest {
     private static final String FILEPATH = "../QA-Automation-Framework/screenshots/";
 
     public static void takeScreenshot(String methodName){
         File screenshotFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yy_HH-mm-ss-SSS");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yy_hh-mm-a ss-SSS");
         LocalDateTime time = LocalDateTime.now();
         String timestamp = dtf.format(time);
 

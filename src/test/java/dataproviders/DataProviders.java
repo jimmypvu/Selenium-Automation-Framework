@@ -1,7 +1,7 @@
 package dataproviders;
 
 import org.testng.annotations.DataProvider;
-import utility.ExcelFileReader;
+import utils.ExcelFileReader;
 
 public class DataProviders {
     /*****************************

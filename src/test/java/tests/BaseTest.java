@@ -11,9 +11,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+
+import static extentreports.ExtentTestManager.startTest;
 
 public class BaseTest {
     protected static final String URL = "https://automationteststore.com/";
