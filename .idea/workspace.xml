@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1051487e-e988-4657-8d43-964cc76cad5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Extent Report 03-22-23 12-42-54-AM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Extent Report 03-22-23 12-44-35-AM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Extent Report 03-22-23 12-47-50-AM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Extent Report 03-22-23 12-48-42-AM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Extent Report 03-22-23 12-49-39-AM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Extent Report 03-22-23 12-51-20-AM.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/extentreports/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/extentreports/ExtentReportManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
