@@ -12,12 +12,12 @@ public class ExtentReportManager extends BaseTest {
     public static ExtentReports report = new ExtentReports();
 
     public synchronized static ExtentReports createExtentReport(){
-//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yy hh-mm-ss-a");
-//        LocalDateTime time = LocalDateTime.now();
-//        String timestamp = dtf.format(time);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yy hh-mm-ss-a");
+        LocalDateTime time = LocalDateTime.now();
+        String timestamp = dtf.format(time);
 
-//        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Extent Report " + timestamp + ".html");
-        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/Extent-Report.html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Extent Report " + timestamp + ".html");
+//        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/Extent-Report.html");
         spark.config().setDocumentTitle("Extent Reports - Automation Report");
         spark.config().setReportName("Automation Report");
         spark.config().setTheme(Theme.DARK);

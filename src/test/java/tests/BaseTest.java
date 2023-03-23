@@ -78,7 +78,7 @@ public class BaseTest {
             case("grid-edge"):
                 caps.setCapability("browser", "MicrosoftEdge");
                 return driver = new RemoteWebDriver(new URL(gridURL), caps);
-            case("cloud"):
+            case("ltCloud"):
                 return lambdaTest();
             default:
                 WebDriverManager.chromedriver().setup();
@@ -92,14 +92,16 @@ public class BaseTest {
     }
 
     public WebDriver lambdaTest() throws MalformedURLException {
-        String hubURL = "https://jimmypvu:vygtZr8rY1Zejji0D6x0n7sWm2VOwb3uchbBYRbpDcKJ4v5SQu@hub.lambdatest.com/wd/hub";
+        String hubURL = "https://jimmyphuvu:vLyH3mPwllnH1jK7WzIZivcOoyQig2omkXsDZs0x4HnBP3IgVs@hub.lambdatest.com/wd/hub";
+        String lambdatestUserName = System.getenv("LT_USERNAME");
+        String lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("browserName", "Safari");
         caps.setCapability("browserVersion", "16.0");
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("user", "jimmypvu");
-        ltOptions.put("accessKey", "vygtZr8rY1Zejji0D6x0n7sWm2VOwb3uchbBYRbpDcKJ4v5SQu");
+        ltOptions.put("username", lambdatestUserName);
+        ltOptions.put("accessKey", lambdatestAccessKey);
         ltOptions.put("build", "Safari Tests");   //build name
         ltOptions.put("platformName", "MacOS Ventura");
         ltOptions.put("name", this.getClass().getName());   //test name
