@@ -64,7 +64,7 @@ public class BaseTest {
                 fo.addArguments("-height=1080");
                 fo.addArguments("--headless");
                 return driver = new FirefoxDriver(fo);
-            case("MicrosoftEdge"):
+            case("edge"):
                 EdgeOptions eo = new EdgeOptions();
                 eo.addArguments("--headless=new");
                 eo.addArguments("--window-size=1920,1080");
@@ -78,7 +78,7 @@ public class BaseTest {
             case("grid-edge"):
                 caps.setCapability("browser", "MicrosoftEdge");
                 return driver = new RemoteWebDriver(new URL(gridURL), caps);
-            case("ltCloud"):
+            case("lt-cloud"):
                 return lambdaTest();
             default:
                 WebDriverManager.chromedriver().setup();
