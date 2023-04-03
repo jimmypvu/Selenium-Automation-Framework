@@ -27,5 +27,12 @@ test {
         suites"src/test/resources/testrunners/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
 
+<<<<<<< Updated upstream
+=======
+task runCucumber(type: Test){
+    useTestNG() {
+        suites "src/test/resources/testrunners/Cucumber.xml"
+        systemProperty "browser", System.getProperty("browser")
+>>>>>>> Stashed changes
     }
 }

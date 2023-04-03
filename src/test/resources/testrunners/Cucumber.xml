@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Cucumber" parallel="false" thread-count="3">
+
+<!--    <listeners>-->
+<!--        <listener class-name="org.jvu.listeners.TestListener" />-->
+<!--        <listener class-name="org.jvu.listeners.AnnotationTransformer" />-->
+<!--    </listeners>-->
+
+    <test name="Cucumber Runner" preserve-order="false" parallel="false" thread-count="6" enabled="true">
+        <classes>
+            <class name="org.jvu.testrunner.CucumberRunner" />
+        </classes>
+    </test>
+</suite>

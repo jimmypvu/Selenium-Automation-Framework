@@ -49,6 +49,27 @@ public class BasePage {
         actions.moveToElement(element).click();
     }
 
+<<<<<<< Updated upstream:src/test/java/pages/BasePage.java
+=======
+    public void waitFor(WebElement element){
+        waitForVis(element);
+        waitForClk(element);
+    }
+
+    public WebElement waitAndGet(By locator){
+        waitFor(locator);
+        return driver.findElement(locator);
+    }
+
+    public void waitForVis(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForClk(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+>>>>>>> Stashed changes:src/test/java/org/jvu/pages/BasePage.java
     public void moveToElement(WebElement element){
         actions.moveToElement(element);
     }
@@ -107,6 +128,24 @@ public class BasePage {
 
     public WebElement waitForPresence(By locator){
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public void waitFor(By locator){
+        waitForPres(locator);
+        waitForVis(locator);
+        waitForClk(locator);
+    }
+
+    public void waitForPres(By locator){
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public void waitForVis(By locator){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public void waitForClk(By locator){
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public WebElement waitForVisibility(By locator){
