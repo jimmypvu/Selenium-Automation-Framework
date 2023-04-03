@@ -1,4 +1,4 @@
-package pages;
+package org.jvu.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,6 +47,24 @@ public class BasePage {
     public void moveToAndClick(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
         actions.moveToElement(element).click();
+    }
+
+    public void waitFor(WebElement element){
+        waitForVis(element);
+        waitForClk(element);
+    }
+
+    public WebElement waitAndGet(WebElement element){
+        waitFor(element);
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForVis(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForClk(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public void moveToElement(WebElement element){

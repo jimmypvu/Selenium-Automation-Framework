@@ -1,4 +1,4 @@
-package tests;
+package org.jvu.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -23,14 +23,17 @@ public class BaseTest {
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
     @BeforeMethod
+    public void setContext(ITestContext context){
+        context.setAttribute("WebDriver", getDriver());
+        context.setAttribute("ThreadID", Thread.currentThread().getId());
+    }
+
+    @BeforeMethod
 //    @Parameters({"browser"})
-    public void launchBrowser(/*String browser,*/ ITestContext context) throws MalformedURLException{
+    public void launchBrowser(/*String browser ITestContext context*/) throws MalformedURLException{
         WebDriver threadDriver = setDriver(System.getProperty("browser"));
 //        WebDriver threadDriver = setDriver(browser);
         threadLocal.set(threadDriver);
-
-        context.setAttribute("WebDriver", getDriver());
-        context.setAttribute("ThreadID", Thread.currentThread().getId());
 
         manageBrowser();
         getDriver().get(URL);
@@ -86,7 +89,7 @@ public class BaseTest {
                 co.addArguments("--remote-allow-origins=*");
                 co.addArguments("--window-size=1920,1080");
                 co.addArguments("--start-maximized");
-                co.addArguments("--headless");
+//                co.addArguments("--headless");
                 return driver = new ChromeDriver(co);
         }
     }

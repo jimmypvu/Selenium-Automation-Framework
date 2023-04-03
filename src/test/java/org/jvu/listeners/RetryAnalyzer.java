@@ -1,11 +1,11 @@
-package listeners;
+package org.jvu.listeners;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
     private int count = 0;
-    private static int retryLimit = 2;
+    private static int retryLimit = 0;
 
     @Override
     public boolean retry(ITestResult result){

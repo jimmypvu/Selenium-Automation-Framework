@@ -1,21 +1,20 @@
-package pages;
+package org.jvu.pages;
 
-import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
     @FindBy(xpath = "//button[@title='Continue']")
-    WebElement btnContinueRegister;
+    public static WebElement btnContinueRegister;
     @FindBy(id = "loginFrm_loginname")
-    WebElement txtUsername;
+    public static WebElement txtUsername;
     @FindBy(id = "loginFrm_password")
-    WebElement txtPassword;
+    public static WebElement txtPassword;
     @FindBy(xpath = "//button[@title='Login']")
-    WebElement btnLogin;
-    @FindBy(xpath = "//span[contains(text(), 'Account Logout')]")
-    WebElement hdrAccLogout;
+    public static WebElement btnLogin;
+    @FindBy(css = "div[class='alert alert-error alert-danger']")
+    public static WebElement lblLoginError;
 
     public LoginPage(WebDriver givenDriver){
         super(givenDriver);

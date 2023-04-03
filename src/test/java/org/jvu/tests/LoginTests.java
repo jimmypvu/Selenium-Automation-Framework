@@ -1,12 +1,12 @@
-package tests;
+package org.jvu.tests;
 
-import dataproviders.DataProviders;
+import org.jvu.dataproviders.DataProviders;
+import org.jvu.pages.HomePage;
+import org.jvu.pages.LoginPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AccountPage;
-import pages.HomePage;
-import pages.LoginPage;
+import org.jvu.pages.AccountPage;
 
 public class LoginTests extends BaseTest {
     @Test(description = "login with valid credentials test", enabled = true)
@@ -64,6 +64,7 @@ public class LoginTests extends BaseTest {
         accPage.logout();
 
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/logout");
+        Assert.assertTrue(AccountPage.hdrAccLogout.isDisplayed());
     }
 
     @Test(description = "invalid login tests", dataProvider = "InvalidLogins", dataProviderClass = DataProviders.class, enabled = true)

@@ -1,9 +1,9 @@
-package extentreports;
+package org.jvu.extentreports;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import tests.BaseTest;
+import org.jvu.tests.BaseTest;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,8 +16,8 @@ public class ExtentReportManager extends BaseTest {
         LocalDateTime time = LocalDateTime.now();
         String timestamp = dtf.format(time);
 
-        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Extent Report " + timestamp + ".html");
-//        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/Extent-Report.html");
+//        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Extent Report " + timestamp + ".html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/ExtentReport.html");
         spark.config().setDocumentTitle("Extent Reports - Automation Report");
         spark.config().setReportName("Automation Report");
         spark.config().setTheme(Theme.DARK);

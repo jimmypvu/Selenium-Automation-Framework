@@ -1,15 +1,14 @@
-package utils;
+package org.jvu.utils;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
-import tests.BaseTest;
+import org.jvu.tests.BaseTest;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Base64;
 
 public class Screenshotter extends BaseTest {
     private static final String FILEPATH = "../QA-Automation-Framework/screenshots/";

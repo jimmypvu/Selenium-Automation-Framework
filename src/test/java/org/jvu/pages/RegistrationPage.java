@@ -1,4 +1,4 @@
-package pages;
+package org.jvu.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,42 +9,42 @@ import java.util.Random;
 
 public class RegistrationPage extends BasePage{
     @FindBy(xpath = "//input[@name='firstname']")
-    WebElement txtFirstName;
+    public static WebElement txtFirstName;
     @FindBy(xpath = "//input[@name='lastname']")
-    WebElement txtLastName;
+    public static WebElement txtLastName;
     @FindBy(id = "AccountFrm_email")
-    WebElement txtEmail;
+    public static WebElement txtEmail;
     @FindBy(xpath = "//input[@name='address_1']")
-    WebElement txtAddress1;
+    public static WebElement txtAddress1;
     @FindBy(id = "AccountFrm_city")
-    WebElement txtCity;
+    public static WebElement txtCity;
     @FindBy(id = "AccountFrm_zone_id")
-    WebElement sddState;
+    public static WebElement sddState;
     @FindBy(id = "AccountFrm_postcode")
-    WebElement txtZipcode;
+    public static WebElement txtZipcode;
     @FindBy(id = "AccountFrm_country_id")
-    WebElement sddCountry;
+    public static WebElement sddCountry;
     @FindBy(id = "AccountFrm_loginname")
-    WebElement txtUsername;
+    public static WebElement txtUsername;
     @FindBy(id = "AccountFrm_password")
-    WebElement txtNewPassword;
+    public static WebElement txtNewPassword;
     @FindBy(id = "AccountFrm_confirm")
-    WebElement txtConfirmPassword;
+    public static WebElement txtConfirmPassword;
     @FindBy(id = "AccountFrm_newsletter0")
-    WebElement btnSubscribeNo;
+    public static WebElement btnSubscribeNo;
     @FindBy(id = "AccountFrm_agree")
-    WebElement chkPrivacy;
+    public static WebElement chkPrivacy;
     @FindBy(xpath = "//button[@title='Continue']")
-    WebElement btnContinue;
+    public static WebElement btnContinue;
     @FindBy(css = "alert alert-error alert-danger")
-    WebElement divError;
+    public static WebElement divError;
     //E-Mail Address is already registered!
     //Email Address does not appear to be valid!
     //Login name must be alphanumeric only and between 5 and 64 characters!
     //Password must be between 4 and 20 characters!
     //Zip/postal code must be between 3 and 10 characters!
     @FindBy(xpath = "//span[contains(text(),'Your Account Has Been Created!')]")
-    WebElement hdrAccCreated;
+    public static WebElement hdrAccCreated;
 
     public RegistrationPage(WebDriver givenDriver){
         super(givenDriver);

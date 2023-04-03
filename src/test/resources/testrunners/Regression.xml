@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestNG" parallel="false" thread-count="3">
+<suite name="Regression" parallel="false" thread-count="3">
 
     <listeners>
-        <listener class-name="listeners.TestListener" />
-        <listener class-name="listeners.AnnotationTransformer" />
+        <listener class-name="org.jvu.listeners.TestListener" />
+        <listener class-name="org.jvu.listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
@@ -21,7 +21,7 @@
             <!--                    <include name="invalidRegistrationTests" />-->
             <!--                </methods>-->
             <!--            </class>-->
-            <class name="tests.LoginTests">
+            <class name="org.jvu.tests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <!--                    <include name="loginEmptyPassword" />-->
@@ -36,7 +36,7 @@
     <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="false">
         <!--        <parameter name="browser" value="firefox" />-->
         <classes>
-            <class name="tests.RegistrationTests">
+            <class name="org.jvu.tests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                     <include name="registerInvalidEmail" />
@@ -46,7 +46,7 @@
                     <include name="invalidRegistrationTests" />
                 </methods>
             </class>
-            <class name="tests.LoginTests">
+            <class name="org.jvu.tests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="loginEmptyPassword" />
@@ -60,7 +60,7 @@
     <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="false">
         <!--        <parameter name="browser" value="MicrosoftEdge" />-->
         <classes>
-            <class name="tests.RegistrationTests">
+            <class name="org.jvu.tests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                     <include name="registerInvalidEmail" />
@@ -70,7 +70,7 @@
                     <include name="invalidRegistrationTests" />
                 </methods>
             </class>
-            <class name="tests.LoginTests">
+            <class name="org.jvu.tests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="loginEmptyPassword" />
