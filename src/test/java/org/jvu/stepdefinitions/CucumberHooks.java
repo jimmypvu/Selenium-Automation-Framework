@@ -35,13 +35,16 @@ public class CucumberHooks {
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }
+
     @Before(order = 1)
     public void launchBrowser(){
         driver.get(URL);
     }
+
     public static WebDriver getDriver(){
         return driver;
     }
+
     @After
     public void tearDown(){
         driver.quit();

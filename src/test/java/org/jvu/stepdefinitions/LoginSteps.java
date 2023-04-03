@@ -48,7 +48,7 @@ public class LoginSteps {
 
     @When("user enters {string} and {string}")
     public void iEnterBadCredentials(String username, String password) {
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.setUsername(username).setPassword(password);
+        LoginPage lp = new LoginPage(getDriver());
+        lp.setUsername(username).setPassword(password);
     }
 }

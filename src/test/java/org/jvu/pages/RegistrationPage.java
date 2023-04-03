@@ -1,4 +1,4 @@
-package pages;
+package org.jvu.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -37,25 +37,18 @@ public class RegistrationPage extends BasePage{
     WebElement chkPrivacy;
     @FindBy(xpath = "//button[@title='Continue']")
     WebElement btnContinue;
-<<<<<<< Updated upstream:src/test/java/pages/RegistrationPage.java
     @FindBy(css = "alert alert-error alert-danger")
     WebElement divError;
-=======
+    @FindBy(xpath = "//span[contains(text(),'Your Account Has Been Created!')]")
+    WebElement hdrAccCreated;
 
     public static By byAccCreatedHdr = By.xpath("//span[contains(text(),'Your Account Has Been Created!')]");
     public static By byErrorAlertDiv = By.cssSelector("[class='alert alert-error alert-danger']");
->>>>>>> Stashed changes:src/test/java/org/jvu/pages/RegistrationPage.java
     //E-Mail Address is already registered!
     //Email Address does not appear to be valid!
     //Login name must be alphanumeric only and between 5 and 64 characters!
     //Password must be between 4 and 20 characters!
     //Zip/postal code must be between 3 and 10 characters!
-<<<<<<< Updated upstream:src/test/java/pages/RegistrationPage.java
-    @FindBy(xpath = "//span[contains(text(),'Your Account Has Been Created!')]")
-    WebElement hdrAccCreated;
-=======
-
->>>>>>> Stashed changes:src/test/java/org/jvu/pages/RegistrationPage.java
 
     public RegistrationPage(WebDriver givenDriver){
         super(givenDriver);

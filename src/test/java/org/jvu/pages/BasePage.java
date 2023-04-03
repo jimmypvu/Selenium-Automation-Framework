@@ -1,4 +1,4 @@
-package pages;
+package org.jvu.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -49,8 +49,6 @@ public class BasePage {
         actions.moveToElement(element).click();
     }
 
-<<<<<<< Updated upstream:src/test/java/pages/BasePage.java
-=======
     public void waitFor(WebElement element){
         waitForVis(element);
         waitForClk(element);
@@ -69,7 +67,6 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
->>>>>>> Stashed changes:src/test/java/org/jvu/pages/BasePage.java
     public void moveToElement(WebElement element){
         actions.moveToElement(element);
     }

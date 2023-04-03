@@ -1,13 +1,13 @@
-package tests;
+package org.jvu.tests;
 
-import dataproviders.DataProviders;
+import org.jvu.dataproviders.DataProviders;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.RegistrationPage;
+import org.jvu.pages.HomePage;
+import org.jvu.pages.LoginPage;
+import org.jvu.pages.RegistrationPage;
 
 public class RegistrationTests extends BaseTest{
 

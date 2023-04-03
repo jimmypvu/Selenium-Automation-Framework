@@ -1,4 +1,4 @@
-package tests;
+package org.jvu.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +12,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,18 +24,17 @@ public class BaseTest {
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
     @BeforeMethod
+    public void setContext(ITestContext context){
+        context.setAttribute("WebDriver", getDriver());
+        context.setAttribute("ThreadID", Thread.currentThread().getId());
+    }
+
+    @BeforeMethod
 //    @Parameters({"browser"})
-<<<<<<< Updated upstream:src/test/java/tests/BaseTest.java
-    public void launchBrowser(/*String browser,*/ ITestContext context) throws MalformedURLException{
-=======
     public void launchBrowser(/*String browser*/) throws MalformedURLException{
->>>>>>> Stashed changes:src/test/java/org/jvu/tests/BaseTest.java
         WebDriver threadDriver = setDriver(System.getProperty("browser"));
 //        WebDriver threadDriver = setDriver(browser);
         threadLocal.set(threadDriver);
-
-        context.setAttribute("WebDriver", getDriver());
-        context.setAttribute("ThreadID", Thread.currentThread().getId());
 
         manageBrowser();
         getDriver().get(URL);

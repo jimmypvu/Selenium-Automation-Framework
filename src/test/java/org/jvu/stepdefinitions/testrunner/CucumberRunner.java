@@ -1,4 +1,4 @@
-package org.jvu.testrunner;
+package org.jvu.stepdefinitions.testrunner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;

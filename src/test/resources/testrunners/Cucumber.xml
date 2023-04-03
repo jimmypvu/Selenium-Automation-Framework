@@ -10,7 +10,7 @@
 
     <test name="Cucumber Runner" preserve-order="false" parallel="false" thread-count="6" enabled="true">
         <classes>
-            <class name="org.jvu.testrunner.CucumberRunner" />
+            <class name="org.jvu.stepdefinitions.testrunner.CucumberRunner" />
         </classes>
     </test>
 </suite>

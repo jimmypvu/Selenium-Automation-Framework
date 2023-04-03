@@ -1,13 +1,12 @@
-package tests;
+package org.jvu.tests;
 
-import dataproviders.DataProviders;
-import org.openqa.selenium.By;
+import org.jvu.dataproviders.DataProviders;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AccountPage;
-import pages.HomePage;
-import pages.LoginPage;
+import org.jvu.pages.AccountPage;
+import org.jvu.pages.HomePage;
+import org.jvu.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
     @Test(description = "login with valid credentials test", enabled = true)
