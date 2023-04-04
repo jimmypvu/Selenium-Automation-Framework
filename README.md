@@ -2,10 +2,17 @@
 Java / Selenium / TestNG framework for web UI and functional testing built using POM & Page Factory design pattern, with custom Extent Reports, Excel reader with Apache Poi for data-driven tests, Retry Analyzer and screenshots on failed tests, and LambdaTest cloud and Selenium Grid integration
 
 Smoke Suite Example/Demo: Smoke Suite - Watch Video
-https://www.loom.com/share/070c01d7eb3d431da6d0ef5260956312
+https://www.loom.com/share/f61c7468d99c434492bc0c1aafc0c1de
 
 Regression Suite Demo: Regression Suite - Watch Video
-https://www.loom.com/share/007bf31f02e4432b920cf9e9ec577da7
+https://www.loom.com/share/c842f2738b8e408b948798a5295449b7
+
+LambdaTest Cloud Demo: Cloud Suite - Watch Video
+https://www.loom.com/share/c30c519832174901ba7859571e52a7a6
+
+Crossbrowser Tests in Parallel Demo: Crossbrowser Tests - Watch Video
+https://www.loom.com/share/b7afa41c7c244fcf8be2761a7f74dd1c
+
 
 Usage:
 
