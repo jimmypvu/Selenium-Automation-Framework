@@ -37,8 +37,6 @@ public class RegistrationPage extends BasePage{
     WebElement chkPrivacy;
     @FindBy(xpath = "//button[@title='Continue']")
     WebElement btnContinue;
-    @FindBy(css = "alert alert-error alert-danger")
-    WebElement divError;
     @FindBy(xpath = "//span[contains(text(),'Your Account Has Been Created!')]")
     WebElement hdrAccCreated;
 
@@ -159,7 +157,7 @@ public class RegistrationPage extends BasePage{
         return "t" + System.currentTimeMillis() + rand.nextInt(1000);
     }
 
-    public String genString(int n, boolean abc, boolean nums, boolean special){
+    public static String genString(int n, boolean abc, boolean nums, boolean special){
         String chars = "";
         if(abc){
             chars += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

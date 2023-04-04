@@ -1,0 +1,2835 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Reports - Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Automation Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 4, 2023 11:16:34 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validUserCheckout</p>
+            <p class="text-sm">
+              <span>11:16:37 AM</span> / <span>00:00:14:209</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validUserCheckout</h5>
+<span class='badge badge-success'>04.04.2023 11:16:37 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:51 AM</span>
+<span class='badge badge-default'>00:00:14:209</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">registered and logged in user should be able to checkout</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:51 AM</td>
+        <td>
+          Regression // org.jvu.tests.CheckoutTests // validUserCheckout
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:51 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (c0686b50-e3e4-4ade-83ec-81ff12d520ba)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:51 AM</td>
+        <td>
+          Thread ID: 30
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:51 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyCartTotal</p>
+            <p class="text-sm">
+              <span>11:16:37 AM</span> / <span>00:00:01:308</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyCartTotal</h5>
+<span class='badge badge-success'>04.04.2023 11:16:37 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:38 AM</span>
+<span class='badge badge-default'>00:00:01:308</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">verify cart total updates as more items are added</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Regression // org.jvu.tests.CartTests // verifyCartTotal
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (c0686b50-e3e4-4ade-83ec-81ff12d520ba)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Thread ID: 30
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyAddToCartBtns</p>
+            <p class="text-sm">
+              <span>11:16:37 AM</span> / <span>00:00:00:538</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyAddToCartBtns</h5>
+<span class='badge badge-success'>04.04.2023 11:16:37 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:38 AM</span>
+<span class='badge badge-default'>00:00:00:538</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">finds all broken product buttons on home page (buttons that redirect instead of add item to cart)</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Regression // org.jvu.tests.HomePageTests // verifyAddToCartBtns
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (c0686b50-e3e4-4ade-83ec-81ff12d520ba)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Thread ID: 30
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">addItemToCartFromHomePage</p>
+            <p class="text-sm">
+              <span>11:16:37 AM</span> / <span>00:00:00:752</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">addItemToCartFromHomePage</h5>
+<span class='badge badge-success'>04.04.2023 11:16:37 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:38 AM</span>
+<span class='badge badge-default'>00:00:00:752</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">user should be able to add an item to the cart</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Regression // org.jvu.tests.CartTests // addItemToCartFromHomePage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (c0686b50-e3e4-4ade-83ec-81ff12d520ba)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Thread ID: 30
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:38 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validGuestCheckout</p>
+            <p class="text-sm">
+              <span>11:16:37 AM</span> / <span>00:00:15:796</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validGuestCheckout</h5>
+<span class='badge badge-success'>04.04.2023 11:16:37 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:53 AM</span>
+<span class='badge badge-default'>00:00:15:796</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">user should be able to checkout as a guest</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:53 AM</td>
+        <td>
+          Regression // org.jvu.tests.CheckoutTests // validGuestCheckout
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:53 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (8d107484-70f1-4c44-a64d-7420d3c5e6b7)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:53 AM</td>
+        <td>
+          Thread ID: 27
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:53 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">updateItemQuantity</p>
+            <p class="text-sm">
+              <span>11:16:37 AM</span> / <span>00:00:04:199</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">updateItemQuantity</h5>
+<span class='badge badge-success'>04.04.2023 11:16:37 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:41 AM</span>
+<span class='badge badge-default'>00:00:04:199</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">user should be able to update item quantities in cart</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:41 AM</td>
+        <td>
+          Regression // org.jvu.tests.CartTests // updateItemQuantity
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:41 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (c0686b50-e3e4-4ade-83ec-81ff12d520ba)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:41 AM</td>
+        <td>
+          Thread ID: 30
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:41 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginEmptyPassword</p>
+            <p class="text-sm">
+              <span>11:16:53 AM</span> / <span>00:00:03:661</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginEmptyPassword</h5>
+<span class='badge badge-success'>04.04.2023 11:16:53 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:56 AM</span>
+<span class='badge badge-default'>00:00:03:661</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">login with invalid credentials test - empty password</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:56 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // loginEmptyPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:56 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (2eb5292d-0fc2-4386-9e07-515930dde124)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:56 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:56 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:16:55 AM</span> / <span>00:00:02:933</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:16:55 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:58 AM</span>
+<span class='badge badge-default'>00:00:02:933</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (2eb5292d-0fc2-4386-9e07-515930dde124)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginEmptyUsername</p>
+            <p class="text-sm">
+              <span>11:16:56 AM</span> / <span>00:00:02:631</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginEmptyUsername</h5>
+<span class='badge badge-success'>04.04.2023 11:16:56 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:58 AM</span>
+<span class='badge badge-default'>00:00:02:631</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">login with invalid credentials test - empty username</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // loginEmptyUsername
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (2eb5292d-0fc2-4386-9e07-515930dde124)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginInvalidPassword</p>
+            <p class="text-sm">
+              <span>11:16:56 AM</span> / <span>00:00:02:278</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginInvalidPassword</h5>
+<span class='badge badge-success'>04.04.2023 11:16:56 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:16:58 AM</span>
+<span class='badge badge-default'>00:00:02:278</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">login with invalid credentials test - incorrect password</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // loginInvalidPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (2eb5292d-0fc2-4386-9e07-515930dde124)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:16:58 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginNonexistentUsername</p>
+            <p class="text-sm">
+              <span>11:17:06 AM</span> / <span>00:00:02:843</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginNonexistentUsername</h5>
+<span class='badge badge-success'>04.04.2023 11:17:06 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:09 AM</span>
+<span class='badge badge-default'>00:00:02:843</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">login with invalid credentials test - nonexistent username</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:09 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // loginNonexistentUsername
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:09 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (c0e9b5e0-e51d-4ca0-b4ab-a240c1887272)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:09 AM</td>
+        <td>
+          Thread ID: 31
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:09 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginValidCredentials</p>
+            <p class="text-sm">
+              <span>11:17:09 AM</span> / <span>00:00:03:713</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginValidCredentials</h5>
+<span class='badge badge-success'>04.04.2023 11:17:09 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:13 AM</span>
+<span class='badge badge-default'>00:00:03:713</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">login with valid credentials test</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:13 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // loginValidCredentials
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:13 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (1037f446-d10e-4a6e-92b0-5ad1a870ae63)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:13 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:13 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidRegistrationTests</p>
+            <p class="text-sm">
+              <span>11:17:10 AM</span> / <span>00:00:08:002</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidRegistrationTests</h5>
+<span class='badge badge-success'>04.04.2023 11:17:10 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:18 AM</span>
+<span class='badge badge-default'>00:00:08:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">register with invalid info</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // invalidRegistrationTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (81c1a680-7eca-4908-a991-8e328d8be51a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">logoutSuccess</p>
+            <p class="text-sm">
+              <span>11:17:11 AM</span> / <span>00:00:03:171</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">logoutSuccess</h5>
+<span class='badge badge-success'>04.04.2023 11:17:11 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:14 AM</span>
+<span class='badge badge-default'>00:00:03:171</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">logout after successful login</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:14 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // logoutSuccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:14 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (1037f446-d10e-4a6e-92b0-5ad1a870ae63)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:14 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:14 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">registerEmailTaken</p>
+            <p class="text-sm">
+              <span>11:17:15 AM</span> / <span>00:00:05:405</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">registerEmailTaken</h5>
+<span class='badge badge-success'>04.04.2023 11:17:15 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:20 AM</span>
+<span class='badge badge-default'>00:00:05:405</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid registration test - email already taken</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:20 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // registerEmailTaken
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:20 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (null)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:20 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:20 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:17:16 AM</span> / <span>00:00:01:673</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:17:16 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:18 AM</span>
+<span class='badge badge-default'>00:00:01:673</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (81c1a680-7eca-4908-a991-8e328d8be51a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:18 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">registerInvalidEmail</p>
+            <p class="text-sm">
+              <span>11:17:24 AM</span> / <span>00:00:06:260</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">registerInvalidEmail</h5>
+<span class='badge badge-success'>04.04.2023 11:17:24 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:31 AM</span>
+<span class='badge badge-default'>00:00:06:260</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid registration test - invalid email</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:31 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // registerInvalidEmail
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:31 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (045fe3e0-d38c-455b-ba98-d86ee23752a7)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:31 AM</td>
+        <td>
+          Thread ID: 27
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:31 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">registerRequiredFieldsEmpty</p>
+            <p class="text-sm">
+              <span>11:17:27 AM</span> / <span>00:00:05:489</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">registerRequiredFieldsEmpty</h5>
+<span class='badge badge-success'>04.04.2023 11:17:27 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:33 AM</span>
+<span class='badge badge-default'>00:00:05:489</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid registration test - required fields empty</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:33 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // registerRequiredFieldsEmpty
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:33 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (10d697d5-a4ac-44a7-aae1-3a494f550d05)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:33 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:17:33 AM</td>
+        <td>
+          Test ignored / skipped / retried
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:33 AM</td>
+        <td>
+          Retried: true
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">registerUsernameTaken</p>
+            <p class="text-sm">
+              <span>11:17:28 AM</span> / <span>00:00:12:485</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">registerUsernameTaken</h5>
+<span class='badge badge-success'>04.04.2023 11:17:28 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:41 AM</span>
+<span class='badge badge-default'>00:00:12:485</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid registration test - username already taken</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:40 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // registerUsernameTaken
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:41 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (40f392f2-8c96-430e-9ab9-73059933cd92)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:41 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:41 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:17:31 AM</span> / <span>00:00:05:944</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:17:31 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:37 AM</span>
+<span class='badge badge-default'>00:00:05:944</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:37 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:37 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (10d697d5-a4ac-44a7-aae1-3a494f550d05)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:37 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:37 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">registerValidInfo</p>
+            <p class="text-sm">
+              <span>11:17:38 AM</span> / <span>00:00:08:914</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">registerValidInfo</h5>
+<span class='badge badge-success'>04.04.2023 11:17:38 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:47 AM</span>
+<span class='badge badge-default'>00:00:08:914</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">valid registration test</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:47 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // registerValidInfo
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:47 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (1e4ccb7d-e581-4aef-b018-afc567f64e42)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:47 AM</td>
+        <td>
+          Thread ID: 31
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:47 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidRegistrationTests</p>
+            <p class="text-sm">
+              <span>11:17:39 AM</span> / <span>00:00:08:039</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidRegistrationTests</h5>
+<span class='badge badge-success'>04.04.2023 11:17:39 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:48 AM</span>
+<span class='badge badge-default'>00:00:08:039</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">register with invalid info</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:48 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // invalidRegistrationTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:48 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (1e4ccb7d-e581-4aef-b018-afc567f64e42)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:48 AM</td>
+        <td>
+          Thread ID: 31
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:48 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:17:40 AM</span> / <span>00:00:01:780</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:17:40 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:42 AM</span>
+<span class='badge badge-default'>00:00:01:780</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:42 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:42 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (40f392f2-8c96-430e-9ab9-73059933cd92)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:42 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:42 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">registerRequiredFieldsEmpty</p>
+            <p class="text-sm">
+              <span>11:17:44 AM</span> / <span>00:00:08:513</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">registerRequiredFieldsEmpty</h5>
+<span class='badge badge-success'>04.04.2023 11:17:44 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:53 AM</span>
+<span class='badge badge-default'>00:00:08:513</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid registration test - required fields empty</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:53 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // registerRequiredFieldsEmpty
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:53 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (9ef1eac9-aec7-48c8-9c4d-c21f94736bd8)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:53 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:53 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:17:51 AM</span> / <span>00:00:03:233</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:17:51 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:54 AM</span>
+<span class='badge badge-default'>00:00:03:233</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:54 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:54 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (9ef1eac9-aec7-48c8-9c4d-c21f94736bd8)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:54 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:54 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:17:56 AM</span> / <span>00:00:01:335</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:17:56 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:57 AM</span>
+<span class='badge badge-default'>00:00:01:335</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:57 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:57 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (1cfb1d66-f5f9-4ce3-a30b-5f3afb34175b)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:57 AM</td>
+        <td>
+          Thread ID: 27
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:57 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForInvalidItem</p>
+            <p class="text-sm">
+              <span>11:17:56 AM</span> / <span>00:00:01:500</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForInvalidItem</h5>
+<span class='badge badge-success'>04.04.2023 11:17:56 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:17:58 AM</span>
+<span class='badge badge-default'>00:00:01:500</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">search should not return any results if search term is not alphanumerical</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:58 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForInvalidItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:58 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (1cfb1d66-f5f9-4ce3-a30b-5f3afb34175b)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:17:58 AM</td>
+        <td>
+          Thread ID: 27
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:17:58 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForValidItem</p>
+            <p class="text-sm">
+              <span>11:18:02 AM</span> / <span>00:00:01:278</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForValidItem</h5>
+<span class='badge badge-success'>04.04.2023 11:18:02 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:04 AM</span>
+<span class='badge badge-default'>00:00:01:278</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">user should see matching search results for an item/keyword searched</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:04 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForValidItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:04 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (a8e4176c-ebe4-4a61-b51b-22bae5f4005b)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:04 AM</td>
+        <td>
+          Thread ID: 30
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:04 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidRegistrationTests</p>
+            <p class="text-sm">
+              <span>11:18:03 AM</span> / <span>00:00:05:570</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidRegistrationTests</h5>
+<span class='badge badge-success'>04.04.2023 11:18:03 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:08 AM</span>
+<span class='badge badge-default'>00:00:05:570</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">register with invalid info</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          Regression // org.jvu.tests.RegistrationTests // invalidRegistrationTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (bac1dfe0-4f2f-4093-a679-4b121e7960be)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:18:06 AM</span> / <span>00:00:02:374</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:18:06 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:08 AM</span>
+<span class='badge badge-default'>00:00:02:374</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (bac1dfe0-4f2f-4093-a679-4b121e7960be)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:08 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="31"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:10 AM</span> / <span>00:00:01:284</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:10 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:12 AM</span>
+<span class='badge badge-default'>00:00:01:284</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:12 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:12 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (e0a0301c-b3fc-42c7-837c-45d5ed7158b8)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:12 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:12 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:18:15 AM</span> / <span>00:00:01:213</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:18:15 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:16 AM</span>
+<span class='badge badge-default'>00:00:01:213</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:16 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:16 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (bad1b511-2ee1-46f8-bb32-d9b8fe49c658)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:16 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:16 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:18 AM</span> / <span>00:00:01:283</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:18 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:20 AM</span>
+<span class='badge badge-default'>00:00:01:283</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:20 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:20 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (f90fcbd2-4b53-4fbf-8622-9c8c680b64cf)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:20 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:20 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:18:23 AM</span> / <span>00:00:01:387</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:18:23 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:25 AM</span>
+<span class='badge badge-default'>00:00:01:387</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:25 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:25 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (96ac51fe-ae9a-4df0-82fe-6207657cbd45)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:25 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:25 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="35"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:26 AM</span> / <span>00:00:01:301</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:26 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:27 AM</span>
+<span class='badge badge-default'>00:00:01:301</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:27 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:27 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (cc12c6f5-e24d-4ecd-994b-8abfd0852ccd)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:27 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:27 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="36"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:18:32 AM</span> / <span>00:00:01:834</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:18:32 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:33 AM</span>
+<span class='badge badge-default'>00:00:01:834</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:33 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:33 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (70d7ee17-92d7-4c89-a29c-fd8d8f16f0a8)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:33 AM</td>
+        <td>
+          Thread ID: 29
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:33 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="37"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:34 AM</span> / <span>00:00:01:277</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:34 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:35 AM</span>
+<span class='badge badge-default'>00:00:01:277</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:35 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:35 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (acfef7ee-8c7d-485c-af20-0c9e5c7facc9)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:35 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:35 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="38"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">invalidLoginTests</p>
+            <p class="text-sm">
+              <span>11:18:40 AM</span> / <span>00:00:01:741</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.04.2023 11:18:40 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:42 AM</span>
+<span class='badge badge-default'>00:00:01:741</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:42 AM</td>
+        <td>
+          Regression // org.jvu.tests.LoginTests // invalidLoginTests
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:42 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (e09b5bce-5a42-415a-be19-d889fcdb7421)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:42 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:42 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="39"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:41 AM</span> / <span>00:00:01:183</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:41 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:43 AM</span>
+<span class='badge badge-default'>00:00:01:183</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:43 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:43 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (e09b5bce-5a42-415a-be19-d889fcdb7421)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:43 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:43 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="40"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:48 AM</span> / <span>00:00:01:162</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:48 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:49 AM</span>
+<span class='badge badge-default'>00:00:01:162</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:49 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:49 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (d6133027-7e05-4a70-8db3-8fd96fee04d9)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:49 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:49 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="41"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:18:55 AM</span> / <span>00:00:01:157</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:18:55 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:18:56 AM</span>
+<span class='badge badge-default'>00:00:01:157</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:56 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:56 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (3a554671-1f43-4ee7-89a7-3f844c48f7d0)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:18:56 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:18:56 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">searchForExistingItems</p>
+            <p class="text-sm">
+              <span>11:19:02 AM</span> / <span>00:00:01:158</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.04.2023 11:19:02 AM</span>
+<span class='badge badge-danger'>04.04.2023 11:19:03 AM</span>
+<span class='badge badge-default'>00:00:01:158</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:19:03 AM</td>
+        <td>
+          Regression // org.jvu.tests.SearchTests // searchForExistingItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:19:03 AM</td>
+        <td>
+          FirefoxDriver: firefox on WINDOWS (b65aa240-2b1b-46c4-9a2b-271b75fe109a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:19:03 AM</td>
+        <td>
+          Thread ID: 28
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:19:03 AM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 4, 2023 11:16:34 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 4, 2023 11:19:04 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>41</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='97%'>
+<b>41</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>1</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='24%'><b>41</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>128</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"validUserCheckout":14.209,"verifyCartTotal":1.308,"verifyAddToCartBtns":0.538,"addItemToCartFromHomePage":0.752,"validGuestCheckout":15.796,"updateItemQuantity":4.199,"loginEmptyPassword":3.661,"invalidLoginTests":2.933,"loginEmptyUsername":2.631,"loginInvalidPassword":2.278,"loginNonexistentUsername":2.843,"loginValidCredentials":3.713,"invalidRegistrationTests":8.002,"logoutSuccess":3.171,"registerEmailTaken":5.405,"invalidLoginTests":1.673,"registerInvalidEmail":6.26,"registerRequiredFieldsEmpty":5.489,"registerUsernameTaken":12.485,"invalidLoginTests":5.944,"registerValidInfo":8.914,"invalidRegistrationTests":8.039,"searchForExistingItems":1.78,"registerRequiredFieldsEmpty":8.513,"invalidLoginTests":3.233,"searchForExistingItems":1.335,"searchForInvalidItem":1.5,"searchForValidItem":1.278,"invalidRegistrationTests":5.57,"invalidLoginTests":2.374,"searchForExistingItems":1.284,"invalidLoginTests":1.213,"searchForExistingItems":1.283,"invalidLoginTests":1.387,"searchForExistingItems":1.301,"invalidLoginTests":1.834,"searchForExistingItems":1.277,"invalidLoginTests":1.741,"searchForExistingItems":1.183,"searchForExistingItems":1.162,"searchForExistingItems":1.157,"searchForExistingItems":1.158
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Project</td>
+<td>automationteststore.com</td>
+</tr>
+<tr>
+<td>Reporter</td>
+<td>jimmy</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 41,
+failParent: 0,
+warningParent: 0,
+skipParent: 1,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 41,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 1,
+infoEvents: 127
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -28,7 +28,7 @@ public class LoginSteps {
         LoginPage lp = new LoginPage(getDriver());
         lp.clickLoginBtn();
     }
-    @Then("^user is navigated to account page$")
+    @Then("^user is logged into account page$")
     public void iAmLoggedIn() {
         AccountPage ap = new AccountPage(getDriver());
         WebElement myAccHdr = ap.waitForPresence(AccountPage.byMyAccountHdr);

@@ -6,7 +6,7 @@ Feature: Login feature
     Given user is on the login page
     When user enters username and password
     And user clicks Login button
-    Then user is navigated to account page
+    Then user is logged into account page
 
   @smoke @regression @login
   Scenario Outline: User should not be logged in with invalid credentials

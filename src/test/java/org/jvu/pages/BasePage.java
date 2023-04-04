@@ -130,7 +130,7 @@ public class BasePage {
     public void waitFor(By locator){
         waitForPres(locator);
         waitForVis(locator);
-        waitForClk(locator);
+//        waitForClk(locator);
     }
 
     public void waitForPres(By locator){

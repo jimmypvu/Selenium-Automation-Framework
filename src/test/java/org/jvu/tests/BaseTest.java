@@ -12,8 +12,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -30,7 +30,7 @@ public class BaseTest {
     }
 
     @BeforeMethod
-//    @Parameters({"browser"})
+    @Parameters({"browser"})
     public void launchBrowser(/*String browser*/) throws MalformedURLException{
         WebDriver threadDriver = setDriver(System.getProperty("browser"));
 //        WebDriver threadDriver = setDriver(browser);
@@ -64,14 +64,14 @@ public class BaseTest {
         switch(browser){
             case("firefox"):
                 FirefoxOptions fo = new FirefoxOptions();
-                fo.addArguments("-width=1920");
-                fo.addArguments("-height=1080");
-                fo.addArguments("--headless");
+//                fo.addArguments("-width=1920");
+//                fo.addArguments("-height=1080");
+//                fo.addArguments("--headless");
                 return driver = new FirefoxDriver(fo);
-            case("edge"):
+            case("MicrosoftEdge"):
                 EdgeOptions eo = new EdgeOptions();
-                eo.addArguments("--headless=new");
-                eo.addArguments("--window-size=1920,1080");
+//                eo.addArguments("--headless=new");
+//                eo.addArguments("--window-size=1920,1080");
                 return driver = new EdgeDriver(eo);
             case("grid-chrome"):
                 caps.setCapability("browser", "chrome");
@@ -88,9 +88,9 @@ public class BaseTest {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions co = new ChromeOptions();
                 co.addArguments("--remote-allow-origins=*");
-                co.addArguments("--window-size=1920,1080");
-                co.addArguments("--start-maximized");
-                co.addArguments("--headless");
+//                co.addArguments("--window-size=1920,1080");
+//                co.addArguments("--start-maximized");
+//                co.addArguments("--headless");
                 return driver = new ChromeDriver(co);
         }
     }
@@ -104,7 +104,7 @@ public class BaseTest {
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
         ltOptions.put("username", System.getenv("LT_USERNAME"));
         ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
-        ltOptions.put("build", "Safari Tests");   //build name
+        ltOptions.put("build", "Safari");   //build name
         ltOptions.put("platformName", "MacOS Ventura");
         ltOptions.put("name", this.getClass().getName());   //test name
         ltOptions.put("video", true);   //enable video recording

@@ -33,6 +33,26 @@ test {
     }
 }
 
+task runSmoke(type: Test){
+    useTestNG() {
+        suites "src/test/resources/testrunners/Smoke.xml"
+        systemProperty "browser", System.getProperty("browser")
+    }
+}
+
+task runRegression(type: Test){
+    useTestNG() {
+        suites "src/test/resources/testrunners/Regression.xml"
+        systemProperty "browser", System.getProperty("browser")
+    }
+}
+
+task runCrossbrowser(type: Test){
+    useTestNG() {
+        suites "src/test/resources/testrunners/ParallelCrossbrowser.xml"
+    }
+}
+
 task runCucumber(type: Test){
     useTestNG() {
         suites "src/test/resources/testrunners/Cucumber.xml"

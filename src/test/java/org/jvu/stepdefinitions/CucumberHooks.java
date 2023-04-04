@@ -28,7 +28,7 @@ public class CucumberHooks {
         WebDriverManager.chromedriver().setup();
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
-//                co.addArguments("--headless");
+                co.addArguments("--headless");
         driver = new ChromeDriver(co);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

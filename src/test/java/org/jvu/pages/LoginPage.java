@@ -16,6 +16,9 @@ public class LoginPage extends BasePage{
     WebElement btnLogin;
     @FindBy(xpath = "//span[contains(text(), 'Account Logout')]")
     WebElement hdrAccLogout;
+    @FindBy(css = "#accountFrm_accountguest")
+    WebElement rdoGuestCheckout;
+
     public static By byLoginErrorLbl = By.cssSelector("div[class='alert alert-error alert-danger']");
 
     public LoginPage(WebDriver givenDriver){
@@ -48,4 +51,11 @@ public class LoginPage extends BasePage{
         btnContinueRegister.click();
         return new RegistrationPage(driver);
     }
+
+    public CheckoutPage clickGuestCheckout(){
+        rdoGuestCheckout.click();
+        btnContinueRegister.click();
+        return new CheckoutPage(driver);
+    }
+
 }

@@ -21,4 +21,10 @@ public class DataProviders {
         Object[][] data = ExcelFileReader.getTestData("login");
         return data;
     }
+
+    @DataProvider(name = "ExistingProducts")
+    public static Object[][] getExistingProducts(){
+        Object[][] data = ExcelFileReader.getTestData("products");
+        return data;
+    }
 }
