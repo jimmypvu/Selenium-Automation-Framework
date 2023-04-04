@@ -20,8 +20,12 @@ To run tests via Selenium Grid, download selenium-server-4.8.0.jar file and star
 
 To pass data via an Excel .xlsx file for running tests with large datasets, ie. login combinations, payment card and billing information, zip codes and locality/localization information, etc., place your .xlsx file into the .src/test/resrouces/testdata/ directory, declare a data provider method in dataproviders.DataProviders class, and annotate the test using @Test (dataProvider = "DataProviderName" dataProviderClass = DataProviders.class)
 
-Smoke Suite Example/Demo: <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/070c01d7eb3d431da6d0ef5260956312" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-Regression Suite Demo: <a href="https://www.loom.com/share/007bf31f02e4432b920cf9e9ec577da7">
-    <p>Regression Suite - Watch Video</p>
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/007bf31f02e4432b920cf9e9ec577da7-with-play.gif">
-  </a>
+Timestamped Extent Reports with screenshots are automatically generated after each run in ./reports folder
+
+Reports are attached with screenshot at failing test step along with logs and you can see which tests passed, failed, or were retried/skipped, can customize test graphs/charts as well
+
+Smoke Suite Example/Demo: Smoke Suite - Watch Video
+https://www.loom.com/share/070c01d7eb3d431da6d0ef5260956312
+
+Regression Suite Demo: Regression Suite - Watch Video
+https://www.loom.com/share/007bf31f02e4432b920cf9e9ec577da7
