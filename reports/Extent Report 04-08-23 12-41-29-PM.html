@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 7, 2023 05:45:23 PM</span></a>
+<a href="#"><span class="badge badge-primary">Apr 8, 2023 12:41:29 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,6 +72,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,9 +85,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">validGuestCheckout</p>
+            <p class="name">validUserCheckout</p>
             <p class="text-sm">
-              <span>5:45:24 PM</span> / <span>00:00:12:797</span>
+              <span>12:41:29 PM</span> / <span>00:00:10:090</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,15 +95,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validGuestCheckout</h5>
-<span class='badge badge-success'>04.07.2023 5:45:24 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:37 PM</span>
-<span class='badge badge-default'>00:00:12:797</span>
+<h5 class="test-status text-pass">validUserCheckout</h5>
+<span class='badge badge-success'>04.08.2023 12:41:29 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:39 PM</span>
+<span class='badge badge-default'>00:00:10:090</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">user should be able to checkout as a guest</div>
+<div class="m-t-10 m-l-5">registered and logged in user should be able to checkout</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -105,30 +111,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:37 PM</td>
+        <td>12:41:39 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.CheckoutTests // validGuestCheckout
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:37 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (null)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:37 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.CheckoutTests // validUserCheckout
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:37 PM</td>
+        <td>12:41:39 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:39 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (c88a466238970efc04f3178e2019924c)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:39 PM</td>
+        <td>
+          Thread ID: 28
         </td>
       </tr>
   </tbody>
@@ -141,9 +147,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">addItemToCartFromHomePage</p>
+            <p class="name">verifyAddToCartBtns</p>
             <p class="text-sm">
-              <span>5:45:24 PM</span> / <span>00:00:00:768</span>
+              <span>12:41:29 PM</span> / <span>00:00:00:778</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -151,15 +157,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">addItemToCartFromHomePage</h5>
-<span class='badge badge-success'>04.07.2023 5:45:24 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:25 PM</span>
-<span class='badge badge-default'>00:00:00:768</span>
+<h5 class="test-status text-pass">verifyAddToCartBtns</h5>
+<span class='badge badge-success'>04.08.2023 12:41:29 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:30 PM</span>
+<span class='badge badge-default'>00:00:00:778</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">user should be able to add an item to the cart</div>
+<div class="m-t-10 m-l-5">finds all broken product buttons on home page (buttons that redirect instead of add item to cart)</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -167,30 +173,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:25 PM</td>
+        <td>12:41:30 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.CartTests // addItemToCartFromHomePage
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:25 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (c7249f51e0e51c5230857cb5cb7a140c)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:25 PM</td>
-        <td>
-          Thread ID: 31
+            Functional Tests // org.jvu.tests.webtests.HomePageTests // verifyAddToCartBtns
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:25 PM</td>
+        <td>12:41:30 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:30 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (95f110bd1ed7d799068e79377aa2444e)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:30 PM</td>
+        <td>
+          Thread ID: 29
         </td>
       </tr>
   </tbody>
@@ -203,9 +209,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">validUserCheckout</p>
+            <p class="name">verifyCartTotal</p>
             <p class="text-sm">
-              <span>5:45:24 PM</span> / <span>00:00:10:670</span>
+              <span>12:41:29 PM</span> / <span>00:00:01:240</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -213,15 +219,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validUserCheckout</h5>
-<span class='badge badge-success'>04.07.2023 5:45:24 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:35 PM</span>
-<span class='badge badge-default'>00:00:10:670</span>
+<h5 class="test-status text-pass">verifyCartTotal</h5>
+<span class='badge badge-success'>04.08.2023 12:41:29 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:30 PM</span>
+<span class='badge badge-default'>00:00:01:240</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">registered and logged in user should be able to checkout</div>
+<div class="m-t-10 m-l-5">verify cart total updates as more items are added</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -229,30 +235,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
+        <td>12:41:30 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.CheckoutTests // validUserCheckout
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (2842f86a6b537161ce9833b7c49b3f54)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.CartTests // verifyCartTotal
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:35 PM</td>
+        <td>12:41:30 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:30 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (95f110bd1ed7d799068e79377aa2444e)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:30 PM</td>
+        <td>
+          Thread ID: 29
         </td>
       </tr>
   </tbody>
@@ -265,9 +271,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyAddToCartBtns</p>
+            <p class="name">addItemToCartFromHomePage</p>
             <p class="text-sm">
-              <span>5:45:25 PM</span> / <span>00:00:00:239</span>
+              <span>12:41:29 PM</span> / <span>00:00:00:957</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -275,15 +281,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyAddToCartBtns</h5>
-<span class='badge badge-success'>04.07.2023 5:45:25 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:25 PM</span>
-<span class='badge badge-default'>00:00:00:239</span>
+<h5 class="test-status text-pass">addItemToCartFromHomePage</h5>
+<span class='badge badge-success'>04.08.2023 12:41:29 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:30 PM</span>
+<span class='badge badge-default'>00:00:00:957</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">finds all broken product buttons on home page (buttons that redirect instead of add item to cart)</div>
+<div class="m-t-10 m-l-5">user should be able to add an item to the cart</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -291,30 +297,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:25 PM</td>
+        <td>12:41:30 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.HomePageTests // verifyAddToCartBtns
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:25 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (94e39f6665903289787fc268d364521b)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:25 PM</td>
-        <td>
-          Thread ID: 32
+            Functional Tests // org.jvu.tests.webtests.CartTests // addItemToCartFromHomePage
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:25 PM</td>
+        <td>12:41:30 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:30 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (95f110bd1ed7d799068e79377aa2444e)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:30 PM</td>
+        <td>
+          Thread ID: 29
         </td>
       </tr>
   </tbody>
@@ -327,9 +333,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">updateItemQuantity</p>
+            <p class="name">validGuestCheckout</p>
             <p class="text-sm">
-              <span>5:45:25 PM</span> / <span>00:00:03:464</span>
+              <span>12:41:29 PM</span> / <span>00:00:11:466</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -337,15 +343,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">updateItemQuantity</h5>
-<span class='badge badge-success'>04.07.2023 5:45:25 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:29 PM</span>
-<span class='badge badge-default'>00:00:03:464</span>
+<h5 class="test-status text-pass">validGuestCheckout</h5>
+<span class='badge badge-success'>04.08.2023 12:41:29 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:41 PM</span>
+<span class='badge badge-default'>00:00:11:466</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">user should be able to update item quantities in cart</div>
+<div class="m-t-10 m-l-5">user should be able to checkout as a guest</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -353,30 +359,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:29 PM</td>
+        <td>12:41:41 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.CartTests // updateItemQuantity
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:29 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (4ca75d347624918b41a93e36f9b88cb6)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:29 PM</td>
-        <td>
-          Thread ID: 32
+            Functional Tests // org.jvu.tests.webtests.CheckoutTests // validGuestCheckout
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:29 PM</td>
+        <td>12:41:41 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:41 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (5e00f8395da965858a88f983cd55716a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:41 PM</td>
+        <td>
+          Thread ID: 31
         </td>
       </tr>
   </tbody>
@@ -389,9 +395,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyCartTotal</p>
+            <p class="name">updateItemQuantity</p>
             <p class="text-sm">
-              <span>5:45:27 PM</span> / <span>00:00:00:766</span>
+              <span>12:41:29 PM</span> / <span>00:00:03:274</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -399,15 +405,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyCartTotal</h5>
-<span class='badge badge-success'>04.07.2023 5:45:27 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:28 PM</span>
-<span class='badge badge-default'>00:00:00:766</span>
+<h5 class="test-status text-pass">updateItemQuantity</h5>
+<span class='badge badge-success'>04.08.2023 12:41:29 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:32 PM</span>
+<span class='badge badge-default'>00:00:03:274</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">verify cart total updates as more items are added</div>
+<div class="m-t-10 m-l-5">user should be able to update item quantities in cart</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -415,30 +421,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:28 PM</td>
+        <td>12:41:32 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.CartTests // verifyCartTotal
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:28 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (c1fc039f6bdb54cdb4e767c01e16d5ba)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:28 PM</td>
-        <td>
-          Thread ID: 29
+            Functional Tests // org.jvu.tests.webtests.CartTests // updateItemQuantity
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:28 PM</td>
+        <td>12:41:32 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:32 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (c8fcbee29a7fd4470546b8c54f8e1c97)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:32 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -451,9 +457,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginEmptyPassword</p>
+            <p class="name">loginEmptyUsername</p>
             <p class="text-sm">
-              <span>5:45:28 PM</span> / <span>00:00:01:457</span>
+              <span>12:41:34 PM</span> / <span>00:00:01:679</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -461,15 +467,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginEmptyPassword</h5>
-<span class='badge badge-success'>04.07.2023 5:45:28 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:30 PM</span>
-<span class='badge badge-default'>00:00:01:457</span>
+<h5 class="test-status text-pass">loginEmptyUsername</h5>
+<span class='badge badge-success'>04.08.2023 12:41:34 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:36 PM</span>
+<span class='badge badge-default'>00:00:01:679</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">login with invalid credentials test - empty password</div>
+<div class="m-t-10 m-l-5">login with invalid credentials test - empty username</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -477,30 +483,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:30 PM</td>
+        <td>12:41:36 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // loginEmptyPassword
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:30 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (4e26560eac721ce3fdce01ab26aa9271)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:30 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // loginEmptyUsername
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:30 PM</td>
+        <td>12:41:36 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:36 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (ad46f4d10ac3601e9dfdb8bb1c0e06d5)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:36 PM</td>
+        <td>
+          Thread ID: 28
         </td>
       </tr>
   </tbody>
@@ -513,9 +519,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">loginEmptyPassword</p>
             <p class="text-sm">
-              <span>5:45:29 PM</span> / <span>00:00:01:523</span>
+              <span>12:41:35 PM</span> / <span>00:00:01:685</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -523,15 +529,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:29 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:31 PM</span>
-<span class='badge badge-default'>00:00:01:523</span>
+<h5 class="test-status text-pass">loginEmptyPassword</h5>
+<span class='badge badge-success'>04.08.2023 12:41:35 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:36 PM</span>
+<span class='badge badge-default'>00:00:01:685</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">login with invalid credentials test - empty password</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -539,30 +545,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:31 PM</td>
+        <td>12:41:36 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:31 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (4e26560eac721ce3fdce01ab26aa9271)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:31 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // loginEmptyPassword
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:31 PM</td>
+        <td>12:41:36 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:36 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (ad46f4d10ac3601e9dfdb8bb1c0e06d5)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:36 PM</td>
+        <td>
+          Thread ID: 28
         </td>
       </tr>
   </tbody>
@@ -575,9 +581,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginEmptyUsername</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:45:32 PM</span> / <span>00:00:01:493</span>
+              <span>12:41:35 PM</span> / <span>00:00:02:017</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -585,15 +591,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginEmptyUsername</h5>
-<span class='badge badge-success'>04.07.2023 5:45:32 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:34 PM</span>
-<span class='badge badge-default'>00:00:01:493</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:41:35 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:37 PM</span>
+<span class='badge badge-default'>00:00:02:017</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">login with invalid credentials test - empty username</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -601,30 +607,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:34 PM</td>
+        <td>12:41:37 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // loginEmptyUsername
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:34 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (d26c88a185202c8c3021c102991258b9)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:34 PM</td>
-        <td>
-          Thread ID: 28
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:34 PM</td>
+        <td>12:41:37 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:37 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (ad46f4d10ac3601e9dfdb8bb1c0e06d5)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:37 PM</td>
+        <td>
+          Thread ID: 28
         </td>
       </tr>
   </tbody>
@@ -639,7 +645,7 @@
           <div class="test-detail">
             <p class="name">loginInvalidPassword</p>
             <p class="text-sm">
-              <span>5:45:33 PM</span> / <span>00:00:01:867</span>
+              <span>12:41:36 PM</span> / <span>00:00:01:609</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -648,9 +654,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">loginInvalidPassword</h5>
-<span class='badge badge-success'>04.07.2023 5:45:33 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:35 PM</span>
-<span class='badge badge-default'>00:00:01:867</span>
+<span class='badge badge-success'>04.08.2023 12:41:36 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:38 PM</span>
+<span class='badge badge-default'>00:00:01:609</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -663,30 +669,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
+        <td>12:41:38 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // loginInvalidPassword
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (2842f86a6b537161ce9833b7c49b3f54)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // loginInvalidPassword
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:35 PM</td>
+        <td>12:41:38 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:38 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (34823d0cc79941263ab2335d6ef5c3fe)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:38 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -701,7 +707,7 @@
           <div class="test-detail">
             <p class="name">loginNonexistentUsername</p>
             <p class="text-sm">
-              <span>5:45:34 PM</span> / <span>00:00:01:671</span>
+              <span>12:41:40 PM</span> / <span>00:00:01:215</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -710,9 +716,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">loginNonexistentUsername</h5>
-<span class='badge badge-success'>04.07.2023 5:45:34 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:35 PM</span>
-<span class='badge badge-default'>00:00:01:671</span>
+<span class='badge badge-success'>04.08.2023 12:41:40 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:41 PM</span>
+<span class='badge badge-default'>00:00:01:215</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -725,30 +731,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
+        <td>12:41:41 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // loginNonexistentUsername
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (2842f86a6b537161ce9833b7c49b3f54)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:35 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // loginNonexistentUsername
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:35 PM</td>
+        <td>12:41:41 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:41 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (5e00f8395da965858a88f983cd55716a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:41 PM</td>
+        <td>
+          Thread ID: 31
         </td>
       </tr>
   </tbody>
@@ -761,9 +767,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">loginValidCredentials</p>
             <p class="text-sm">
-              <span>5:45:34 PM</span> / <span>00:00:01:733</span>
+              <span>12:41:40 PM</span> / <span>00:00:01:706</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -771,15 +777,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:34 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:36 PM</span>
-<span class='badge badge-default'>00:00:01:733</span>
+<h5 class="test-status text-pass">loginValidCredentials</h5>
+<span class='badge badge-success'>04.08.2023 12:41:40 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:42 PM</span>
+<span class='badge badge-default'>00:00:01:706</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">login with valid credentials test</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -787,30 +793,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:36 PM</td>
+        <td>12:41:42 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:36 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (2842f86a6b537161ce9833b7c49b3f54)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:36 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // loginValidCredentials
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:36 PM</td>
+        <td>12:41:42 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:42 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (1275e3fbd212cd8fb1f9bf6dc9255c8f)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:42 PM</td>
+        <td>
+          Thread ID: 30
         </td>
       </tr>
   </tbody>
@@ -823,9 +829,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginValidCredentials</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:45:38 PM</span> / <span>00:00:01:518</span>
+              <span>12:41:41 PM</span> / <span>00:00:01:480</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -833,15 +839,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginValidCredentials</h5>
-<span class='badge badge-success'>04.07.2023 5:45:38 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:39 PM</span>
-<span class='badge badge-default'>00:00:01:518</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:41:41 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:42 PM</span>
+<span class='badge badge-default'>00:00:01:480</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">login with valid credentials test</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -849,30 +855,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:39 PM</td>
+        <td>12:41:42 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // loginValidCredentials
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:39 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (49e3767f479d2813213f7a8c9903e236)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:39 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:39 PM</td>
+        <td>12:41:42 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:42 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (f13787db4aef62cb8c4ce8c2f823f5f6)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:42 PM</td>
+        <td>
+          Thread ID: 29
         </td>
       </tr>
   </tbody>
@@ -887,7 +893,7 @@
           <div class="test-detail">
             <p class="name">logoutSuccess</p>
             <p class="text-sm">
-              <span>5:45:38 PM</span> / <span>00:00:02:634</span>
+              <span>12:41:41 PM</span> / <span>00:00:02:782</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -896,9 +902,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">logoutSuccess</h5>
-<span class='badge badge-success'>04.07.2023 5:45:38 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:41 PM</span>
-<span class='badge badge-default'>00:00:02:634</span>
+<span class='badge badge-success'>04.08.2023 12:41:41 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:44 PM</span>
+<span class='badge badge-default'>00:00:02:782</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -911,30 +917,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:41 PM</td>
+        <td>12:41:44 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // logoutSuccess
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:41 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (8504bc5f431ff1109b577afadffafd8f)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:41 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.LoginTests // logoutSuccess
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:41 PM</td>
+        <td>12:41:44 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:44 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (0af93d552b23b6137b9aaf3750b51e4d)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:44 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -949,7 +955,7 @@
           <div class="test-detail">
             <p class="name">invalidRegistrationTests</p>
             <p class="text-sm">
-              <span>5:45:39 PM</span> / <span>00:00:04:999</span>
+              <span>12:41:43 PM</span> / <span>00:00:04:223</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -958,9 +964,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">invalidRegistrationTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:39 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:44 PM</span>
-<span class='badge badge-default'>00:00:04:999</span>
+<span class='badge badge-success'>04.08.2023 12:41:43 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:47 PM</span>
+<span class='badge badge-default'>00:00:04:223</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -973,30 +979,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:44 PM</td>
+        <td>12:41:47 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // invalidRegistrationTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:44 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (99f4f93c74790a4020e180f734202359)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:44 PM</td>
-        <td>
-          Thread ID: 29
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // invalidRegistrationTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:44 PM</td>
+        <td>12:41:47 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:47 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (c2b2502ffdbf2ce8c3cfabb73f314672)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:47 PM</td>
+        <td>
+          Thread ID: 28
         </td>
       </tr>
   </tbody>
@@ -1011,7 +1017,7 @@
           <div class="test-detail">
             <p class="name">registerEmailTaken</p>
             <p class="text-sm">
-              <span>5:45:39 PM</span> / <span>00:00:04:935</span>
+              <span>12:41:44 PM</span> / <span>00:00:04:556</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1020,9 +1026,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">registerEmailTaken</h5>
-<span class='badge badge-success'>04.07.2023 5:45:39 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:44 PM</span>
-<span class='badge badge-default'>00:00:04:935</span>
+<span class='badge badge-success'>04.08.2023 12:41:44 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:49 PM</span>
+<span class='badge badge-default'>00:00:04:556</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -1035,30 +1041,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:44 PM</td>
+        <td>12:41:49 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // registerEmailTaken
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:44 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (99f4f93c74790a4020e180f734202359)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:44 PM</td>
-        <td>
-          Thread ID: 29
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // registerEmailTaken
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:44 PM</td>
+        <td>12:41:49 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:49 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (1646c77e2fe9cbf57c46092b1f95a202)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:49 PM</td>
+        <td>
+          Thread ID: 31
         </td>
       </tr>
   </tbody>
@@ -1071,9 +1077,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">registerInvalidEmail</p>
             <p class="text-sm">
-              <span>5:45:39 PM</span> / <span>00:00:01:497</span>
+              <span>12:41:45 PM</span> / <span>00:00:04:755</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1081,15 +1087,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:39 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:41 PM</span>
-<span class='badge badge-default'>00:00:01:497</span>
+<h5 class="test-status text-pass">registerInvalidEmail</h5>
+<span class='badge badge-success'>04.08.2023 12:41:45 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:50 PM</span>
+<span class='badge badge-default'>00:00:04:755</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">invalid registration test - invalid email</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1097,30 +1103,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:41 PM</td>
+        <td>12:41:50 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:41 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (8504bc5f431ff1109b577afadffafd8f)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:41 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // registerInvalidEmail
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:41 PM</td>
+        <td>12:41:50 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:50 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (5dc1bef26ed8766dd59e87499d5fba44)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:50 PM</td>
+        <td>
+          Thread ID: 30
         </td>
       </tr>
   </tbody>
@@ -1133,9 +1139,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">registerInvalidEmail</p>
+            <p class="name">registerRequiredFieldsEmpty</p>
             <p class="text-sm">
-              <span>5:45:40 PM</span> / <span>00:00:05:218</span>
+              <span>12:41:46 PM</span> / <span>00:00:04:064</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1143,15 +1149,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">registerInvalidEmail</h5>
-<span class='badge badge-success'>04.07.2023 5:45:40 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:45 PM</span>
-<span class='badge badge-default'>00:00:05:218</span>
+<h5 class="test-status text-pass">registerRequiredFieldsEmpty</h5>
+<span class='badge badge-success'>04.08.2023 12:41:46 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:50 PM</span>
+<span class='badge badge-default'>00:00:04:064</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid registration test - invalid email</div>
+<div class="m-t-10 m-l-5">invalid registration test - required fields empty</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1159,30 +1165,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:45 PM</td>
+        <td>12:41:50 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // registerInvalidEmail
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:45 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (ad5a8782e2efe9141fde4c3cfc0c1575)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:45 PM</td>
-        <td>
-          Thread ID: 28
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // registerRequiredFieldsEmpty
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:45 PM</td>
+        <td>12:41:50 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:50 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (5dc1bef26ed8766dd59e87499d5fba44)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:50 PM</td>
+        <td>
+          Thread ID: 30
         </td>
       </tr>
   </tbody>
@@ -1195,9 +1201,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">registerRequiredFieldsEmpty</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:45:43 PM</span> / <span>00:00:04:706</span>
+              <span>12:41:46 PM</span> / <span>00:00:01:181</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1205,15 +1211,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">registerRequiredFieldsEmpty</h5>
-<span class='badge badge-success'>04.07.2023 5:45:43 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:48 PM</span>
-<span class='badge badge-default'>00:00:04:706</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:41:46 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:47 PM</span>
+<span class='badge badge-default'>00:00:01:181</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid registration test - required fields empty</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1221,30 +1227,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:48 PM</td>
+        <td>12:41:47 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // registerRequiredFieldsEmpty
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:48 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (950180c5b80a485a233d2f329b724cae)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:48 PM</td>
-        <td>
-          Thread ID: 31
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:48 PM</td>
+        <td>12:41:47 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:47 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (c2b2502ffdbf2ce8c3cfabb73f314672)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:47 PM</td>
+        <td>
+          Thread ID: 28
         </td>
       </tr>
   </tbody>
@@ -1257,9 +1263,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">registerUsernameTaken</p>
             <p class="text-sm">
-              <span>5:45:45 PM</span> / <span>00:00:01:151</span>
+              <span>12:41:47 PM</span> / <span>00:00:04:689</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1267,15 +1273,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:45 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:46 PM</span>
-<span class='badge badge-default'>00:00:01:151</span>
+<h5 class="test-status text-pass">registerUsernameTaken</h5>
+<span class='badge badge-success'>04.08.2023 12:41:47 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:52 PM</span>
+<span class='badge badge-default'>00:00:04:689</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">invalid registration test - username already taken</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1283,30 +1289,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:46 PM</td>
+        <td>12:41:52 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:46 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (ad5a8782e2efe9141fde4c3cfc0c1575)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:46 PM</td>
-        <td>
-          Thread ID: 28
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // registerUsernameTaken
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:46 PM</td>
+        <td>12:41:52 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:52 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (8a549f3463e25121861b6c34da8ea6e6)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:52 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -1319,9 +1325,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">registerUsernameTaken</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:45:45 PM</span> / <span>00:00:04:827</span>
+              <span>12:41:51 PM</span> / <span>00:00:01:271</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1329,15 +1335,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">registerUsernameTaken</h5>
-<span class='badge badge-success'>04.07.2023 5:45:45 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:50 PM</span>
-<span class='badge badge-default'>00:00:04:827</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:41:51 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:52 PM</span>
+<span class='badge badge-default'>00:00:01:271</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid registration test - username already taken</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1345,30 +1351,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:50 PM</td>
+        <td>12:41:52 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // registerUsernameTaken
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:50 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (0d366ec36c1f78a3f2cf00971ac122c3)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:50 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:50 PM</td>
+        <td>12:41:52 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:52 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (8a549f3463e25121861b6c34da8ea6e6)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:52 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -1383,7 +1389,7 @@
           <div class="test-detail">
             <p class="name">invalidRegistrationTests</p>
             <p class="text-sm">
-              <span>5:45:47 PM</span> / <span>00:00:04:343</span>
+              <span>12:41:51 PM</span> / <span>00:00:04:070</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1392,9 +1398,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">invalidRegistrationTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:47 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:52 PM</span>
-<span class='badge badge-default'>00:00:04:343</span>
+<span class='badge badge-success'>04.08.2023 12:41:51 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:55 PM</span>
+<span class='badge badge-default'>00:00:04:070</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -1407,30 +1413,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:52 PM</td>
+        <td>12:41:55 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // invalidRegistrationTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:52 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (b1600ee2a58374eda4997874e58ea4b3)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:52 PM</td>
-        <td>
-          Thread ID: 29
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // invalidRegistrationTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:52 PM</td>
+        <td>12:41:55 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:55 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (36a07ce74efb62b3b81f9a0ef7892853)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:55 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -1445,7 +1451,7 @@
           <div class="test-detail">
             <p class="name">registerValidInfo</p>
             <p class="text-sm">
-              <span>5:45:48 PM</span> / <span>00:00:04:973</span>
+              <span>12:41:52 PM</span> / <span>00:00:05:024</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1454,9 +1460,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">registerValidInfo</h5>
-<span class='badge badge-success'>04.07.2023 5:45:48 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:53 PM</span>
-<span class='badge badge-default'>00:00:04:973</span>
+<span class='badge badge-success'>04.08.2023 12:41:52 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:57 PM</span>
+<span class='badge badge-default'>00:00:05:024</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -1469,30 +1475,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:53 PM</td>
+        <td>12:41:57 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // registerValidInfo
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:53 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (b1600ee2a58374eda4997874e58ea4b3)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:53 PM</td>
-        <td>
-          Thread ID: 29
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // registerValidInfo
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:53 PM</td>
+        <td>12:41:57 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:57 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (ee623944cbe905a49de65399483fd63a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:57 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -1505,9 +1511,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">searchForExistingItems</p>
+            <p class="name">searchForInvalidItem</p>
             <p class="text-sm">
-              <span>5:45:49 PM</span> / <span>00:00:02:007</span>
+              <span>12:41:53 PM</span> / <span>00:00:01:668</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1515,15 +1521,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:45:49 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:51 PM</span>
-<span class='badge badge-default'>00:00:02:007</span>
+<h5 class="test-status text-pass">searchForInvalidItem</h5>
+<span class='badge badge-success'>04.08.2023 12:41:53 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:55 PM</span>
+<span class='badge badge-default'>00:00:01:668</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+<div class="m-t-10 m-l-5">search should not return any results if search term is not alphanumerical</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1531,30 +1537,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:51 PM</td>
+        <td>12:41:55 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:51 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (null)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:51 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForInvalidItem
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:51 PM</td>
+        <td>12:41:55 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:55 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (36a07ce74efb62b3b81f9a0ef7892853)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:55 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -1567,9 +1573,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:45:49 PM</span> / <span>00:00:01:276</span>
+              <span>12:41:53 PM</span> / <span>00:00:02:097</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1577,15 +1583,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:49 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:50 PM</span>
-<span class='badge badge-default'>00:00:01:276</span>
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.08.2023 12:41:53 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:55 PM</span>
+<span class='badge badge-default'>00:00:02:097</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1593,30 +1599,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:50 PM</td>
+        <td>12:41:55 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:50 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (0d366ec36c1f78a3f2cf00971ac122c3)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:50 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:50 PM</td>
+        <td>12:41:55 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:55 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (36a07ce74efb62b3b81f9a0ef7892853)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:55 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -1629,9 +1635,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">searchForInvalidItem</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:45:51 PM</span> / <span>00:00:01:741</span>
+              <span>12:41:56 PM</span> / <span>00:00:01:820</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1639,15 +1645,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">searchForInvalidItem</h5>
-<span class='badge badge-success'>04.07.2023 5:45:51 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:53 PM</span>
-<span class='badge badge-default'>00:00:01:741</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:41:56 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:58 PM</span>
+<span class='badge badge-default'>00:00:01:820</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">search should not return any results if search term is not alphanumerical</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1655,30 +1661,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:53 PM</td>
+        <td>12:41:58 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForInvalidItem
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:53 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (b1600ee2a58374eda4997874e58ea4b3)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:53 PM</td>
-        <td>
-          Thread ID: 29
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:53 PM</td>
+        <td>12:41:58 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:58 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (ee623944cbe905a49de65399483fd63a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:58 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -1693,7 +1699,7 @@
           <div class="test-detail">
             <p class="name">searchForValidItem</p>
             <p class="text-sm">
-              <span>5:45:53 PM</span> / <span>00:00:01:916</span>
+              <span>12:41:56 PM</span> / <span>00:00:02:170</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1702,9 +1708,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForValidItem</h5>
-<span class='badge badge-success'>04.07.2023 5:45:53 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:55 PM</span>
-<span class='badge badge-default'>00:00:01:916</span>
+<span class='badge badge-success'>04.08.2023 12:41:56 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:41:58 PM</span>
+<span class='badge badge-default'>00:00:02:170</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -1717,30 +1723,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:55 PM</td>
+        <td>12:41:58 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForValidItem
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:55 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (f89473bfaf5687e95b3b7bb8d8a030b9)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:55 PM</td>
-        <td>
-          Thread ID: 31
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForValidItem
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:55 PM</td>
+        <td>12:41:58 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:58 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (ee623944cbe905a49de65399483fd63a)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:41:58 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -1753,9 +1759,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:45:54 PM</span> / <span>00:00:01:237</span>
+              <span>12:41:59 PM</span> / <span>00:00:01:822</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1763,15 +1769,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:54 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:55 PM</span>
-<span class='badge badge-default'>00:00:01:237</span>
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.08.2023 12:41:59 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:01 PM</span>
+<span class='badge badge-default'>00:00:01:822</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1779,30 +1785,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:55 PM</td>
+        <td>12:42:01 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:55 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (f89473bfaf5687e95b3b7bb8d8a030b9)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:55 PM</td>
-        <td>
-          Thread ID: 31
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:55 PM</td>
+        <td>12:42:01 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:01 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (20a3b666785cb7e50b2e9417dcb3ba92)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:01 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -1815,9 +1821,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">searchForExistingItems</p>
+            <p class="name">invalidRegistrationTests</p>
             <p class="text-sm">
-              <span>5:45:54 PM</span> / <span>00:00:01:951</span>
+              <span>12:42:00 PM</span> / <span>00:00:03:837</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1825,15 +1831,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:45:54 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:56 PM</span>
-<span class='badge badge-default'>00:00:01:951</span>
+<h5 class="test-status text-pass">invalidRegistrationTests</h5>
+<span class='badge badge-success'>04.08.2023 12:42:00 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:04 PM</span>
+<span class='badge badge-default'>00:00:03:837</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+<div class="m-t-10 m-l-5">register with invalid info</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1841,30 +1847,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:56 PM</td>
+        <td>12:42:04 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:56 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (f89473bfaf5687e95b3b7bb8d8a030b9)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:56 PM</td>
-        <td>
-          Thread ID: 31
+            Functional Tests // org.jvu.tests.webtests.RegistrationTests // invalidRegistrationTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:56 PM</td>
+        <td>12:42:04 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:04 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (b1ac6c53a5819f9770f4ccb38e80e87c)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:04 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -1877,9 +1883,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidRegistrationTests</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:45:55 PM</span> / <span>00:00:03:732</span>
+              <span>12:42:01 PM</span> / <span>00:00:01:276</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1887,15 +1893,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidRegistrationTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:55 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:45:59 PM</span>
-<span class='badge badge-default'>00:00:03:732</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:42:01 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:02 PM</span>
+<span class='badge badge-default'>00:00:01:276</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">register with invalid info</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1903,30 +1909,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:59 PM</td>
+        <td>12:42:02 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.RegistrationTests // invalidRegistrationTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:59 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (a4133b4f4f6cb37e63e0f2b24cca988d)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:45:59 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:45:59 PM</td>
+        <td>12:42:02 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:02 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (d328cdf523e5d512e084d3ae5418aaa6)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:02 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -1939,9 +1945,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">invalidLoginTests</p>
+            <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:45:58 PM</span> / <span>00:00:01:123</span>
+              <span>12:42:04 PM</span> / <span>00:00:02:193</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1949,15 +1955,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:45:58 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:00 PM</span>
-<span class='badge badge-default'>00:00:01:123</span>
+<h5 class="test-status text-pass">searchForExistingItems</h5>
+<span class='badge badge-success'>04.08.2023 12:42:04 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:07 PM</span>
+<span class='badge badge-default'>00:00:02:193</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">invalid login tests</div>
+<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -1965,30 +1971,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:00 PM</td>
+        <td>12:42:07 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:00 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (a4133b4f4f6cb37e63e0f2b24cca988d)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:00 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:00 PM</td>
+        <td>12:42:07 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:07 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (null)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:07 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -2001,9 +2007,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">searchForExistingItems</p>
+            <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:46:00 PM</span> / <span>00:00:02:378</span>
+              <span>12:42:05 PM</span> / <span>00:00:01:116</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2011,15 +2017,15 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:00 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:02 PM</span>
-<span class='badge badge-default'>00:00:02:378</span>
+<h5 class="test-status text-pass">invalidLoginTests</h5>
+<span class='badge badge-success'>04.08.2023 12:42:05 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:06 PM</span>
+<span class='badge badge-default'>00:00:01:116</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
-<div class="m-t-10 m-l-5">searched item should be displayed in search resultsif only 1 result matched than user should be taken directly to item page</div>
+<div class="m-t-10 m-l-5">invalid login tests</div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -2027,30 +2033,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:02 PM</td>
+        <td>12:42:06 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:02 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (7ac0b6e26032042c5ab537c59b84fa6e)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:02 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:02 PM</td>
+        <td>12:42:06 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:06 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (b1ac6c53a5819f9770f4ccb38e80e87c)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:06 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -2065,7 +2071,7 @@
           <div class="test-detail">
             <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:46:03 PM</span> / <span>00:00:01:202</span>
+              <span>12:42:10 PM</span> / <span>00:00:01:202</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2074,8 +2080,8 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:46:03 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:04 PM</span>
+<span class='badge badge-success'>04.08.2023 12:42:10 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:11 PM</span>
 <span class='badge badge-default'>00:00:01:202</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
@@ -2089,30 +2095,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:04 PM</td>
+        <td>12:42:11 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:04 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (0bbc2f0da03afd2ea07bab09ef4300b3)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:04 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:04 PM</td>
+        <td>12:42:11 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:11 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (57d9e6a4e941fe197f1d57f5317b5ace)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:11 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2127,7 +2133,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:05 PM</span> / <span>00:00:02:768</span>
+              <span>12:42:10 PM</span> / <span>00:00:02:437</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2136,9 +2142,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:05 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:08 PM</span>
-<span class='badge badge-default'>00:00:02:768</span>
+<span class='badge badge-success'>04.08.2023 12:42:10 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:12 PM</span>
+<span class='badge badge-default'>00:00:02:437</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2151,30 +2157,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:08 PM</td>
+        <td>12:42:12 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:08 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (9aff874d007853a89d5382c651e05bbb)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:08 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:08 PM</td>
+        <td>12:42:12 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:12 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (3d1711f72d422d9faf4f7d276673efce)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:12 PM</td>
+        <td>
+          Thread ID: 32
         </td>
       </tr>
   </tbody>
@@ -2189,7 +2195,7 @@
           <div class="test-detail">
             <p class="name">invalidLoginTests</p>
             <p class="text-sm">
-              <span>5:46:08 PM</span> / <span>00:00:01:157</span>
+              <span>12:42:14 PM</span> / <span>00:00:01:143</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2198,9 +2204,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">invalidLoginTests</h5>
-<span class='badge badge-success'>04.07.2023 5:46:08 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:09 PM</span>
-<span class='badge badge-default'>00:00:01:157</span>
+<span class='badge badge-success'>04.08.2023 12:42:14 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:15 PM</span>
+<span class='badge badge-default'>00:00:01:143</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2213,30 +2219,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:09 PM</td>
+        <td>12:42:15 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.LoginTests // invalidLoginTests
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:09 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (9aff874d007853a89d5382c651e05bbb)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:09 PM</td>
-        <td>
-          Thread ID: 27
+            Functional Tests // org.jvu.tests.webtests.LoginTests // invalidLoginTests
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:09 PM</td>
+        <td>12:42:15 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:15 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (adb4e3768b177e5f3750238eaf6bd5a7)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:15 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2251,7 +2257,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:11 PM</span> / <span>00:00:02:143</span>
+              <span>12:42:15 PM</span> / <span>00:00:02:208</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2260,9 +2266,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:11 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:13 PM</span>
-<span class='badge badge-default'>00:00:02:143</span>
+<span class='badge badge-success'>04.08.2023 12:42:15 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:17 PM</span>
+<span class='badge badge-default'>00:00:02:208</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2275,30 +2281,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:13 PM</td>
+        <td>12:42:17 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:13 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (4a5dc2b7985debdf30bdcdc08227134d)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:13 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:13 PM</td>
+        <td>12:42:17 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:17 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (adb4e3768b177e5f3750238eaf6bd5a7)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:17 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2313,7 +2319,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:17 PM</span> / <span>00:00:01:786</span>
+              <span>12:42:21 PM</span> / <span>00:00:01:767</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2322,9 +2328,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:17 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:18 PM</span>
-<span class='badge badge-default'>00:00:01:786</span>
+<span class='badge badge-success'>04.08.2023 12:42:21 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:22 PM</span>
+<span class='badge badge-default'>00:00:01:767</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2337,30 +2343,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:18 PM</td>
+        <td>12:42:22 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:18 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (2dbcc2009d5b2e42950c411e9297e486)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:18 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:18 PM</td>
+        <td>12:42:22 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:22 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (05986f24ec3627f9b5b922b5ea2559b2)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:22 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2375,7 +2381,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:22 PM</span> / <span>00:00:02:222</span>
+              <span>12:42:25 PM</span> / <span>00:00:02:151</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2384,9 +2390,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:22 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:24 PM</span>
-<span class='badge badge-default'>00:00:02:222</span>
+<span class='badge badge-success'>04.08.2023 12:42:25 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:28 PM</span>
+<span class='badge badge-default'>00:00:02:151</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2399,30 +2405,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:24 PM</td>
+        <td>12:42:28 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:24 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (ee6cd360849dc57f81de8812fbd408f1)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:24 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:24 PM</td>
+        <td>12:42:28 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:28 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (1e903428a245c9ee067dc2e54bef86b1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:28 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2437,7 +2443,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:27 PM</span> / <span>00:00:02:149</span>
+              <span>12:42:31 PM</span> / <span>00:00:02:776</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2446,9 +2452,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:27 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:29 PM</span>
-<span class='badge badge-default'>00:00:02:149</span>
+<span class='badge badge-success'>04.08.2023 12:42:31 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:34 PM</span>
+<span class='badge badge-default'>00:00:02:776</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2461,30 +2467,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:29 PM</td>
+        <td>12:42:34 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:29 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (39498822c410cbe495ae655b7b669185)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:29 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:29 PM</td>
+        <td>12:42:34 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:34 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (6703566753116db35202637293f2b82f)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:34 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2499,7 +2505,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:32 PM</span> / <span>00:00:02:179</span>
+              <span>12:42:37 PM</span> / <span>00:00:02:170</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2508,9 +2514,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:32 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:34 PM</span>
-<span class='badge badge-default'>00:00:02:179</span>
+<span class='badge badge-success'>04.08.2023 12:42:37 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:39 PM</span>
+<span class='badge badge-default'>00:00:02:170</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2523,30 +2529,30 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:34 PM</td>
+        <td>12:42:39 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:34 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (e1790a50349b1b18ee048fe886a415bb)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:34 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:34 PM</td>
+        <td>12:42:39 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:39 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (c738a18666bd1ea8925f50d42c6b40f1)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:39 PM</td>
+        <td>
+          Thread ID: 27
         </td>
       </tr>
   </tbody>
@@ -2561,7 +2567,7 @@
           <div class="test-detail">
             <p class="name">searchForExistingItems</p>
             <p class="text-sm">
-              <span>5:46:38 PM</span> / <span>00:00:02:114</span>
+              <span>12:42:42 PM</span> / <span>00:00:02:152</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2570,9 +2576,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">searchForExistingItems</h5>
-<span class='badge badge-success'>04.07.2023 5:46:38 PM</span>
-<span class='badge badge-danger'>04.07.2023 5:46:40 PM</span>
-<span class='badge badge-default'>00:00:02:114</span>
+<span class='badge badge-success'>04.08.2023 12:42:42 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:44 PM</span>
+<span class='badge badge-default'>00:00:02:152</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -2585,30 +2591,107 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:40 PM</td>
+        <td>12:42:44 PM</td>
         <td>
-            Smoke // org.jvu.tests.webtests.SearchTests // searchForExistingItems
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:40 PM</td>
-        <td>
-          ChromeDriver: chrome on WINDOWS (08e249ff1057361b514ae6f65c9d84db)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>5:46:40 PM</td>
-        <td>
-          Thread ID: 30
+            Functional Tests // org.jvu.tests.webtests.SearchTests // searchForExistingItems
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:46:40 PM</td>
+        <td>12:42:44 PM</td>
         <td>
           Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:44 PM</td>
+        <td>
+          ChromeDriver: chrome on WINDOWS (92dcfb263ccea2f532b1a817889e5405)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:44 PM</td>
+        <td>
+          Thread ID: 27
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">getTest01</p>
+            <p class="text-sm">
+              <span>12:42:45 PM</span> / <span>00:00:02:503</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">getTest01</h5>
+<span class='badge badge-success'>04.08.2023 12:42:45 PM</span>
+<span class='badge badge-danger'>04.08.2023 12:42:47 PM</span>
+<span class='badge badge-default'>00:00:02:503</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:47 PM</td>
+        <td>
+          API Tests // org.jvu.tests.apitests.ListUsersTests // getTest01
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:42:47 PM</td>
+        <td>
+          Test passed!
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:42:47 PM</td>
+        <td>
+          API Tests // org.jvu.tests.apitests.ListUsersTests // getTest01
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:42:47 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "org.testng.ITestContext.getAttribute(String)" is null
+	at org.jvu.listeners.TestListener.onTestSuccess(TestListener.java:59)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:103)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -2625,18 +2708,67 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:42:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='42'>getTest01</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 7, 2023 05:45:23 PM</h3>
+<h3>Apr 8, 2023 12:41:29 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 7, 2023 05:46:40 PM</h3>
+<h3>Apr 8, 2023 12:42:47 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -2648,7 +2780,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -2664,12 +2796,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
+<div><small data-tooltip='97%'>
 <b>41</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='2%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -2687,10 +2819,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='25%'><b>41</b> events passed</small></div>
+<div><small data-tooltip='25%'><b>42</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>123</b> others
+<small data-tooltip='0%'><b>1</b> events failed,
+<b data-tooltip='%'>125</b> others
 </small>
 </div>
 </div>
@@ -2706,7 +2838,7 @@
 </div></div>
 <script>
 var timeline = {
-"validGuestCheckout":12.797,"addItemToCartFromHomePage":0.768,"validUserCheckout":10.67,"verifyAddToCartBtns":0.239,"updateItemQuantity":3.464,"verifyCartTotal":0.766,"loginEmptyPassword":1.457,"invalidLoginTests":1.523,"loginEmptyUsername":1.493,"loginInvalidPassword":1.867,"loginNonexistentUsername":1.671,"invalidLoginTests":1.733,"loginValidCredentials":1.518,"logoutSuccess":2.634,"invalidRegistrationTests":4.999,"registerEmailTaken":4.935,"invalidLoginTests":1.497,"registerInvalidEmail":5.218,"registerRequiredFieldsEmpty":4.706,"invalidLoginTests":1.151,"registerUsernameTaken":4.827,"invalidRegistrationTests":4.343,"registerValidInfo":4.973,"searchForExistingItems":2.007,"invalidLoginTests":1.276,"searchForInvalidItem":1.741,"searchForValidItem":1.916,"invalidLoginTests":1.237,"searchForExistingItems":1.951,"invalidRegistrationTests":3.732,"invalidLoginTests":1.123,"searchForExistingItems":2.378,"invalidLoginTests":1.202,"searchForExistingItems":2.768,"invalidLoginTests":1.157,"searchForExistingItems":2.143,"searchForExistingItems":1.786,"searchForExistingItems":2.222,"searchForExistingItems":2.149,"searchForExistingItems":2.179,"searchForExistingItems":2.114
+"validUserCheckout":10.09,"verifyAddToCartBtns":0.778,"verifyCartTotal":1.24,"addItemToCartFromHomePage":0.957,"validGuestCheckout":11.466,"updateItemQuantity":3.274,"loginEmptyUsername":1.679,"loginEmptyPassword":1.685,"invalidLoginTests":2.017,"loginInvalidPassword":1.609,"loginNonexistentUsername":1.215,"loginValidCredentials":1.706,"invalidLoginTests":1.48,"logoutSuccess":2.782,"invalidRegistrationTests":4.223,"registerEmailTaken":4.556,"registerInvalidEmail":4.755,"registerRequiredFieldsEmpty":4.064,"invalidLoginTests":1.181,"registerUsernameTaken":4.689,"invalidLoginTests":1.271,"invalidRegistrationTests":4.07,"registerValidInfo":5.024,"searchForInvalidItem":1.668,"searchForExistingItems":2.097,"invalidLoginTests":1.82,"searchForValidItem":2.17,"searchForExistingItems":1.822,"invalidRegistrationTests":3.837,"invalidLoginTests":1.276,"searchForExistingItems":2.193,"invalidLoginTests":1.116,"invalidLoginTests":1.202,"searchForExistingItems":2.437,"invalidLoginTests":1.143,"searchForExistingItems":2.208,"searchForExistingItems":1.767,"searchForExistingItems":2.151,"searchForExistingItems":2.776,"searchForExistingItems":2.17,"searchForExistingItems":2.152,"getTest01":2.503
 };
 </script>
 <div class="row">
@@ -2734,7 +2866,7 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 41,
-failParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -2750,11 +2882,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 41,
-failEvents: 0,
+passEvents: 42,
+failEvents: 1,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 123
+infoEvents: 125
 };
 </script>        </div>
       </div>

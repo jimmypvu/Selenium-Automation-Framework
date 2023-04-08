@@ -16,12 +16,12 @@
             </run>
         </groups>
         <classes>
-            <class name="org.jvu.tests.RegistrationTests" />
-            <class name="org.jvu.tests.LoginTests" />
-            <class name="org.jvu.tests.SearchTests" />
-            <class name="org.jvu.tests.CartTests" />
-            <class name="org.jvu.tests.CheckoutTests" />
-            <class name="org.jvu.tests.HomePageTests" />
+            <class name="org.jvu.tests.webtests.RegistrationTests" />
+            <class name="org.jvu.tests.webtests.LoginTests" />
+            <class name="org.jvu.tests.webtests.SearchTests" />
+            <class name="org.jvu.tests.webtests.CartTests" />
+            <class name="org.jvu.tests.webtests.CheckoutTests" />
+            <class name="org.jvu.tests.webtests.HomePageTests" />
         </classes>
     </test>
 </suite>

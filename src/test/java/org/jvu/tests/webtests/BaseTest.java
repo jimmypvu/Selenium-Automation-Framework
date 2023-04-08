@@ -1,6 +1,7 @@
-package org.jvu.tests;
+package org.jvu.tests.webtests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.jvu.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,18 +14,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Properties;
 
 public class BaseTest {
-    private static Properties config = new Properties();
 
     protected static String url;
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
@@ -38,16 +33,10 @@ public class BaseTest {
     @BeforeMethod(groups = {"setup"})
 //    @Parameters({"browser"})
     public void launchBrowser(/*String browser, */ITestContext context) throws MalformedURLException{
-        try (InputStream ip = getClass().getClassLoader().getResourceAsStream("configs/qa-env.properties")) {
-            config.load(ip);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        url = config.getProperty("url");
+        url = ConfigReader.getConfig("url");
 
 //        WebDriver threadDriver = setDriver(System.getProperty("browser"));
-        WebDriver threadDriver = setDriver(config.getProperty("browser"));
+        WebDriver threadDriver = setDriver(ConfigReader.getConfig("browser"));
         threadLocal.set(threadDriver);
 
         context.setAttribute("WebDriver", getDriver());
@@ -91,7 +80,13 @@ public class BaseTest {
                 eo.addArguments("--window-size=1920,1080");
                 return driver = new EdgeDriver(eo);
             case("grid-chrome"):
+                ChromeOptions cog = new ChromeOptions();
+                cog.addArguments("--remote-allow-origins=*");
+                cog.addArguments("--window-size=1920,1080");
+                cog.addArguments("--start-maximized");
+                cog.addArguments("--headless");
                 caps.setCapability("browser", "chrome");
+                caps.setCapability(ChromeOptions.CAPABILITY, cog);
                 return driver = new RemoteWebDriver(new URL(gridURL), caps);
             case("grid-firefox"):
                 caps.setCapability("browser", "firefox");

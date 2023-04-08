@@ -1,12 +1,9 @@
-package org.jvu.tests;
+package org.jvu.tests.webtests;
 
-import io.cucumber.java.bs.A;
 import org.jvu.pages.CartPage;
 import org.jvu.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.HashMap;
 
 public class CartTests extends BaseTest{
 
@@ -28,7 +25,7 @@ public class CartTests extends BaseTest{
         double itemPrice = hp.getItemPrice();
         double cartTotal = hp.getCartTotal();
 
-        Assert.assertEquals(cartTotal, itemPrice*1);
+        Assert.assertEquals(cartTotal, itemPrice*2);
     }
 
     @Test(description = "user should be able to update item quantities in cart", groups = {"web", "cart", "smoke", "regression"})

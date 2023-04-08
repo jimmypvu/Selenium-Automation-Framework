@@ -3,7 +3,7 @@ package org.jvu.extentreports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.jvu.tests.BaseTest;
+import org.jvu.tests.webtests.BaseTest;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

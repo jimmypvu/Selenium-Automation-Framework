@@ -9,8 +9,14 @@
     </listeners>
 
     <test name="Regression Tests" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
+        <groups>
+            <run>
+                <include name="setup" />
+                <include name="regression" />
+            </run>
+        </groups>
         <classes>
-            <class name="org.jvu.tests.RegistrationTests">
+            <class name="org.jvu.tests.webtests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                     <include name="registerInvalidEmail" />
@@ -20,7 +26,7 @@
                     <include name="invalidRegistrationTests" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.LoginTests">
+            <class name="org.jvu.tests.webtests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="loginEmptyUsername" />
@@ -31,7 +37,7 @@
                     <include name="invalidLoginTests" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.SearchTests">
+            <class name="org.jvu.tests.webtests.SearchTests">
                 <methods>
                     <include name="searchForValidItem" />
                     <include name="searchForExistingItems" />
@@ -39,20 +45,20 @@
                     <include name="searchItemWithATypo" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CartTests">
+            <class name="org.jvu.tests.webtests.CartTests">
                 <methods>
                     <include name="addItemToCartFromHomePage" />
                     <include name="verifyCartTotal" />
                     <include name="updateItemQuantity" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CheckoutTests">
+            <class name="org.jvu.tests.webtests.CheckoutTests">
                 <methods>
                     <include name="validUserCheckout" />
                     <include name="validGuestCheckout" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.HomePageTests">
+            <class name="org.jvu.tests.webtests.HomePageTests">
                 <methods>
                     <include name="verifyAddToCartBtns" />
                 </methods>

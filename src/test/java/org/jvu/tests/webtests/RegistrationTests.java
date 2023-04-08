@@ -1,4 +1,4 @@
-package org.jvu.tests;
+package org.jvu.tests.webtests;
 
 import org.jvu.dataproviders.DataProviders;
 import org.openqa.selenium.By;

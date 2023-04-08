@@ -8,8 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.jvu.tests.BaseTest;
-import org.testng.annotations.AfterGroups;
+import org.jvu.tests.webtests.BaseTest;
 
 import static org.jvu.extentreports.ExtentTestManager.getTest;
 import static org.jvu.extentreports.ExtentTestManager.startTest;

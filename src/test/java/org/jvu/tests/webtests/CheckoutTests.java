@@ -1,4 +1,4 @@
-package org.jvu.tests;
+package org.jvu.tests.webtests;
 
 import org.jvu.pages.*;
 import org.testng.Assert;

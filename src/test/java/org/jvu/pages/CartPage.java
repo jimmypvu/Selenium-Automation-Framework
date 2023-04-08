@@ -1,6 +1,5 @@
 package org.jvu.pages;
 
-import org.jvu.tests.CheckoutTests;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

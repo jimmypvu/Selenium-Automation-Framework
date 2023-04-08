@@ -11,29 +11,29 @@
     <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="org.jvu.tests.RegistrationTests">
+            <class name="org.jvu.tests.webtests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.LoginTests">
+            <class name="org.jvu.tests.webtests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="logoutSuccess" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.SearchTests">
+            <class name="org.jvu.tests.webtests.SearchTests">
                 <methods>
                     <include name="searchForValidItem" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CartTests">
+            <class name="org.jvu.tests.webtests.CartTests">
                 <methods>
                     <include name="addItemToCartFromHomePage" />
                     <include name="verifyCartTotal" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CheckoutTests">
+            <class name="org.jvu.tests.webtests.CheckoutTests">
                 <methods>
                     <include name="validUserCheckout" />
                 </methods>
@@ -44,29 +44,29 @@
     <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="org.jvu.tests.RegistrationTests">
+            <class name="org.jvu.tests.webtests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.LoginTests">
+            <class name="org.jvu.tests.webtests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="logoutSuccess" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.SearchTests">
+            <class name="org.jvu.tests.webtests.SearchTests">
                 <methods>
                     <include name="searchForValidItem" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CartTests">
+            <class name="org.jvu.tests.webtests.CartTests">
                 <methods>
                     <include name="addItemToCartFromHomePage" />
                     <include name="verifyCartTotal" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CheckoutTests">
+            <class name="org.jvu.tests.webtests.CheckoutTests">
                 <methods>
                     <include name="validUserCheckout" />
                 </methods>
@@ -77,29 +77,29 @@
     <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="MicrosoftEdge" />
         <classes>
-            <class name="org.jvu.tests.RegistrationTests">
+            <class name="org.jvu.tests.webtests.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.LoginTests">
+            <class name="org.jvu.tests.webtests.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="logoutSuccess" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.SearchTests">
+            <class name="org.jvu.tests.webtests.SearchTests">
                 <methods>
                     <include name="searchForValidItem" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CartTests">
+            <class name="org.jvu.tests.webtests.CartTests">
                 <methods>
                     <include name="addItemToCartFromHomePage" />
                     <include name="verifyCartTotal" />
                 </methods>
             </class>
-            <class name="org.jvu.tests.CheckoutTests">
+            <class name="org.jvu.tests.webtests.CheckoutTests">
                 <methods>
                     <include name="validUserCheckout" />
                 </methods>
