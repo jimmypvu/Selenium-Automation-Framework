@@ -8,7 +8,7 @@
         <listener class-name="org.jvu.listeners.AnnotationTransformer" />
     </listeners>
 
-    <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+    <test name="Chrome" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="org.jvu.tests.RegistrationTests">
@@ -41,7 +41,7 @@
         </classes>
     </test>
 
-    <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+    <test name="Firefox" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="org.jvu.tests.RegistrationTests">
@@ -74,7 +74,7 @@
         </classes>
     </test>
 
-    <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+    <test name="Edge" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <parameter name="browser" value="MicrosoftEdge" />
         <classes>
             <class name="org.jvu.tests.RegistrationTests">

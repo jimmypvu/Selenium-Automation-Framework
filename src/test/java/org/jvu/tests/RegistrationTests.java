@@ -11,7 +11,7 @@ import org.jvu.pages.RegistrationPage;
 
 public class RegistrationTests extends BaseTest{
 
-    @Test(description = "valid registration test", enabled = true)
+    @Test(description = "valid registration test", groups = {"web", "registration", "smoke", "regression"})
     public void registerValidInfo() {
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -27,7 +27,7 @@ public class RegistrationTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/success");
     }
 
-    @Test(description = "invalid registration test - invalid email", enabled = true)
+    @Test(description = "invalid registration test - invalid email", groups = {"web", "registration", "regression"})
     public void registerInvalidEmail(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -41,7 +41,7 @@ public class RegistrationTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 
-    @Test(description = "invalid registration test - email already taken", enabled = true)
+    @Test(description = "invalid registration test - email already taken", groups = {"web", "registration", "regression"})
     public void registerEmailTaken(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -54,7 +54,7 @@ public class RegistrationTests extends BaseTest{
 
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
-    @Test(description = "invalid registration test - username already taken", enabled = true)
+    @Test(description = "invalid registration test - username already taken", groups = {"web", "registration", "regression"})
     public void registerUsernameTaken(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -69,7 +69,7 @@ public class RegistrationTests extends BaseTest{
                 "This login name is not available. Try different login name!");
     }
 
-    @Test(description = "invalid registration test - required fields empty", enabled = true)
+    @Test(description = "invalid registration test - required fields empty", groups = {"web", "registration", "regression"})
     public void registerRequiredFieldsEmpty(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -82,7 +82,8 @@ public class RegistrationTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 
-    @Test(description = "register with invalid info", dataProvider = "InvalidRegistrations", dataProviderClass = DataProviders.class, enabled = true)
+    @Test(description = "register with invalid info", dataProvider = "InvalidRegistrations",
+            dataProviderClass = DataProviders.class,groups = {"web", "registration", "regression"})
     public void invalidRegistrationTests(String firstname, String lastname, String email, String address, String city, String state, String zip, String country, String username, String password){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();

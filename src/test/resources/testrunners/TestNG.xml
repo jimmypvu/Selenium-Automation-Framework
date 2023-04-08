@@ -8,8 +8,8 @@
         <listener class-name="org.jvu.listeners.AnnotationTransformer" />
     </listeners>
 
-    <test name="Chrome Tests" preserve-order="false" parallel="classes" thread-count="6" enabled="true">
-        <parameter name="browser" value="chrome" />
+    <test name="Chrome" preserve-order="false" parallel="classes" thread-count="6" enabled="true">
+<!--        <parameter name="browser" value="chrome" />-->
         <classes>
             <class name="org.jvu.tests.RegistrationTests" />
             <class name="org.jvu.tests.LoginTests" />
@@ -20,8 +20,19 @@
         </classes>
     </test>
 
-    <test name="Firefox Tests" preserve-order="false" parallel="classes" thread-count="3" enabled="false">
-        <parameter name="browser" value="firefox" />
+    <test name="API" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+        <groups>
+            <run>
+                <include name="api" />
+            </run>
+        </groups>
+        <classes>
+            <class name="org.jvu.tests.apitests.ListUsersTests" />
+        </classes>
+    </test>
+
+    <test name="Firefox" preserve-order="false" parallel="classes" thread-count="3" enabled="false">
+<!--        <parameter name="browser" value="firefox" />-->
         <classes>
             <class name="org.jvu.tests.RegistrationTests" />
             <class name="org.jvu.tests.LoginTests" />
@@ -32,8 +43,8 @@
         </classes>
     </test>
 
-    <test name="Edge Tests" preserve-order="false" parallel="classes" thread-count="3" enabled="false">
-        <parameter name="browser" value="MicrosoftEdge" />
+    <test name="Edge" preserve-order="false" parallel="classes" thread-count="3" enabled="false">
+<!--        <parameter name="browser" value="MicrosoftEdge" />-->
         <classes>
             <class name="org.jvu.tests.RegistrationTests" />
             <class name="org.jvu.tests.LoginTests" />

@@ -9,35 +9,19 @@
     </listeners>
 
     <test name="Smoke" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
+        <groups>
+            <run>
+                <include name="setup" />
+                <include name="smoke" />
+            </run>
+        </groups>
         <classes>
-            <class name="org.jvu.tests.RegistrationTests">
-                <methods>
-                    <include name="registerValidInfo" />
-                </methods>
-            </class>
-            <class name="org.jvu.tests.LoginTests">
-                <methods>
-                    <include name="loginValidCredentials" />
-                    <include name="logoutSuccess" />
-                </methods>
-            </class>
-            <class name="org.jvu.tests.SearchTests">
-                <methods>
-                    <include name="searchForValidItem" />
-                </methods>
-            </class>
-            <class name="org.jvu.tests.CartTests">
-                <methods>
-                    <include name="addItemToCartFromHomePage" />
-                    <include name="verifyCartTotal" />
-                </methods>
-            </class>
-            <class name="org.jvu.tests.CheckoutTests">
-                <methods>
-                    <include name="validUserCheckout" />
-                </methods>
-            </class>
+            <class name="org.jvu.tests.RegistrationTests" />
+            <class name="org.jvu.tests.LoginTests" />
+            <class name="org.jvu.tests.SearchTests" />
+            <class name="org.jvu.tests.CartTests" />
+            <class name="org.jvu.tests.CheckoutTests" />
+            <class name="org.jvu.tests.HomePageTests" />
         </classes>
-
     </test>
 </suite>

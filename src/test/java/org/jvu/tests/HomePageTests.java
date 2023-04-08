@@ -10,7 +10,8 @@ import java.util.List;
 public class HomePageTests extends BaseTest{
 
     //this example test will fail bc there are several broken buttons on the page
-    @Test(description = "finds all broken product buttons on home page (buttons that redirect instead of add item to cart)")
+    @Test(description = "finds all broken product buttons on home page (buttons that redirect instead of add item to cart)",
+            groups = {"web", "page", "homepage", "regression"})
     public void verifyAddToCartBtns(){
         HomePage hp = new HomePage(getDriver());
         List<WebElement> brokenBtns = hp.findBrokenBtns();

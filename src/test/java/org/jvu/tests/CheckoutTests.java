@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckoutTests extends BaseTest{
-    @Test(description = "registered and logged in user should be able to checkout")
+    @Test(description = "registered and logged in user should be able to checkout", groups = {"web", "checkout", "smoke", "regression"})
     public void validUserCheckout(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -21,7 +21,7 @@ public class CheckoutTests extends BaseTest{
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=checkout/success");
     }
 
-    @Test(description = "user should be able to checkout as a guest")
+    @Test(description = "user should be able to checkout as a guest", groups = {"web", "checkout", "regression"})
     public void validGuestCheckout(){
         HomePage hp = new HomePage(getDriver());
         hp.addAllItemsToCart();

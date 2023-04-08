@@ -8,7 +8,7 @@
 <!--        <listener class-name="org.jvu.listeners.AnnotationTransformer" />-->
 <!--    </listeners>-->
 
-    <test name="Cucumber Runner" preserve-order="false" parallel="false" thread-count="6" enabled="true">
+    <test name="Cucumber" preserve-order="false" parallel="false" thread-count="6" enabled="true">
         <classes>
             <class name="org.jvu.stepdefinitions.testrunner.CucumberRunner" />
         </classes>

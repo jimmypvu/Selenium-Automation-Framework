@@ -23,13 +23,13 @@ public class BaseTest {
     protected static final String URL = "https://automationteststore.com/";
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setContext(ITestContext context){
         context.setAttribute("WebDriver", getDriver());
         context.setAttribute("ThreadID", Thread.currentThread().getId());
     }
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"setup"})
     @Parameters({"browser"})
     public void launchBrowser(/*String browser*/) throws MalformedURLException{
         WebDriver threadDriver = setDriver(System.getProperty("browser"));
@@ -40,7 +40,7 @@ public class BaseTest {
         getDriver().get(URL);
     }
 
-    @AfterMethod
+    @AfterMethod(groups = {"setup"})
     public void tearDown(){
         getDriver().quit();
         threadLocal.remove();
@@ -64,14 +64,14 @@ public class BaseTest {
         switch(browser){
             case("firefox"):
                 FirefoxOptions fo = new FirefoxOptions();
-//                fo.addArguments("-width=1920");
-//                fo.addArguments("-height=1080");
-//                fo.addArguments("--headless");
+                fo.addArguments("-width=1920");
+                fo.addArguments("-height=1080");
+                fo.addArguments("--headless");
                 return driver = new FirefoxDriver(fo);
             case("MicrosoftEdge"):
                 EdgeOptions eo = new EdgeOptions();
-//                eo.addArguments("--headless=new");
-//                eo.addArguments("--window-size=1920,1080");
+                eo.addArguments("--headless=new");
+                eo.addArguments("--window-size=1920,1080");
                 return driver = new EdgeDriver(eo);
             case("grid-chrome"):
                 caps.setCapability("browser", "chrome");
@@ -88,9 +88,9 @@ public class BaseTest {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions co = new ChromeOptions();
                 co.addArguments("--remote-allow-origins=*");
-//                co.addArguments("--window-size=1920,1080");
-//                co.addArguments("--start-maximized");
-//                co.addArguments("--headless");
+                co.addArguments("--window-size=1920,1080");
+                co.addArguments("--start-maximized");
+                co.addArguments("--headless");
                 return driver = new ChromeDriver(co);
         }
     }

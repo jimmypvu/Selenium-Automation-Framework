@@ -9,6 +9,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.jvu.tests.BaseTest;
+import org.testng.annotations.AfterGroups;
 
 import static org.jvu.extentreports.ExtentTestManager.getTest;
 import static org.jvu.extentreports.ExtentTestManager.startTest;
@@ -26,7 +27,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context){
-        System.out.println(context.getName() + " finished!");
+        System.out.println(context.getName() + " tests finished!");
         ExtentReportManager.report.flush();
     }
 
@@ -35,13 +36,16 @@ public class TestListener extends BaseTest implements ITestListener {
 //        enable if you need screenshots saved to local machine
 //        String methodName = result.getName();
 //        Screenshotter.takeScreenshot(methodName);
-        String base64 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
-
         getTest().log(Status.INFO, result.getTestContext().getName() + " // " + result.getInstanceName() + " // " + result.getMethod().getMethodName());
-        getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
-        getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
-        getTest().log(Status.INFO, "Test failed at: ", MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
         getTest().fail(result.getThrowable());
+
+        if(!result.getTestContext().getName().toString().equals("API")){
+            String base64 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
+            getTest().log(Status.INFO, "Test failed at: ", MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
+
+            getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
+            getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
+        }
 
         System.out.println(result.getName() + " test failed");
     }
@@ -49,22 +53,29 @@ public class TestListener extends BaseTest implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result){
         getTest().log(Status.INFO, result.getTestContext().getName() + " // " + result.getInstanceName() + " // " + result.getMethod().getMethodName());
-        getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
-        getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         getTest().log(Status.PASS, "Test passed!");
+
+        if(!result.getTestContext().getName().toString().equals("API")){
+            getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
+            getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
+        }
 
         System.out.println(result.getName() + " test passed");
     }
 
     @Override
     public void onTestSkipped(ITestResult result){
+        System.out.println(result.getTestContext().getName());
         getTest().log(Status.INFO, result.getTestContext().getName() + " // " + result.getInstanceName() + " // " + result.getMethod().getMethodName());
-        getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
-        getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         getTest().log(Status.SKIP, "Test ignored / skipped / retried");
         getTest().log(Status.INFO, "Retried: " + result.wasRetried());
         if(!result.wasRetried()){
             getTest().log(Status.INFO, result.getThrowable());
+        }
+
+        if(!result.getTestContext().getName().toString().equals("API")){
+            getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
+            getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         }
     }
 

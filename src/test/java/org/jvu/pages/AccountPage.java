@@ -29,7 +29,6 @@ public class AccountPage extends BasePage{
     @FindBy(xpath = "//a[@class='active menu_home']")
     WebElement btnHomepage;
 
-
     public static By byAccLogoutHdr = By.xpath("//span[contains(text(), 'Account Logout')]");
     public static By byMyAccountHdr = By.xpath("//span/i[@class='fa fa-user']");
 
@@ -43,10 +42,10 @@ public class AccountPage extends BasePage{
     }
 
     public HomePage clickHomeBtn(){
-        pause(1000);
-        scrollIntoView(btnHomepage);
+//        pause(500);
+//        scrollIntoView(btnHomepage);
         btnHomepage.click();
-        pause(1000);
+        pause(500);
         return new HomePage(driver);
     }
 }

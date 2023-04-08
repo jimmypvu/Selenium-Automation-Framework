@@ -9,7 +9,7 @@ import org.jvu.pages.HomePage;
 import org.jvu.pages.LoginPage;
 
 public class LoginTests extends BaseTest {
-    @Test(description = "login with valid credentials test", enabled = true)
+    @Test(description = "login with valid credentials test", groups = {"web", "login", "smoke", "regression"})
     public void loginValidCredentials(){
         //sirtestsalot / 1234iTestMore!
         HomePage hp = new HomePage(getDriver());
@@ -22,7 +22,7 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/account");
     }
 
-    @Test(description = "login with invalid credentials test - empty username", enabled = true)
+    @Test(description = "login with invalid credentials test - empty username", groups = {"web", "login", "regression"})
     public void loginEmptyUsername(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -31,7 +31,7 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/login");
     }
 
-    @Test(description = "login with invalid credentials test - nonexistent username", enabled = true)
+    @Test(description = "login with invalid credentials test - nonexistent username", groups = {"web", "login", "regression"})
     public void loginNonexistentUsername(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -40,7 +40,7 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/login");
     }
 
-    @Test(description = "login with invalid credentials test - empty password", enabled = true)
+    @Test(description = "login with invalid credentials test - empty password", groups = {"web", "login", "regression"})
     public void loginEmptyPassword(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -49,7 +49,7 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/login");
     }
 
-    @Test(description = "login with invalid credentials test - incorrect password", enabled = true)
+    @Test(description = "login with invalid credentials test - incorrect password", groups = {"web", "login", "regression"})
     public void loginInvalidPassword(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -58,7 +58,7 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/login");
     }
 
-    @Test(description = "logout after successful login", enabled = true)
+    @Test(description = "logout after successful login", groups = {"web", "login", "regression"})
     public void logoutSuccess(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
@@ -71,7 +71,8 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/logout");
     }
 
-    @Test(description = "invalid login tests", dataProvider = "InvalidLogins", dataProviderClass = DataProviders.class, enabled = true)
+    @Test(description = "invalid login tests", dataProvider = "InvalidLogins",
+            dataProviderClass = DataProviders.class, groups = {"web", "login", "regression"})
     public void invalidLoginTests(String username, String password){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
