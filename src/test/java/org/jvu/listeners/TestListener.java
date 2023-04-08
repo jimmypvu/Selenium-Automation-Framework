@@ -65,7 +65,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result){
-        System.out.println(result.getTestContext().getName());
+        System.out.println(result.getTestContext().getName() + " tests skipped");
         getTest().log(Status.INFO, result.getTestContext().getName() + " // " + result.getInstanceName() + " // " + result.getMethod().getMethodName());
         getTest().log(Status.SKIP, "Test ignored / skipped / retried");
         getTest().log(Status.INFO, "Retried: " + result.wasRetried());

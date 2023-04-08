@@ -8,7 +8,7 @@
         <listener class-name="org.jvu.listeners.AnnotationTransformer" />
     </listeners>
 
-    <test name="Smoke" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
+    <test name="Smoke Tests" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
         <groups>
             <run>
                 <include name="setup" />

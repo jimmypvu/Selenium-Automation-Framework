@@ -15,29 +15,46 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Properties;
 
 public class BaseTest {
-    protected static final String URL = "https://automationteststore.com/";
+    private static Properties config = new Properties();
+
+    protected static String url;
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
-    @BeforeMethod(alwaysRun = true)
-    public void setContext(ITestContext context){
-        context.setAttribute("WebDriver", getDriver());
-        context.setAttribute("ThreadID", Thread.currentThread().getId());
-    }
+//    @BeforeMethod(alwaysRun = true)
+//    public void setContext(ITestContext context){
+//        context.setAttribute("WebDriver", getDriver());
+//        context.setAttribute("ThreadID", Thread.currentThread().getId());
+//    }
 
     @BeforeMethod(groups = {"setup"})
-    @Parameters({"browser"})
-    public void launchBrowser(/*String browser*/) throws MalformedURLException{
-        WebDriver threadDriver = setDriver(System.getProperty("browser"));
-//        WebDriver threadDriver = setDriver(browser);
+//    @Parameters({"browser"})
+    public void launchBrowser(/*String browser, */ITestContext context) throws MalformedURLException{
+        try (InputStream ip = getClass().getClassLoader().getResourceAsStream("configs/qa-env.properties")) {
+            config.load(ip);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        url = config.getProperty("url");
+
+//        WebDriver threadDriver = setDriver(System.getProperty("browser"));
+        WebDriver threadDriver = setDriver(config.getProperty("browser"));
         threadLocal.set(threadDriver);
 
+        context.setAttribute("WebDriver", getDriver());
+        context.setAttribute("ThreadID", Thread.currentThread().getId());
+
         manageBrowser();
-        getDriver().get(URL);
+        getDriver().get(url);
     }
 
     @AfterMethod(groups = {"setup"})
