@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83bc6fe0-bd74-424e-9fc9-a3b4b9b479a1" name="Changes" comment="" />
+    <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/reports/ExtentReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/ExtentReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/testrunner/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/runner/CucumberHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/testrunner/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/runner/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
