@@ -1,4 +1,4 @@
-package org.jvu.stepdefinitions.testrunner;
+package org.jvu.stepdefinitions.runner;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;

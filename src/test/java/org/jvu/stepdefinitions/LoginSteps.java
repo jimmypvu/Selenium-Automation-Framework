@@ -10,7 +10,7 @@ import org.jvu.pages.LoginPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import static org.jvu.stepdefinitions.testrunner.CucumberHooks.getCucumberDriver;
+import static org.jvu.stepdefinitions.runner.CucumberHooks.getCucumberDriver;
 
 public class LoginSteps {
     @Given("^user is on the login page$")
