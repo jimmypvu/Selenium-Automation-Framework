@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1051487e-e988-4657-8d43-964cc76cad5c" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Regression.xml" afterDir="false" />
+    <list default="true" id="1a0a0829-ddc9-479d-9d6c-11d29015a0e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/ExtentReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/ExtentReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/CucumberHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/testrunner/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/testrunner/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" afterDir="false" />
->>>>>>> Stashed changes
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,38 +49,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-<<<<<<< Updated upstream
-    "last_opened_file_path": "C:/Users/jimmy/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/2.0.6/bd0a88459dd8c99bb9d2474965c1aa36c7d66fb9/slf4j-nop-2.0.6.jar",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4275862",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-=======
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/jimmy/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/2.0.6/bd0a88459dd8c99bb9d2474965c1aa36c7d66fb9/slf4j-nop-2.0.6.jar",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4275862",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
->>>>>>> Stashed changes
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jimmy/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/2.0.6/bd0a88459dd8c99bb9d2474965c1aa36c7d66fb9/slf4j-nop-2.0.6.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4275862&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jimmy/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-nop/2.0.6/bd0a88459dd8c99bb9d2474965c1aa36c7d66fb9/slf4j-nop-2.0.6.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4275862&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jimmy\OneDrive\Desktop\code\QA-Automation-Framework\src\test\resources\testrunners" />
     </key>
   </component>
-<<<<<<< Updated upstream
-  <component name="RunManager" selected="Gradle.RegistrationTests">
-    <configuration name="RegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-=======
-  <component name="RunManager" selected="Gradle.LoginTests.logoutSuccess">
+  <component name="RunManager" selected="Cucumber Java.Scenario: User should be able to login successfully with valid credentials">
     <configuration name="Scenario: User should be able to login successfully with valid credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -122,7 +95,6 @@
       </method>
     </configuration>
     <configuration name="CucumberRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
->>>>>>> Stashed changes
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -135,11 +107,8 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-<<<<<<< Updated upstream
             <option value="&quot;tests.RegistrationTests&quot;" />
-=======
             <option value="&quot;org.jvu.stepdefinitions.testrunner.CucumberRunner&quot;" />
->>>>>>> Stashed changes
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,6 +116,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationTests.invalidRegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -170,6 +140,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationTests.registerInvalidEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -193,6 +164,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationTests.registerRequiredFieldsEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -216,6 +188,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationTests.registerValidInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -239,6 +212,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationTests.registerValidInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -267,19 +241,13 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< Updated upstream
-        <item itemvalue="Gradle.RegistrationTests" />
         <item itemvalue="Gradle.RegistrationTests.registerValidInfo" />
         <item itemvalue="Gradle.RegistrationTests.registerInvalidEmail" />
         <item itemvalue="Gradle.RegistrationTests.invalidRegistrationTests" />
         <item itemvalue="Gradle.RegistrationTests.registerRequiredFieldsEmpty" />
-=======
-        <item itemvalue="Gradle.LoginTests.logoutSuccess" />
-        <item itemvalue="Gradle.LoginTests.loginValidCredentials" />
         <item itemvalue="Gradle.RegistrationTests.registerValidInfo" />
         <item itemvalue="Cucumber Java.Scenario: User should be able to login successfully with valid credentials" />
         <item itemvalue="Gradle.CucumberRunner" />
->>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
