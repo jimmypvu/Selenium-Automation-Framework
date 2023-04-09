@@ -17,7 +17,7 @@ public class EdgeManager {
 
     public static EdgeOptions getEdgeOptions(){
         EdgeOptions eo = new EdgeOptions();
-        if(ConfigReader.getConfig("headless") == "true"){
+        if(ConfigReader.getConfig("headless").equals("true")){
             eo.addArguments("--headless=new");
             eo.addArguments("--window-size=1920,1080");
         }

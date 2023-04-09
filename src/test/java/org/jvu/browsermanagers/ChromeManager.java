@@ -19,7 +19,7 @@ public class ChromeManager {
     public static ChromeOptions getChromeOptions(){
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
-        if(ConfigReader.getConfig("headless") == "true"){
+        if(ConfigReader.getConfig("headless").equals("true")){
             co.addArguments("--window-size=1920,1080");
             co.addArguments("--start-maximized");
             co.addArguments("--headless");

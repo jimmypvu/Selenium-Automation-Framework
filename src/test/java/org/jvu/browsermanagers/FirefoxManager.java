@@ -18,7 +18,7 @@ public class FirefoxManager {
 
     public static FirefoxOptions getFirefoxOptions(){
         FirefoxOptions fo = new FirefoxOptions();
-        if(ConfigReader.getConfig("headless") == "true"){
+        if(ConfigReader.getConfig("headless").equals("true")){
             fo.addArguments("-width=1920");
             fo.addArguments("-height=1080");
             fo.addArguments("--headless");
