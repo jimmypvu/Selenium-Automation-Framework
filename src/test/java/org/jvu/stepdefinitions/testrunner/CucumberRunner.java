@@ -8,14 +8,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        plugin = {"pretty", "html:src/test/resources/reports/cucumberreport.html",
-                "json:src/test/resources/reports/cucumberreport.json"},
-        features = {"src/test/resources/features/"},
+        plugin = {"html:src/test/resources/reports/cucumberreport.html",
+                "json:src/test/resources/reports/cucumberreport.json", "pretty"},
+        features = {"src/test/resources/features/Login.feature"},
         glue = {"org.jvu.stepdefinitions"},
         tags = "@smoke or @regression or @e2e"
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
-
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass(alwaysRun = true)
@@ -32,4 +31,5 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     public void tearDown(){
         testNGCucumberRunner.finish();
     }
+
 }

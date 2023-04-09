@@ -1,9 +1,9 @@
-package org.jvu.extentreports;
+package org.framework.extentreports;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.jvu.tests.webtests.BaseTest;
+import org.framework.BaseTest;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

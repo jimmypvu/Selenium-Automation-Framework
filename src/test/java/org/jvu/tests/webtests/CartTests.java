@@ -1,11 +1,12 @@
 package org.jvu.tests.webtests;
 
+import org.framework.BaseTest;
 import org.jvu.pages.CartPage;
 import org.jvu.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CartTests extends BaseTest{
+public class CartTests extends BaseTest {
 
     @Test(description = "user should be able to add an item to the cart", groups = {"web", "cart", "smoke", "regression"})
     public void addItemToCartFromHomePage(){

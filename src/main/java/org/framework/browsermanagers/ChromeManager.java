@@ -1,7 +1,7 @@
-package org.jvu.browsermanagers;
+package org.framework.browsermanagers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.jvu.utils.ConfigReader;
+import org.framework.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

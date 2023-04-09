@@ -1,6 +1,6 @@
 package org.jvu.dataproviders;
 
-import org.jvu.utils.ExcelFileReader;
+import org.framework.utils.ExcelFileReader;
 import org.testng.annotations.DataProvider;
 
 public class DataProviders {

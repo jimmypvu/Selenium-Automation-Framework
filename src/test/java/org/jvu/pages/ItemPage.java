@@ -1,11 +1,12 @@
 package org.jvu.pages;
 
+import org.framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ItemPage extends BasePage{
+public class ItemPage extends BasePage {
     @FindBy(css = "h1.productname")
     WebElement hdrProductName;
     @FindBy(css = "#product_quantity")

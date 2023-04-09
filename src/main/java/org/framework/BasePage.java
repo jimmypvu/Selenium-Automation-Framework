@@ -1,4 +1,4 @@
-package org.jvu.pages;
+package org.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

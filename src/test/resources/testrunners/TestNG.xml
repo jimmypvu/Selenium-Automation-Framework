@@ -4,8 +4,8 @@
 <suite name="TestNG" parallel="classes" thread-count="3">
 
     <listeners>
-        <listener class-name="org.jvu.listeners.TestListener" />
-        <listener class-name="org.jvu.listeners.AnnotationTransformer" />
+        <listener class-name="org.framework.listeners.TestListener" />
+        <listener class-name="org.framework.listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="Functional Tests" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
