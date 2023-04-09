@@ -36,7 +36,7 @@ public class CartTests extends BaseTest{
         Assert.assertEquals(itemCount, 3);
 
         CartPage cp = hp.clickCartBtn();
-        int newItemCount = cp.updateQuantity("1").getQuantity();
+        int newItemCount = cp.updateQuantity(1).getQuantity();
 
         Assert.assertTrue(newItemCount == 1);
         Assert.assertTrue(newItemCount < itemCount);

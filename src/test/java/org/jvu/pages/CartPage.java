@@ -1,6 +1,5 @@
 package org.jvu.pages;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,9 +17,10 @@ public class CartPage extends BasePage{
         super(givenDriver);
     }
 
-    public CartPage updateQuantity(String num){
-        txtItemQuantity.sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.DELETE));
-        txtItemQuantity.sendKeys(num);
+    public CartPage updateQuantity(int qt){
+//        txtItemQuantity.sendKeys(Keys.chord(Keys.CONTROL, "A", Keys.DELETE));
+        txtItemQuantity.clear();
+        txtItemQuantity.sendKeys(String.valueOf(qt));
         btnUpdateCart.click();
         return this;
     }

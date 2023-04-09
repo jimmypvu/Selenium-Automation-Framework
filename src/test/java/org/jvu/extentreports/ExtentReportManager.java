@@ -16,8 +16,8 @@ public class ExtentReportManager extends BaseTest {
         LocalDateTime time = LocalDateTime.now();
         String timestamp = dtf.format(time);
 
-        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Extent Report " + timestamp + ".html");
-//        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/ExtentReport.html");
+//        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Extent Report " + timestamp + ".html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/ExtentReport.html");
         spark.config().setDocumentTitle("Extent Reports - Automation Report");
         spark.config().setReportName("Automation Report");
         spark.config().setTheme(Theme.DARK);

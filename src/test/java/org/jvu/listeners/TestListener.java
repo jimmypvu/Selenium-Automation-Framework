@@ -2,6 +2,7 @@ package org.jvu.listeners;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.Media;
 import org.jvu.extentreports.ExtentReportManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -38,7 +39,7 @@ public class TestListener extends BaseTest implements ITestListener {
         getTest().log(Status.INFO, result.getTestContext().getName() + " // " + result.getInstanceName() + " // " + result.getMethod().getMethodName());
         getTest().fail(result.getThrowable());
 
-        if(!result.getTestContext().getName().toString().equals("API")){
+        if(!result.getTestContext().getName().toString().contains("API")){
             String base64 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
             getTest().log(Status.INFO, "Test failed at: ", MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
 
@@ -53,8 +54,9 @@ public class TestListener extends BaseTest implements ITestListener {
     public void onTestSuccess(ITestResult result){
         getTest().log(Status.INFO, result.getTestContext().getName() + " // " + result.getInstanceName() + " // " + result.getMethod().getMethodName());
         getTest().log(Status.PASS, "Test passed!");
+        getTest().log(Status.INFO, result.getThrowable());
 
-        if(!result.getTestContext().getName().toString().equals("API")){
+        if(!result.getTestContext().getName().toString().contains("API")){
             getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
             getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         }
@@ -72,7 +74,7 @@ public class TestListener extends BaseTest implements ITestListener {
             getTest().log(Status.INFO, result.getThrowable());
         }
 
-        if(!result.getTestContext().getName().toString().equals("API")){
+        if(!result.getTestContext().getName().toString().contains("API")){
             getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
             getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         }

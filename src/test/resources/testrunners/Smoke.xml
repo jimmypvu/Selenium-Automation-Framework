@@ -24,4 +24,16 @@
             <class name="org.jvu.tests.webtests.HomePageTests" />
         </classes>
     </test>
+
+    <test name="API Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+        <groups>
+            <run>
+                <include name="api" />
+            </run>
+        </groups>
+        <classes>
+            <class name="org.jvu.tests.apitests.ListUsersTests" />
+        </classes>
+    </test>
+
 </suite>
