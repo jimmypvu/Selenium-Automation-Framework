@@ -61,7 +61,7 @@ public class HomePage extends BasePage{
     }
 
     public SearchPage searchItem(String item){
-//        txtSearchBar.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+        txtSearchBar.clear();
         txtSearchBar.sendKeys(item);
         txtSearchBar.sendKeys(Keys.ENTER);
         pause(1000);
@@ -75,6 +75,7 @@ public class HomePage extends BasePage{
 
     public CartPage clickCartBtn(){
         btnCheckout.click();
+        pause(500);
         return new CartPage(driver);
     }
 

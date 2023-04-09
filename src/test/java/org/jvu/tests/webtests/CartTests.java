@@ -5,6 +5,8 @@ import org.jvu.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
+
 public class CartTests extends BaseTest{
 
     @Test(description = "user should be able to add an item to the cart", groups = {"web", "cart", "smoke", "regression"})
@@ -33,6 +35,7 @@ public class CartTests extends BaseTest{
         HomePage hp = new HomePage(getDriver());
         hp.addFeaturedItemToCart().addFeaturedItemToCart().addFeaturedItemToCart();
         int itemCount = hp.getItemCount();
+
         Assert.assertEquals(itemCount, 3);
 
         CartPage cp = hp.clickCartBtn();

@@ -11,10 +11,10 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -26,11 +26,11 @@ public class BaseTest {
 
     @BeforeMethod(groups = {"setup"})
 //    @Parameters({"browser"})
-    public void launchBrowser(/*String browser, */ITestContext context) throws MalformedURLException {
+    public void launchBrowser(/*String browser, */ITestContext context, Method method) throws MalformedURLException {
         url = ConfigReader.getConfig("url");
 
 //        WebDriver threadDriver = setDriver(System.getProperty("browser"));
-        WebDriver threadDriver = setDriver(ConfigReader.getConfig("browser"));
+        WebDriver threadDriver = setDriver(ConfigReader.getConfig("browser"), method);
         threadLocal.set(threadDriver);
 
         context.setAttribute("WebDriver", getDriver());
@@ -55,7 +55,7 @@ public class BaseTest {
         getDriver().manage().deleteAllCookies();
     }
 
-    public WebDriver setDriver(String browser) throws MalformedURLException {
+    public WebDriver setDriver(String browser, Method method) throws MalformedURLException {
         WebDriver driver;
         DesiredCapabilities caps = new DesiredCapabilities();
         //java -jar selenium-server-4.8.0.jar standalone
@@ -79,13 +79,13 @@ public class BaseTest {
                 caps.setCapability(EdgeOptions.CAPABILITY, eo);
                 return driver = new RemoteWebDriver(new URL(gridURL), caps);
             case("lt-cloud"):
-                return driver = lambdaTest();
+                return driver = lambdaTest(method);
             default:
                 return driver = ChromeManager.getChromeDriver();
         }
     }
 
-    public WebDriver lambdaTest() throws MalformedURLException {
+    public WebDriver lambdaTest(Method method) throws MalformedURLException {
         String hubURL = "https://jimmyphuvu:vLyH3mPwllnH1jK7WzIZivcOoyQig2omkXsDZs0x4HnBP3IgVs@hub.lambdatest.com/wd/hub";
 
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -96,10 +96,11 @@ public class BaseTest {
         ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
         ltOptions.put("build", "Safari Tests");   //build name
         ltOptions.put("platformName", "MacOS Ventura");
-        ltOptions.put("name", this.getClass().getName());   //test name
+//        ltOptions.put("name", this.getClass().getName());   //test name
+        ltOptions.put("name", method.getName());   //test name
         ltOptions.put("video", true);   //enable video recording
         ltOptions.put("network", true); //enable network logging
-        ltOptions.put("seCdp", true);   //chrome performance logs
+        ltOptions.put("seCdp", true);   //selenium cdp for stability
         ltOptions.put("console", "true");   //enable console debugging
         ltOptions.put("w3c", true);
         ltOptions.put("selenium_version", "4.7.0");

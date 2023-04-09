@@ -26,6 +26,7 @@ public class CartPage extends BasePage{
     }
 
     public int getQuantity(){
+        pause(500);
         return Integer.parseInt(txtItemQuantity.getAttribute("value"));
     }
 
