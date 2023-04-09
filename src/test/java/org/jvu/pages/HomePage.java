@@ -1,5 +1,6 @@
 package org.jvu.pages;
 
+import org.framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
     @FindBy(xpath = "//a[contains(text(), 'Login or register')]")
     WebElement btnLoginRegister;
     @FindBy(xpath = "//a[@class='active menu_home']")

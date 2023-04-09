@@ -1,5 +1,6 @@
 package org.jvu.tests.webtests;
 
+import org.framework.BaseTest;
 import org.jvu.dataproviders.DataProviders;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,7 @@ import org.jvu.pages.HomePage;
 import org.jvu.pages.LoginPage;
 import org.jvu.pages.RegistrationPage;
 
-public class RegistrationTests extends BaseTest{
+public class RegistrationTests extends BaseTest {
 
     @Test(description = "valid registration test", groups = {"web", "registration", "smoke", "regression"})
     public void registerValidInfo() {

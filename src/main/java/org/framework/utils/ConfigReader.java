@@ -1,4 +1,4 @@
-package org.jvu.utils;
+package org.framework.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

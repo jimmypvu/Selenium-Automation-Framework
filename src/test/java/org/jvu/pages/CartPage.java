@@ -1,10 +1,11 @@
 package org.jvu.pages;
 
+import org.framework.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CartPage extends BasePage{
+public class CartPage extends BasePage {
 //    public static By byCartQuantityTxt = By.cssSelector("input[id^='cart_quantity']");
     @FindBy(css = "input[id='cart_quantity50']")
     WebElement txtItemQuantity;

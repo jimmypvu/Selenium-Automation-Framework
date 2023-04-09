@@ -1,5 +1,6 @@
 package org.jvu.tests.webtests;
 
+import org.framework.BaseTest;
 import org.jvu.dataproviders.DataProviders;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

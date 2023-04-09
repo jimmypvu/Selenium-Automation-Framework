@@ -1,4 +1,4 @@
-package org.jvu.extentreports;
+package org.framework.extentreports;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

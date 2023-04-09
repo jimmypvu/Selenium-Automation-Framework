@@ -1,5 +1,6 @@
 package org.jvu.tests.webtests;
 
+import org.framework.BaseTest;
 import org.jvu.pages.HomePage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class HomePageTests extends BaseTest{
+public class HomePageTests extends BaseTest {
 
     //this example test will fail bc there are several broken buttons on the page **fixed to pass for now**
     @Test(description = "finds all broken product buttons on home page (buttons that redirect instead of add item to cart)",

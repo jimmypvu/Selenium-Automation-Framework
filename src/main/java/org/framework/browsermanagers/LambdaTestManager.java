@@ -1,4 +1,4 @@
-package org.jvu.browsermanagers;
+package org.framework.browsermanagers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;

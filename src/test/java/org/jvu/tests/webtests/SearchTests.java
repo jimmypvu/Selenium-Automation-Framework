@@ -1,5 +1,6 @@
 package org.jvu.tests.webtests;
 
+import org.framework.BaseTest;
 import org.jvu.dataproviders.DataProviders;
 import org.jvu.pages.HomePage;
 import org.jvu.pages.SearchPage;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import static org.jvu.pages.RegistrationPage.genString;
 
-public class SearchTests extends BaseTest{
+public class SearchTests extends BaseTest {
     @Test(description = "user should see matching search results for an item/keyword searched", groups = {"web", "search", "smoke", "regression"})
     public void searchForValidItem(){
         HomePage hp = new HomePage(getDriver());

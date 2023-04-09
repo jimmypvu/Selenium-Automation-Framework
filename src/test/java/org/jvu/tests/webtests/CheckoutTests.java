@@ -1,10 +1,11 @@
 package org.jvu.tests.webtests;
 
+import org.framework.BaseTest;
 import org.jvu.pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckoutTests extends BaseTest{
+public class CheckoutTests extends BaseTest {
     @Test(description = "registered and logged in user should be able to checkout", groups = {"web", "checkout", "smoke", "regression"})
     public void validUserCheckout(){
         HomePage hp = new HomePage(getDriver());

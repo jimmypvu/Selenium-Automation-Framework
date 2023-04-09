@@ -4,8 +4,8 @@
 <suite name="Crossbrowser Suite" parallel="tests" thread-count="3" data-provider-thread-count="3">
 
     <listeners>
-        <listener class-name="org.jvu.listeners.TestListener" />
-        <listener class-name="org.jvu.listeners.AnnotationTransformer" />
+        <listener class-name="org.framework.listeners.TestListener" />
+        <listener class-name="org.framework.listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">

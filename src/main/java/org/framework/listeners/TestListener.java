@@ -1,18 +1,17 @@
-package org.jvu.listeners;
+package org.framework.listeners;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.Media;
-import org.jvu.extentreports.ExtentReportManager;
+import org.framework.extentreports.ExtentReportManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.jvu.tests.webtests.BaseTest;
+import org.framework.BaseTest;
 
-import static org.jvu.extentreports.ExtentTestManager.getTest;
-import static org.jvu.extentreports.ExtentTestManager.startTest;
+import static org.framework.extentreports.ExtentTestManager.getTest;
+import static org.framework.extentreports.ExtentTestManager.startTest;
 
 public class TestListener extends BaseTest implements ITestListener {
     @Override

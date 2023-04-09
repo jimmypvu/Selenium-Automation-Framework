@@ -1,5 +1,6 @@
 package org.jvu.pages;
 
+import org.framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.Random;
 
-public class RegistrationPage extends BasePage{
+public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//input[@name='firstname']")
     WebElement txtFirstName;
     @FindBy(xpath = "//input[@name='lastname']")

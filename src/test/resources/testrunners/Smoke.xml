@@ -4,8 +4,8 @@
 <suite name="Smoke Suite" parallel="methods" thread-count="3">
 
     <listeners>
-        <listener class-name="org.jvu.listeners.TestListener" />
-        <listener class-name="org.jvu.listeners.AnnotationTransformer" />
+        <listener class-name="org.framework.listeners.TestListener" />
+        <listener class-name="org.framework.listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="Smoke Tests" preserve-order="false" parallel="methods" thread-count="4" enabled="true">

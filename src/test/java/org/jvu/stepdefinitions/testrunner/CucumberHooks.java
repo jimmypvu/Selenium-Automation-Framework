@@ -1,4 +1,4 @@
-package org.jvu.stepdefinitions;
+package org.jvu.stepdefinitions.testrunner;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
@@ -28,7 +26,9 @@ public class CucumberHooks {
         WebDriverManager.chromedriver().setup();
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
-                co.addArguments("--headless");
+        co.addArguments("--headless");
+        co.addArguments("--window-size=1920,1080");
+        co.addArguments("--start-maximized");
         driver = new ChromeDriver(co);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -41,7 +41,7 @@ public class CucumberHooks {
         driver.get(URL);
     }
 
-    public static WebDriver getDriver(){
+    public static WebDriver getCucumberDriver(){
         return driver;
     }
 

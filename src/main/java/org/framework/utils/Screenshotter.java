@@ -1,6 +1,6 @@
-package org.jvu.utils;
+package org.framework.utils;
 
-import org.jvu.tests.webtests.BaseTest;
+import org.framework.BaseTest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;

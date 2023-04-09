@@ -1,5 +1,6 @@
 package org.jvu.pages;
 
+import org.framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchPage extends BasePage{
+public class SearchPage extends BasePage {
     @FindBy(xpath = "//h4[contains(text(),'Products meeting the search criteria')]")
     WebElement hdrSearchResults;
     @FindBy(xpath = "//div[contains(text(),'There is no product that matches the search criteria')]")

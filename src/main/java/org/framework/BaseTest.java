@@ -1,9 +1,9 @@
-package org.jvu.tests.webtests;
+package org.framework;
 
-import org.jvu.browsermanagers.ChromeManager;
-import org.jvu.browsermanagers.EdgeManager;
-import org.jvu.browsermanagers.FirefoxManager;
-import org.jvu.utils.ConfigReader;
+import org.framework.browsermanagers.ChromeManager;
+import org.framework.browsermanagers.EdgeManager;
+import org.framework.browsermanagers.FirefoxManager;
+import org.framework.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static org.jvu.browsermanagers.LambdaTestManager.lambdaTest;
+import static org.framework.browsermanagers.LambdaTestManager.lambdaTest;
 
 public class BaseTest {
 

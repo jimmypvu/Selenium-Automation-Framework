@@ -1,11 +1,12 @@
 package org.jvu.pages;
 
+import org.framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AccountPage extends BasePage{
+public class AccountPage extends BasePage {
     @FindBy(xpath = "//span/i[@class='fa fa-user']")
     WebElement hdrMyAccount;
     @FindBy(xpath = "//a[@data-original-title = 'Logoff']")
