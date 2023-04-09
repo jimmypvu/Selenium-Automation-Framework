@@ -11,7 +11,6 @@ repositories {
 
 dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.8.3'
-//    implementation 'org.jetbrains:annotations:23.1.0'
     testImplementation 'org.testng:testng:7.7.1'
     implementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
     testImplementation 'io.rest-assured:rest-assured:5.3.0'
@@ -51,6 +50,13 @@ task runRegression(type: Test){
     }
 }
 
+task runAPI(type: Test){
+    useTestNG() {
+        suites "src/test/resources/testrunners/API.xml"
+        systemProperty "browser", System.getProperty("browser")
+    }
+}
+
 task runCrossbrowser(type: Test){
     useTestNG() {
         suites "src/test/resources/testrunners/ParallelCrossbrowser.xml"
@@ -60,13 +66,6 @@ task runCrossbrowser(type: Test){
 task runCucumber(type: Test){
     useTestNG() {
         suites "src/test/resources/testrunners/Cucumber.xml"
-        systemProperty "browser", System.getProperty("browser")
-    }
-}
-
-task runAPI(type: Test){
-    useTestNG() {
-        suites "src/test/resources/testrunners/API.xml"
         systemProperty "browser", System.getProperty("browser")
     }
 }
