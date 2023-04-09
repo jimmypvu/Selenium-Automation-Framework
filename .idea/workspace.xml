@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a0a0829-ddc9-479d-9d6c-11d29015a0e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/framework/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MyXrxAIB6yTgJ5ksU4XJODL4d6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
