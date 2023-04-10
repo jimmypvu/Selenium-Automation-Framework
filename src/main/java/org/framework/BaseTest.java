@@ -3,6 +3,7 @@ package org.framework;
 import org.framework.browsermanagers.ChromeManager;
 import org.framework.browsermanagers.EdgeManager;
 import org.framework.browsermanagers.FirefoxManager;
+import org.framework.browsermanagers.LambdaTestManager;
 import org.framework.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -30,8 +31,10 @@ public class BaseTest {
     public void launchBrowser(/*String browser, */ITestContext context, Method method) throws MalformedURLException {
         url = ConfigReader.getConfig("url");
 
-//        WebDriver threadDriver = setDriver(System.getProperty("browser"));
-        WebDriver threadDriver = setDriver(ConfigReader.getConfig("browser"), method);
+        WebDriver threadDriver = System.getProperty("browser").equals("") ?
+                                                setDriver(ConfigReader.getConfig("browser"), method)
+                                                : setDriver(System.getProperty("browser"), method);
+
         threadLocal.set(threadDriver);
 
         context.setAttribute("WebDriver", getDriver());
@@ -57,32 +60,31 @@ public class BaseTest {
     }
 
     public WebDriver setDriver(String browser, Method method) throws MalformedURLException {
-        WebDriver driver;
         DesiredCapabilities caps = new DesiredCapabilities();
         //java -jar selenium-server-4.8.0.jar standalone
         String gridURL = "http://192.168.0.163:4444";
 
         switch(browser){
             case("firefox"):
-                return driver = FirefoxManager.getFirefoxDriver();
+                return FirefoxManager.getFirefoxDriver();
             case("edge"):
-                return driver = EdgeManager.getEdgeDriver();
+                return EdgeManager.getEdgeDriver();
             case("grid-chrome"):
                 ChromeOptions co = ChromeManager.getChromeOptions();
                 caps.setCapability(ChromeOptions.CAPABILITY, co);
-                return driver = new RemoteWebDriver(new URL(gridURL), caps);
+                return new RemoteWebDriver(new URL(gridURL), caps);
             case("grid-firefox"):
                 FirefoxOptions fo = FirefoxManager.getFirefoxOptions();
                 caps.setCapability(FirefoxOptions.FIREFOX_OPTIONS, fo);
-                return driver = new RemoteWebDriver(new URL(gridURL), caps);
+                return new RemoteWebDriver(new URL(gridURL), caps);
             case("grid-edge"):
                 EdgeOptions eo = EdgeManager.getEdgeOptions();
                 caps.setCapability(EdgeOptions.CAPABILITY, eo);
-                return driver = new RemoteWebDriver(new URL(gridURL), caps);
+                return new RemoteWebDriver(new URL(gridURL), caps);
             case("lt-cloud"):
-                return driver = lambdaTest(method);
+                return LambdaTestManager.lambdaTest(method);
             default:
-                return driver = ChromeManager.getChromeDriver();
+                return ChromeManager.getChromeDriver();
         }
     }
 
