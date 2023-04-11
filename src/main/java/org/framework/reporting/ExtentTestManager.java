@@ -2,6 +2,7 @@ package org.framework.reporting;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import org.testng.ITestResult;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,8 +15,10 @@ public class ExtentTestManager {
         return extentTestMap.get((int) Thread.currentThread().getId());
     }
 
-    public static synchronized ExtentTest startTest(String testName, String desc){
-        ExtentTest test = report.createTest(testName, desc);
+    public static synchronized ExtentTest startTest(String testName, String desc, ITestResult result){
+        String testClass = result.getTestClass().getName().replaceAll("org.jvu.tests.webtests.", "");
+
+        ExtentTest test = report.createTest(testClass + " - " + testName, desc);
         extentTestMap.put((int) Thread.currentThread().getId(), test);
         return test;
     }
