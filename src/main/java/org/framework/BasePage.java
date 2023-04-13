@@ -67,8 +67,12 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public void moveToElement(WebElement element){
+    public void mouseToElement(WebElement element){
         actions.moveToElement(element);
+    }
+
+    public void clickAndDragTo(WebElement clickTarget, WebElement dropTarget){
+        actions.clickAndHold(clickTarget).release(dropTarget).perform();
     }
 
     public List<WebElement> getElements(By locator){
@@ -123,7 +127,7 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public WebElement waitForPresence(By locator){
+    public WebElement waitForPresAndGet(By locator){
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
@@ -145,11 +149,11 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    public WebElement waitForVisibility(By locator){
+    public WebElement waitForVisAndGet(By locator){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void moveToElement(By locator){
+    public void mouseToElement(By locator){
         actions.moveToElement(wait.until(ExpectedConditions.visibilityOfElementLocated(locator))).perform();
     }
 
