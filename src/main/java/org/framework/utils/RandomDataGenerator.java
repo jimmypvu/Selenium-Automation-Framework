@@ -51,7 +51,7 @@ public class RandomDataGenerator {
         return faker.number().numberBetween(min, max);
     }
 
-    public static String genString(int n, boolean abc, boolean nums, boolean special){
+    public static String getRandomString(int n, boolean abc, boolean nums, boolean special){
         String chars = "";
         if(abc){
             chars += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -67,6 +67,17 @@ public class RandomDataGenerator {
         Random rand = new Random();
         for (int i = 0; i < n; i++) {
             sb.append(chars.charAt(rand.nextInt(chars.length())));
+        }
+
+        return sb.toString();
+    }
+
+    public static String getRandomString(int n){
+        String chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_-+=[]{}\\|:;'\"<>,./?";
+
+        StringBuilder sb = new StringBuilder(n);
+        for (int i = 0; i < n; i++) {
+            sb.append(chars.charAt(random.nextInt(chars.length())));
         }
 
         return sb.toString();

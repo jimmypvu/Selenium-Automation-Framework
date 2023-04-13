@@ -17,9 +17,7 @@ public class LoginTests extends BaseTest {
         LoginPage lp = hp.clickLoginBtn();
         lp.login("sirtestsalot", "1234iTestMore!");
 
-        WebElement successHeader = lp.waitAndGet(AccountPage.byMyAccountHdr);
-
-        Assert.assertTrue(successHeader.isDisplayed());
+        Assert.assertTrue(lp.waitAndGet(AccountPage.byMyAccountHdr).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/account");
     }
 
@@ -66,9 +64,7 @@ public class LoginTests extends BaseTest {
         AccountPage ap = lp.login("sirtestsalot", "1234iTestMore!");
         ap.logout();
 
-        WebElement successHeader = ap.waitAndGet(AccountPage.byAccLogoutHdr);
-
-        Assert.assertTrue(successHeader.isDisplayed());
+        Assert.assertTrue(ap.waitAndGet(AccountPage.byLogoutSuccessHdr).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/logout");
     }
 

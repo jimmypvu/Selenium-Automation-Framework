@@ -31,10 +31,9 @@ public class SearchTests extends BaseTest {
     @Test(description = "search should not return any results if search term is not alphanumerical", groups = {"web", "search", "regression"})
     public void searchForInvalidItem(){
         HomePage hp = new HomePage(getDriver());
-        SearchPage sp = hp.searchItem(RandomDataGenerator.genString(20, false, false, true));
-        WebElement noMatchingResults = sp.waitAndGet(SearchPage.byNoMatchingResultsLbl);
+        SearchPage sp = hp.searchItem(RandomDataGenerator.getRandomString(20, false, false, true));
 
-        Assert.assertTrue(noMatchingResults.isDisplayed());
+        Assert.assertTrue(sp.waitAndGet(SearchPage.byNoMatchingResultsLbl).isDisplayed());
     }
 
     //this example test will fail bc no partial match or close results are displayed if keyword is misspelled
@@ -42,10 +41,8 @@ public class SearchTests extends BaseTest {
             groups = {"web", "search", "regression"})
     public void searchItemWithATypo(){
         HomePage hp = new HomePage(getDriver());
-        SearchPage sp = hp.searchItem("curl to straight shampoo");
+        SearchPage sp = hp.searchItem("curl to straight shampoo"); //item is "curls to straight shampoo", even if "curls" is misspelled the search results should still give us matches for "shampoo"
 
-        WebElement sortResultsDropdown = sp.waitAndGet(SearchPage.bySearchResultsHdr);
-
-        Assert.assertTrue(sortResultsDropdown.isDisplayed());
+        Assert.assertFalse(sp.waitAndGet(SearchPage.byNoMatchingResultsLbl).isDisplayed());
     }
 }

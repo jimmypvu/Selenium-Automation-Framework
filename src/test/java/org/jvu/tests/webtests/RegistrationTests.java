@@ -42,7 +42,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test(description = "invalid registration test - email already taken", groups = {"web", "registration", "regression"})
-    public void registerEmailTaken(){
+    public void registerTakenEmail(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
         RegistrationPage rp = lp.clickRegisterBtn();
@@ -54,18 +54,18 @@ public class RegistrationTests extends BaseTest {
         Assert.assertTrue(rp.waitAndGet(RegistrationPage.byErrorAlertDiv).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
-    
+
     @Test(description = "invalid registration test - username already taken", groups = {"web", "registration", "regression"})
-    public void registerUsernameTaken(){
+    public void registerTakenUsername(){
         HomePage hp = new HomePage(getDriver());
         LoginPage lp = hp.clickLoginBtn();
         RegistrationPage rp = lp.clickRegisterBtn();
 
-        rp.registerNewUser("sir", "testsalot", rp.getRandomEmail(),
-                        "123 testing lane", "west testington", "California", "United States",
-                        "12345", "sirtestsalot", "1234iTestMore!")
-                .waitFor(RegistrationPage.byErrorAlertDiv);
+        User newUser = User.builder().username("sirtestsalot").build();
 
+        rp.registerNewUser(newUser);
+
+        Assert.assertTrue(rp.waitAndGet(RegistrationPage.byErrorAlertDiv).isDisplayed());
         Assert.assertEquals(getDriver().findElement(By.xpath("//span[contains(text(),'login name is not available')]")).getText(),
                 "This login name is not available. Try different login name!");
     }
@@ -76,10 +76,11 @@ public class RegistrationTests extends BaseTest {
         LoginPage lp = hp.clickLoginBtn();
         RegistrationPage rp = lp.clickRegisterBtn();
 
-        rp.registerNewUser("sir", "", "", "123 testing lane",
-                "west testington", "California", "United States", "12345", "", "")
-                .waitFor(RegistrationPage.byErrorAlertDiv);
+        rp.registerNewUser("", "", RandomDataGenerator.getRandomFor(DataType.EMAIL), "",
+                "", "California", "United States", "",
+                RandomDataGenerator.getRandomFor(DataType.USERNAME), RandomDataGenerator.getRandomString(10));
 
+        Assert.assertTrue(rp.waitAndGet(RegistrationPage.byErrorAlertDiv).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 
@@ -90,9 +91,9 @@ public class RegistrationTests extends BaseTest {
         LoginPage lp = hp.clickLoginBtn();
         RegistrationPage rp = lp.clickRegisterBtn();
 
-        rp.registerNewUser(firstname, lastname, email, address, city, state, country, zip, username, password)
-                .waitFor(RegistrationPage.byErrorAlertDiv);
+        rp.registerNewUser(firstname, lastname, email, address, city, state, country, zip, username, password);
 
+        Assert.assertTrue(rp.waitAndGet(RegistrationPage.byErrorAlertDiv).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=account/create");
     }
 

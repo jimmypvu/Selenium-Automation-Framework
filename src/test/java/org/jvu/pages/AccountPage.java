@@ -30,7 +30,7 @@ public class AccountPage extends BasePage {
     @FindBy(xpath = "//a[@class='active menu_home']")
     WebElement btnHomepage;
 
-    public static By byAccLogoutHdr = By.xpath("//span[contains(text(), 'Account Logout')]");
+    public static By byLogoutSuccessHdr = By.xpath("//span[contains(text(), 'Account Logout')]");
     public static By byMyAccountHdr = By.xpath("//span/i[@class='fa fa-user']");
 
     public AccountPage(WebDriver givenDriver){

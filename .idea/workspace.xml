@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/framework/utils/DataType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/framework/utils/RandomDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/pojos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/framework/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/RandomDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/framework/utils/RandomDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/pojos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CheckoutTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/RegistrationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/SearchTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" afterDir="false" />
@@ -85,8 +88,8 @@
       <recent name="C:\Users\jimmy\OneDrive\Desktop\code\QA-Automation-Framework\src\test\resources\testrunners" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests.registerEmailTaken">
-    <configuration name="CartTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.LoginTests.loginValidCredentials">
+    <configuration name="CheckoutTests.validGuestCheckout" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -99,7 +102,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.jvu.tests.webtests.CartTests&quot;" />
+            <option value="&quot;org.jvu.tests.webtests.CheckoutTests.validGuestCheckout&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -110,7 +113,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="CartTests.addItemToCartFromHomePage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CheckoutTests.validUserCheckout" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -123,7 +126,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.jvu.tests.webtests.CartTests.addItemToCartFromHomePage&quot;" />
+            <option value="&quot;org.jvu.tests.webtests.CheckoutTests.validUserCheckout&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -134,7 +137,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registerEmailTaken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginValidCredentials" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -147,55 +150,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.jvu.tests.webtests.RegistrationTests.registerEmailTaken&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationTests.registerInvalidEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.jvu.tests.webtests.RegistrationTests.registerInvalidEmail&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationTests.registerValidInfo (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.jvu.tests.webtests.RegistrationTests.registerValidInfo&quot;" />
+            <option value="&quot;org.jvu.tests.webtests.LoginTests.loginValidCredentials&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,13 +185,61 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="SearchTests.searchForInvalidItem" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.jvu.tests.webtests.SearchTests.searchForInvalidItem&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="SearchTests.searchForValidItem" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.jvu.tests.webtests.SearchTests.searchForValidItem&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationTests.registerEmailTaken" />
-        <item itemvalue="Gradle.RegistrationTests.registerValidInfo (1)" />
-        <item itemvalue="Gradle.RegistrationTests.registerInvalidEmail" />
-        <item itemvalue="Gradle.CartTests" />
-        <item itemvalue="Gradle.CartTests.addItemToCartFromHomePage" />
+        <item itemvalue="Gradle.LoginTests.loginValidCredentials" />
+        <item itemvalue="Gradle.CheckoutTests.validUserCheckout" />
+        <item itemvalue="Gradle.CheckoutTests.validGuestCheckout" />
+        <item itemvalue="Gradle.SearchTests.searchForValidItem" />
+        <item itemvalue="Gradle.SearchTests.searchForInvalidItem" />
       </list>
     </recent_temporary>
   </component>

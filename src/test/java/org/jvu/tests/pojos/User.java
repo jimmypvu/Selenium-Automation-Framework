@@ -21,5 +21,5 @@ public class User {
     @Builder.Default private String country = "United States";
     @Builder.Default private String zip = RandomDataGenerator.getRandomNumber(5);
     @Builder.Default private String username = RandomDataGenerator.getRandomFor(DataType.USERNAME);
-    @Builder.Default private String password = RandomDataGenerator.genString(10, true, true, true);
+    @Builder.Default private String password = RandomDataGenerator.getRandomString(10, true, true, true);
 }

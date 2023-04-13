@@ -157,7 +157,7 @@ public class RegistrationPage extends BasePage {
                 .selectState("California")
                 .setZip(RandomDataGenerator.getRandomNumber(5))
                 .setUsername(RandomDataGenerator.getRandomFor(DataType.USERNAME))
-                .setPassword(RandomDataGenerator.genString(10, true, true, true))
+                .setPassword(RandomDataGenerator.getRandomString(10))
                 .clickPrivacy()
                 .clickContinue();
         return this;
@@ -189,7 +189,7 @@ public class RegistrationPage extends BasePage {
     }
 
     public String getInvalidEmail(){
-        return RandomDataGenerator.genString(10, false, true, true) + "@gmail.com";
+        return RandomDataGenerator.getRandomString(10, false, true, true) + "@gmail.com";
     }
 
     public String getRandomUsername(){

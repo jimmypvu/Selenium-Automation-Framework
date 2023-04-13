@@ -17,8 +17,9 @@ public class CheckoutTests extends BaseTest {
         CartPage ctp = hp.clickCartBtn();
 
         CheckoutPage cop = ctp.clickCheckout();
-        cop.clickCheckoutConfirm().waitFor(CheckoutPage.byCheckoutSuccessHdr);
+        cop.clickCheckoutConfirm();
 
+        Assert.assertTrue(cop.waitAndGet(CheckoutPage.byCheckoutSuccessHdr).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=checkout/success");
     }
 
@@ -32,10 +33,9 @@ public class CheckoutTests extends BaseTest {
         CheckoutPage cop = lp.clickGuestCheckout();
         cop.enterShippingInfo("guest", "thebest", "TheGuestEver@bmail.com",
                 "321 faker street", "fakerton", "United States", "California", "54321")
-                .clickContinue();
+                .clickContinue().clickCheckoutConfirm();
 
-        cop.clickCheckoutConfirm().waitFor(CheckoutPage.byCheckoutSuccessHdr);
-
+        Assert.assertTrue(cop.waitAndGet(CheckoutPage.byCheckoutSuccessHdr).isDisplayed());
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://automationteststore.com/index.php?rt=checkout/success");
     }
 

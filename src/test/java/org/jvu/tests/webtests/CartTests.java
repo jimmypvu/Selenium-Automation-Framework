@@ -32,7 +32,10 @@ public class CartTests extends BaseTest {
     @Test(description = "user should be able to update item quantities in cart", groups = {"web", "cart", "smoke", "regression"})
     public void updateItemQuantity(){
         HomePage hp = new HomePage(getDriver());
-        hp.addFeaturedItemToCart().addFeaturedItemToCart().addFeaturedItemToCart();
+        hp.addFeaturedItemToCart()
+                .addFeaturedItemToCart()
+                .addFeaturedItemToCart();
+
         int itemCount = hp.getItemCount();
 
         Assert.assertEquals(itemCount, 3);
