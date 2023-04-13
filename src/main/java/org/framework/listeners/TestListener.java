@@ -35,7 +35,7 @@ public class TestListener extends BaseTest implements ITestListener {
 //        enable if you need screenshots saved to local machine
 //        String methodName = result.getName();
 //        Screenshotter.takeScreenshot(methodName);
-        getTest().log(Status.INFO, result.getTestContext().getName() + " --- " + result.getInstanceName() + " --- " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " :: " + result.getInstanceName() + " :: " + result.getMethod().getMethodName());
         getTest().fail(result.getThrowable());
 
         if(!result.getTestContext().getName().toString().contains("API")){
@@ -51,7 +51,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result){
-        getTest().log(Status.INFO, result.getTestContext().getName() + " --- " + result.getInstanceName() + " --- " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " :: " + result.getInstanceName() + " :: " + result.getMethod().getMethodName());
         getTest().log(Status.PASS, "Test passed!");
         getTest().log(Status.INFO, result.getThrowable());
 
@@ -66,7 +66,7 @@ public class TestListener extends BaseTest implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult result){
         System.out.println(result.getTestContext().getName() + " tests skipped");
-        getTest().log(Status.INFO, result.getTestContext().getName() + " --- " + result.getInstanceName() + " --- " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " :: " + result.getInstanceName() + " :: " + result.getMethod().getMethodName());
         getTest().log(Status.SKIP, "Test ignored / skipped / retried");
         getTest().log(Status.INFO, "Retried: " + result.wasRetried());
         if(!result.wasRetried()){

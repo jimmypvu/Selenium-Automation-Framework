@@ -1,6 +1,9 @@
 package org.jvu.pages;
 
 import org.framework.BasePage;
+import org.framework.utils.DataType;
+import org.framework.utils.RandomDataGenerator;
+import org.jvu.tests.pojos.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -144,13 +147,49 @@ public class RegistrationPage extends BasePage {
         return this;
     }
 
+    public RegistrationPage registerNewUser(){
+        setFirstName(RandomDataGenerator.getRandomFor(DataType.FIRSTNAME))
+                .setLastName(RandomDataGenerator.getRandomFor(DataType.LASTNAME))
+                .setEmail(RandomDataGenerator.getRandomFor(DataType.EMAIL))
+                .setAddress(RandomDataGenerator.getRandomFor(DataType.ADDRESS))
+                .setCity(RandomDataGenerator.getRandomFor(DataType.CITY))
+                .selectCountry("United States")
+                .selectState("California")
+                .setZip(RandomDataGenerator.getRandomNumber(5))
+                .setUsername(RandomDataGenerator.getRandomFor(DataType.USERNAME))
+                .setPassword(RandomDataGenerator.genString(10, true, true, true))
+                .clickPrivacy()
+                .clickContinue();
+        return this;
+    }
+
+    public RegistrationPage registerNewUser(User user){
+        setFirstName(user.getFirstName())
+                .setLastName(user.getLastName())
+                .setEmail(user.getEmail())
+                .setAddress(user.getAddress())
+                .setCity(user.getCity())
+                .selectCountry(user.getCountry())
+                .selectState(user.getState())
+                .setZip(user.getZip())
+                .setUsername(user.getUsername())
+                .setPassword(user.getPassword())
+                .clickPrivacy()
+                .clickContinue();
+        return this;
+    }
+
     public String getRandomEmail(){
         Random rand = new Random();
         return "t" + System.currentTimeMillis() + rand.nextInt(1000) + "@gmail.com";
     }
 
+    public String getFakerEmail(){
+        return RandomDataGenerator.getRandomEmail();
+    }
+
     public String getInvalidEmail(){
-        return genString(10, false, true, true) + "@gmail.com";
+        return RandomDataGenerator.genString(10, false, true, true) + "@gmail.com";
     }
 
     public String getRandomUsername(){
@@ -158,25 +197,8 @@ public class RegistrationPage extends BasePage {
         return "t" + System.currentTimeMillis() + rand.nextInt(1000);
     }
 
-    public static String genString(int n, boolean abc, boolean nums, boolean special){
-        String chars = "";
-        if(abc){
-            chars += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        }
-        if(nums){
-            chars += "0123456789";
-        }
-        if(special){
-            chars += "~!@#$%^&*()_-+=[]{}\\|:;'\"<>,./?";
-        }
-
-        StringBuilder sb = new StringBuilder(n);
-        Random rand = new Random();
-        for (int i = 0; i < n; i++) {
-            sb.append(chars.charAt(rand.nextInt(chars.length())));
-        }
-
-        return sb.toString();
+    public String getFakerUsername(){
+        return RandomDataGenerator.getRandomFor(DataType.USERNAME);
     }
 
 }

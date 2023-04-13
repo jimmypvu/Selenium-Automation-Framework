@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "io.freefair.lombok" version "8.0.1"
 }
 
 group 'org.example'
@@ -15,17 +16,19 @@ dependencies {
     implementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
     testImplementation 'io.rest-assured:rest-assured:5.3.0'
     testImplementation 'io.rest-assured:json-schema-validator:5.3.0'
-    implementation 'com.jayway.jsonpath:json-path:2.7.0'
-    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
     implementation 'io.cucumber:cucumber-java:7.11.2'
     implementation 'io.cucumber:cucumber-core:7.11.2'
     implementation 'io.cucumber:cucumber-testng:7.11.2'
+    implementation 'net.datafaker:datafaker:1.8.1'
+    implementation 'com.aventstack:extentreports:5.0.9'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    implementation 'commons-io:commons-io:2.11.0'
     implementation 'org.apache.poi:poi:5.2.3'
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
     implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     testImplementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
-    implementation 'com.aventstack:extentreports:5.0.8'
 
 }
 

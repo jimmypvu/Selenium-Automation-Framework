@@ -1,14 +1,13 @@
 package org.jvu.tests.webtests;
 
 import org.framework.BaseTest;
+import org.framework.utils.RandomDataGenerator;
 import org.jvu.dataproviders.DataProviders;
 import org.jvu.pages.HomePage;
 import org.jvu.pages.SearchPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.jvu.pages.RegistrationPage.genString;
 
 public class SearchTests extends BaseTest {
     @Test(description = "user should see matching search results for an item/keyword searched", groups = {"web", "search", "smoke", "regression"})
@@ -32,7 +31,7 @@ public class SearchTests extends BaseTest {
     @Test(description = "search should not return any results if search term is not alphanumerical", groups = {"web", "search", "regression"})
     public void searchForInvalidItem(){
         HomePage hp = new HomePage(getDriver());
-        SearchPage sp = hp.searchItem(genString(20, false, false, true));
+        SearchPage sp = hp.searchItem(RandomDataGenerator.genString(20, false, false, true));
         WebElement noMatchingResults = sp.waitAndGet(SearchPage.byNoMatchingResultsLbl);
 
         Assert.assertTrue(noMatchingResults.isDisplayed());
