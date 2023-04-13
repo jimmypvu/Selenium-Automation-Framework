@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Test Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/framework/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/RandomDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/framework/utils/RandomDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/pojos/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CheckoutTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/SearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/framework/BasePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
