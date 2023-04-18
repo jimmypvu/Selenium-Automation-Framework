@@ -88,7 +88,7 @@ public class BasePage {
     }
 
     public void scrollToTop(){
-        js.executeScript("window.scrollBy(0,0)");
+        js.executeScript("window.scrollTo(0,0)");
     }
 
     public void scrollToMiddle(){
@@ -109,6 +109,9 @@ public class BasePage {
 
     public String getPageTitle() {
         return js.executeScript("return document.title;").toString();
+    }
+    public boolean pageIsLoadedCompletely(){
+        return js.executeScript("return document.readyState").toString().equals("complete");
     }
 
     public void pause(int n){
