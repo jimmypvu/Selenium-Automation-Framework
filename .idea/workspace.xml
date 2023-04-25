@@ -6,61 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Test Report 2023-04-10 05_36_42_PM.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report 2023-04-10 05_36_42_PM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Test Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/browsermanagers/ChromeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/ChromeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/browsermanagers/EdgeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/EdgeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/browsermanagers/FirefoxManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/FirefoxManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/browsermanagers/LambdaTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/LambdaTestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/listeners/AnnotationTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/AnnotationTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/listeners/RetryAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/reporting/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentReportManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/reporting/ExtentTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentTestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/DataType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/DataType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/ExcelFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/ExcelReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/RandomDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/framework/utils/Screenshotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/Screenshotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/dataproviders/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/dataproviders/DataProviders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/AccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/ItemPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/SpecialsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/SpecialsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsApparelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsApparelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsBooksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsBooksPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsFragrancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsFragrancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsHaircarePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsHaircarePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsMakeupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsMakeupPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsMensPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsMensPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/pages/productPages/ProductsSkincarePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/pages/productPages/ProductsSkincarePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/runner/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/stepdefinitions/runner/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/apitests/ListUsersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/apitests/ListUsersTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/pojos/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/webtests/CartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/webtests/CheckoutTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/webtests/HomePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/webtests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/webtests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/jvu/tests/webtests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/webtests/SearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/API.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/API.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/ParallelCrossbrowser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/ParallelCrossbrowser.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Regression.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Smoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
