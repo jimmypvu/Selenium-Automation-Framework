@@ -4,8 +4,8 @@
 <suite name="TestNG" parallel="classes" thread-count="3">
 
     <listeners>
-        <listener class-name="org.framework.listeners.TestListener" />
-        <listener class-name="org.framework.listeners.AnnotationTransformer" />
+        <listener class-name="framework.listeners.TestListener" />
+        <listener class-name="framework.listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="API Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
@@ -15,7 +15,7 @@
             </run>
         </groups>
         <classes>
-            <class name="org.jvu.tests.apitests.ListUsersTests" />
+            <class name="jpvu.tests.apitests.ListUsersTests" />
         </classes>
     </test>
 

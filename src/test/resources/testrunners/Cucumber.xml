@@ -4,13 +4,13 @@
 <suite name="Cucumber" parallel="false" thread-count="3">
 
 <!--    <listeners>-->
-<!--        <listener class-name="org.framework.listeners.TestListener" />-->
-<!--        <listener class-name="org.framework.listeners.AnnotationTransformer" />-->
+<!--        <listener class-name="listeners.framework.TestListener" />-->
+<!--        <listener class-name="listeners.framework.AnnotationTransformer" />-->
 <!--    </listeners>-->
 
     <test name="Cucumber" preserve-order="false" parallel="false" thread-count="6" enabled="true">
         <classes>
-            <class name="org.jvu.stepdefinitions.runner.CucumberRunner" />
+            <class name="jpvu.stepdefinitions.runner.CucumberRunner" />
         </classes>
     </test>
 </suite>

@@ -4,8 +4,8 @@
 <suite name="Smoke Suite" verbose="3" parallel="methods" thread-count="3">
 
     <listeners>
-        <listener class-name="org.framework.listeners.TestListener" />
-        <listener class-name="org.framework.listeners.AnnotationTransformer" />
+        <listener class-name="framework.listeners.TestListener" />
+        <listener class-name="framework.listeners.AnnotationTransformer" />
     </listeners>
 
     <test name="Smoke Tests" preserve-order="false" parallel="methods" thread-count="4" enabled="true">
@@ -16,12 +16,12 @@
             </run>
         </groups>
         <classes>
-            <class name="org.jvu.tests.webtests.RegistrationTests" />
-            <class name="org.jvu.tests.webtests.LoginTests" />
-            <class name="org.jvu.tests.webtests.SearchTests" />
-            <class name="org.jvu.tests.webtests.CartTests" />
-            <class name="org.jvu.tests.webtests.CheckoutTests" />
-            <class name="org.jvu.tests.webtests.HomePageTests" />
+            <class name="jpvu.tests.webtests.RegistrationTests" />
+            <class name="jpvu.tests.webtests.LoginTests" />
+            <class name="jpvu.tests.webtests.SearchTests" />
+            <class name="jpvu.tests.webtests.CartTests" />
+            <class name="jpvu.tests.webtests.CheckoutTests" />
+            <class name="jpvu.tests.webtests.HomePageTests" />
         </classes>
     </test>
 
@@ -32,7 +32,7 @@
             </run>
         </groups>
         <classes>
-            <class name="org.jvu.tests.apitests.ListUsersTests" />
+            <class name="jpvu.tests.apitests.ListUsersTests" />
         </classes>
     </test>
 
