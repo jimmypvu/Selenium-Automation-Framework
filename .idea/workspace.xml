@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testrunners/RegressionAllBrowsers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNGAllBrowsers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/ParallelCrossbrowser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/SmokeAllBrowsers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/TestNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +90,7 @@
       <recent name="C:\Users\jimmy\OneDrive\Desktop\code\QA-Automation-Framework\src\test\resources\testrunners" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Login">
+  <component name="RunManager" selected="Gradle.LoginTests">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -136,6 +150,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;jpvu.tests.webtests.LoginTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="RegistrationTests.registerValidInfo (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -160,37 +198,13 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SearchTests.searchForValidItem" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.jvu.tests.webtests.SearchTests.searchForValidItem&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests" />
         <item itemvalue="Cucumber Java.Feature: Login" />
         <item itemvalue="Cucumber Java.Scenario: User should not be logged in with invalid credentials" />
         <item itemvalue="Cucumber Java.Scenario: User should be able to login successfully with valid credentials" />
         <item itemvalue="Gradle.RegistrationTests.registerValidInfo (1)" />
-        <item itemvalue="Gradle.SearchTests.searchForValidItem" />
       </list>
     </recent_temporary>
   </component>

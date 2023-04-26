@@ -15,12 +15,6 @@ public class CucumberHooks {
     protected static WebDriver driver = null;
     protected WebDriverWait wait = null;
 
-//    @Before(order = 1)
-//    public void setContext(ITestContext context){
-//        context.setAttribute("WebDriver", getDriver());
-//        context.setAttribute("ThreadID", Thread.currentThread().getId());
-//    }
-
     @Before(order = 0)
     public void setupBrowser(){
         WebDriverManager.chromedriver().setup();

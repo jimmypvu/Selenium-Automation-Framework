@@ -26,46 +26,60 @@ dependencies {
     implementation 'commons-io:commons-io:2.11.0'
     implementation 'org.apache.poi:poi:5.2.3'
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
-    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
-    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
-    testImplementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+
+//    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+//    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+//    testImplementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
 }
 
 test {
     useTestNG() {
-        suites "src/test/resources/testrunners/TestNG.xml"
         systemProperty "browser", System.getProperty("browser")
+        systemProperty "allbrowsers", System.getProperty("allbrowsers")
+
+        if(System.getProperty("allbrowsers") == "true"){
+            suites "src/test/resources/testrunners/TestNGAllBrowsers.xml"
+        }else{
+            suites "src/test/resources/testrunners/TestNG.xml"
+        }
     }
 }
 
-task runSmoke(type: Test){
+tasks.register('runSmoke', Test) {
     useTestNG() {
-        suites "src/test/resources/testrunners/Smoke.xml"
         systemProperty "browser", System.getProperty("browser")
+        systemProperty "allbrowsers", System.getProperty("allbrowsers")
+
+        if(System.getProperty("allbrowsers") == "true"){
+            suites "src/test/resources/testrunners/SmokeAllBrowsers.xml"
+        }else{
+            suites "src/test/resources/testrunners/Smoke.xml"
+        }
     }
 }
 
-task runRegression(type: Test){
+tasks.register('runRegression', Test) {
     useTestNG() {
-        suites "src/test/resources/testrunners/Regression.xml"
         systemProperty "browser", System.getProperty("browser")
+        systemProperty "allbrowsers", System.getProperty("allbrowsers")
+
+        if(System.getProperty("allbrowsers") == "true"){
+            suites "src/test/resources/testrunners/RegressionAllBrowsers.xml"
+        }else{
+            suites "src/test/resources/testrunners/Regression.xml"
+        }
     }
 }
 
-task runAPI(type: Test){
+tasks.register('runAPI', Test) {
     useTestNG() {
         suites "src/test/resources/testrunners/API.xml"
-        systemProperty "browser", System.getProperty("browser")
     }
 }
 
-task runCrossbrowser(type: Test){
-    useTestNG() {
-        suites "src/test/resources/testrunners/ParallelCrossbrowser.xml"
-    }
-}
-
-task runCucumber(type: Test){
+tasks.register('runCucumber', Test) {
     useTestNG() {
         suites "src/test/resources/testrunners/Cucumber.xml"
         systemProperty "browser", System.getProperty("browser")

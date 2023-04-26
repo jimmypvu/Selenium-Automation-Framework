@@ -8,8 +8,7 @@
         <listener class-name="framework.listeners.AnnotationTransformer" />
     </listeners>
 
-    <test name="Functional Tests" preserve-order="false" parallel="methods" thread-count="6" enabled="true">
-<!--        <parameter name="browser" value="chrome" />-->
+    <test name="Functional Tests" preserve-order="false" parallel="methods" thread-count="4" enabled="true">
         <groups>
             <run>
                 <include name="setup" />

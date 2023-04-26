@@ -14,6 +14,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
@@ -21,17 +23,23 @@ import java.net.URL;
 
 public class BaseTest {
 
-    protected static String url;
+    private static String baseURL = ConfigReader.getConfig("url");
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
     @BeforeMethod(groups = {"setup"})
-//    @Parameters({"browser"})
-    public void launchBrowser(/*String browser, */ITestContext context, Method method) throws MalformedURLException {
-        url = ConfigReader.getConfig("url");
+    @Parameters({"browsers"})
+    public void launchBrowser(@Optional String browsers, ITestContext context, Method method) throws MalformedURLException {
+        WebDriver threadDriver;
 
-        WebDriver threadDriver = System.getProperty("browser").equals("") ?
-                                                setDriver(ConfigReader.getConfig("browser"), method)
-                                                : setDriver(System.getProperty("browser"), method);
+        //if allbrowsers property is true, pass browser params from testng xml file to set driver for each browser
+        //otherwise get browser setting from sys properties if specified during gradle invoke and from config file if not
+        if(System.getProperty("allbrowsers").equals("true")){
+            threadDriver = setDriver(browsers, method);
+        }else{
+            threadDriver = System.getProperty("browser").equals("") ?
+                    setDriver(ConfigReader.getConfig("browser"), method)
+                    : setDriver(System.getProperty("browser"), method);
+        }
 
         threadLocal.set(threadDriver);
 
@@ -39,7 +47,7 @@ public class BaseTest {
         context.setAttribute("ThreadID", Thread.currentThread().getId());
 
         manageBrowser();
-        getDriver().get(url);
+        getDriver().get(baseURL);
     }
 
     @AfterMethod(groups = {"setup"})

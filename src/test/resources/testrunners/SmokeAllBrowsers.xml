@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Crossbrowser Suite" parallel="tests" thread-count="3" data-provider-thread-count="3">
+<suite name="Smoke Suite All Browsers" parallel="tests" thread-count="3" data-provider-thread-count="3">
 
     <listeners>
         <listener class-name="framework.listeners.TestListener" />
@@ -9,7 +9,13 @@
     </listeners>
 
     <test name="Chrome Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
-        <parameter name="browser" value="chrome" />
+        <parameter name="browsers" value="chrome" />
+        <groups>
+            <run>
+                <include name="setup" />
+                <include name="web" />
+            </run>
+        </groups>
         <classes>
             <class name="jpvu.tests.webtests.RegistrationTests">
                 <methods>
@@ -42,7 +48,13 @@
     </test>
 
     <test name="Firefox Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
-        <parameter name="browser" value="firefox" />
+        <parameter name="browsers" value="firefox" />
+        <groups>
+            <run>
+                <include name="setup" />
+                <include name="web" />
+            </run>
+        </groups>
         <classes>
             <class name="jpvu.tests.webtests.RegistrationTests">
                 <methods>
@@ -75,7 +87,13 @@
     </test>
 
     <test name="Edge Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
-        <parameter name="browser" value="MicrosoftEdge" />
+        <parameter name="browsers" value="edge" />
+        <groups>
+            <run>
+                <include name="setup" />
+                <include name="web" />
+            </run>
+        </groups>
         <classes>
             <class name="jpvu.tests.webtests.RegistrationTests">
                 <methods>

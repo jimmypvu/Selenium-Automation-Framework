@@ -9,6 +9,7 @@ public class ConfigReader {
     private static String propertiesPath = "configs/qa-env.properties";
     private static Properties config = new Properties();
 
+
     public static String getConfig(String property){
         try (InputStream ip = ConfigReader.class.getClassLoader().getResourceAsStream(propertiesPath)) {
             config.load(ip);
@@ -18,4 +19,5 @@ public class ConfigReader {
 
         return config.getProperty(property);
     }
+
 }

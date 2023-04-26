@@ -35,10 +35,10 @@ public class TestListener extends BaseTest implements ITestListener {
 //        enable if you need screenshots saved to local machine
 //        String methodName = result.getName();
 //        Screenshotter.takeScreenshot(methodName);
-        getTest().log(Status.INFO, result.getTestContext().getName() + " <---> " + result.getInstanceName() + " <---> " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " --- " + result.getInstanceName() + " --- " + result.getMethod().getMethodName());
         getTest().fail(result.getThrowable());
 
-        if(!result.getTestContext().getName().toString().contains("API")){
+        if(!result.getTestContext().getName().contains("API")){
             String base64 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
             getTest().log(Status.INFO, "Test failed at: ", MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
 
@@ -51,11 +51,11 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result){
-        getTest().log(Status.INFO, result.getTestContext().getName() + " <---> " + result.getInstanceName() + " <---> " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " --- " + result.getInstanceName() + " --- " + result.getMethod().getMethodName());
         getTest().log(Status.PASS, "Test passed!");
         getTest().log(Status.INFO, result.getThrowable());
 
-        if(!result.getTestContext().getName().toString().contains("API")){
+        if(!result.getTestContext().getName().contains("API")){
             getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
             getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         }
@@ -66,14 +66,14 @@ public class TestListener extends BaseTest implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult result){
         System.out.println(result.getTestContext().getName() + " tests skipped");
-        getTest().log(Status.INFO, result.getTestContext().getName() + " <---> " + result.getInstanceName() + " <---> " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " --- " + result.getInstanceName() + " --- " + result.getMethod().getMethodName());
         getTest().log(Status.SKIP, "Test ignored / skipped / retried");
         getTest().log(Status.INFO, "Retried: " + result.wasRetried());
         if(!result.wasRetried()){
             getTest().log(Status.INFO, result.getThrowable());
         }
 
-        if(!result.getTestContext().getName().toString().contains("API")){
+        if(!result.getTestContext().getName().contains("API")){
             getTest().log(Status.INFO, result.getTestContext().getAttribute("WebDriver").toString());
             getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         }
