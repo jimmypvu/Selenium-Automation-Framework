@@ -25,7 +25,7 @@ gradle clean runAPI
 
 gradle clean runCucumber
 
-to run tests on all browsers at once add "-Dallbrowsers=true" flag to gradle command
+to run tests locally on all browsers at once add "-Dallbrowsers=true" flag to gradle command
 
 # if managing browser / config through system properties, add "-Dbrowser={browser}" flag to the gradle command, otherwise manage in the config properties file
 where {browser} is one of [chrome, firefox, edge, grid-chrome, grid-firefox, grid-edge, lambda, sauce] to designate browser when running tests via terminal. If no browser is designated in the config file or gradle flag it will default to Chrome
