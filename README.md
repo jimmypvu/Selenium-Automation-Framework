@@ -28,7 +28,9 @@ gradle clean runCucumber
 to run tests on all browsers at once add "-Dallbrowsers=true" flag to gradle command
 
 # if managing browser / config through system properties, add "-Dbrowser={browser}" flag to the gradle command, otherwise manage in the config properties file
-where {browser} is one of [chrome, firefox, edge, grid-chrome, grid-firefox, grid-edge, lt-cloud] to designate browser when running tests via terminal. If no browser is designated in the config file or gradle flag it will default to Chrome
+where {browser} is one of [chrome, firefox, edge, grid-chrome, grid-firefox, grid-edge, lambdatest, saucelabs] to designate browser when running tests via terminal. If no browser is designated in the config file or gradle flag it will default to Chrome
+
+if running on lambdatest or saucelabs clouds, set desired capabilities in LambdaTestManager or SauceLabs manager
 
 Can also run crossbrowser tests in parallel rather than test methods in parallel with ParallelCrossbrowser.xml configuration by passing {"browser"} parameters to @BeforeMethod BaseTest.launchBrowser(), remember to modify setDriver() method in launchBrowser() to allow crossbrowser tests to run in parallel
 
