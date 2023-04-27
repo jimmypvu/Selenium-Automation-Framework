@@ -16,13 +16,21 @@ https://www.loom.com/share/b7afa41c7c244fcf8be2761a7f74dd1c
 
 Usage:
 gradle clean test
+
 gradle clean runSmoke
+
 gradle clean runRegression
+
 gradle clean runAPI
+
 gradle clean runCucumber
 
-# if managing browser / config through system properties, add "-Dbrowser={browser}" to the gradle script, otherwise manage in the config properties file
-where {browser} is one of [chrome, firefox, edge, grid-chrome, grid-firefox, grid-edge, lt-cloud] to designate browser when running tests via terminal. If no browser is designated it will default to Chrome
+to run tests locally on all browsers at once add "-Dallbrowsers=true" flag to gradle command
+
+# if managing browser / config through system properties, add "-Dbrowser={browser}" flag to the gradle command, otherwise manage in the config properties file
+where {browser} is one of [chrome, firefox, edge, grid-chrome, grid-firefox, grid-edge, lambda, sauce] to designate browser when running tests via terminal. If no browser is designated in the config file or gradle flag it will default to Chrome
+
+if running on LambdaTest or SauceLabs clouds, set desired capabilities in LambdaTestManager or SauceLabs manager
 
 Can also run crossbrowser tests in parallel rather than test methods in parallel with ParallelCrossbrowser.xml configuration by passing {"browser"} parameters to @BeforeMethod BaseTest.launchBrowser(), remember to modify setDriver() method in launchBrowser() to allow crossbrowser tests to run in parallel
 
