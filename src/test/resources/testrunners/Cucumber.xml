@@ -3,6 +3,7 @@
 
 <suite name="Cucumber" parallel="false" thread-count="3">
 
+<!-- can use cucumber reports for cucumber suite -->
 <!--    <listeners>-->
 <!--        <listener class-name="listeners.framework.TestListener" />-->
 <!--        <listener class-name="listeners.framework.AnnotationTransformer" />-->

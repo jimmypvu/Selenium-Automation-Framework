@@ -8,8 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ExtentTestManager {
+    private ExtentTestManager (){}
     private static Map<Integer, ExtentTest> extentTestMap = new HashMap<>();
     private static ExtentReports report = ExtentReportManager.createExtentReport();
+
 
     public static synchronized ExtentTest getTest(){
         return extentTestMap.get((int) Thread.currentThread().getId());

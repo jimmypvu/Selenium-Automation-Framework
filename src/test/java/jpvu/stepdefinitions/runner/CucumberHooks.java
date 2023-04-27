@@ -12,17 +12,18 @@ import java.time.Duration;
 
 public class CucumberHooks {
     protected static final String URL = "https://automationteststore.com/";
-    protected static WebDriver driver = null;
-    protected WebDriverWait wait = null;
+    protected static WebDriver driver;
+    protected WebDriverWait wait;
 
     @Before(order = 0)
     public void setupBrowser(){
-        WebDriverManager.chromedriver().setup();
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
         co.addArguments("--headless");
         co.addArguments("--window-size=1920,1080");
         co.addArguments("--start-maximized");
+        WebDriverManager.chromedriver().setup();
+
         driver = new ChromeDriver(co);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -35,7 +36,7 @@ public class CucumberHooks {
         driver.get(URL);
     }
 
-    public static WebDriver getCucumberDriver(){
+    public static WebDriver getDriver(){
         return driver;
     }
 

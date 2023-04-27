@@ -1,18 +1,17 @@
-package jpvu.tests.apitests;
+package jpvu.tests.api;
 
 import org.testng.annotations.Test;
-import io.restassured.path.json.JsonPath;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 public class ListUsersTests {
-    private static final String BASEURL = "https://reqres.in/api";
+    private static final String BASE_URL = "https://reqres.in/api";
 
     @Test(groups = {"api"})
     public void getTest01(){
-        baseURI = BASEURL;
+        baseURI = BASE_URL;
 
         when()
                 .get("/users?page=2")

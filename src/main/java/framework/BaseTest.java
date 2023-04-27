@@ -1,9 +1,6 @@
 package framework;
 
-import framework.browsermanagers.ChromeManager;
-import framework.browsermanagers.EdgeManager;
-import framework.browsermanagers.FirefoxManager;
-import framework.browsermanagers.LambdaTestManager;
+import framework.browsermanagers.*;
 import framework.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,18 +19,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseTest {
-
-    private static String baseURL = ConfigReader.getConfig("url");
+    private static final String BASE_URL = ConfigReader.getConfig("url");
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
 
-    @BeforeMethod(groups = {"setup"})
+
+    @BeforeMethod(groups = {"web setup"})
     @Parameters({"browsers"})
     public void launchBrowser(@Optional String browsers, ITestContext context, Method method) throws MalformedURLException {
         WebDriver threadDriver;
 
-        //if allbrowsers property is true, pass browser params from testng xml file to set driver for each browser
-        //otherwise get browser setting from sys properties if specified during gradle invoke and from config file if not
-        if(System.getProperty("allbrowsers").equals("true")){
+        //browser and run mode can be set via gradle script with -Dbrowser flag, config file, or TestNG params
+        if(System.getProperty("browser").equals("all")){
             threadDriver = setDriver(browsers, method);
         }else{
             threadDriver = System.getProperty("browser").equals("") ?
@@ -47,10 +43,11 @@ public class BaseTest {
         context.setAttribute("ThreadID", Thread.currentThread().getId());
 
         manageBrowser();
-        getDriver().get(baseURL);
+
+        getDriver().get(BASE_URL);
     }
 
-    @AfterMethod(groups = {"setup"})
+    @AfterMethod(groups = {"web setup"})
     public void tearDown(){
         getDriver().quit();
         threadLocal.remove();
@@ -87,8 +84,10 @@ public class BaseTest {
                 EdgeOptions eo = EdgeManager.getEdgeOptions();
                 caps.setCapability(EdgeOptions.CAPABILITY, eo);
                 return new RemoteWebDriver(new URL(gridURL), caps);
-            case("lt-cloud"):
+            case("cloud-lt"):
                 return LambdaTestManager.lambdaTest(method);
+            case("cloud-sauce"):
+                return SauceLabsManager.sauceLabs(method);
             default:
                 return ChromeManager.getChromeDriver();
         }

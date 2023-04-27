@@ -11,28 +11,30 @@
     <test name="Smoke Tests" preserve-order="false" parallel="methods" thread-count="4" enabled="true">
         <groups>
             <run>
-                <include name="setup" />
+                <include name="web setup" />
                 <include name="smoke" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests" />
-            <class name="jpvu.tests.webtests.LoginTests" />
-            <class name="jpvu.tests.webtests.SearchTests" />
-            <class name="jpvu.tests.webtests.CartTests" />
-            <class name="jpvu.tests.webtests.CheckoutTests" />
-            <class name="jpvu.tests.webtests.HomePageTests" />
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
         </classes>
     </test>
 
-    <test name="API Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="false">
+    <test name="API Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
         <groups>
             <run>
                 <include name="api" />
+                <exclude name="web setup" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.apitests.ListUsersTests" />
+            <class name="jpvu.tests.api.ListUsersTests" />
         </classes>
     </test>
 

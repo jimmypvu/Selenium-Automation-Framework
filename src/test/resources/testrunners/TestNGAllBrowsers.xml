@@ -12,17 +12,22 @@
         <parameter name="browsers" value="chrome" />
         <groups>
             <run>
-                <include name="setup" />
-                <include name="web" />
+                <include name="web setup" />
+                <include name="functional" />
+                <include name="ui" />
+                <include name="smoke" />
+                <include name="regression" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests" />
-            <class name="jpvu.tests.webtests.LoginTests" />
-            <class name="jpvu.tests.webtests.SearchTests" />
-            <class name="jpvu.tests.webtests.CartTests" />
-            <class name="jpvu.tests.webtests.CheckoutTests" />
-            <class name="jpvu.tests.webtests.HomePageTests" />
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
+            <class name="jpvu.tests.ui.HomePageUiTests" />
         </classes>
     </test>
 
@@ -30,17 +35,22 @@
         <parameter name="browsers" value="firefox" />
         <groups>
             <run>
-                <include name="setup" />
-                <include name="web" />
+                <include name="web setup" />
+                <include name="functional" />
+                <include name="ui" />
+                <include name="smoke" />
+                <include name="regression" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests" />
-            <class name="jpvu.tests.webtests.LoginTests" />
-            <class name="jpvu.tests.webtests.SearchTests" />
-            <class name="jpvu.tests.webtests.CartTests" />
-            <class name="jpvu.tests.webtests.CheckoutTests" />
-            <class name="jpvu.tests.webtests.HomePageTests" />
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
+            <class name="jpvu.tests.ui.HomePageUiTests" />
         </classes>
     </test>
 
@@ -48,17 +58,22 @@
         <parameter name="browsers" value="edge" />
         <groups>
             <run>
-                <include name="setup" />
-                <include name="web" />
+                <include name="web setup" />
+                <include name="functional" />
+                <include name="ui" />
+                <include name="smoke" />
+                <include name="regression" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests" />
-            <class name="jpvu.tests.webtests.LoginTests" />
-            <class name="jpvu.tests.webtests.SearchTests" />
-            <class name="jpvu.tests.webtests.CartTests" />
-            <class name="jpvu.tests.webtests.CheckoutTests" />
-            <class name="jpvu.tests.webtests.HomePageTests" />
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
+            <class name="jpvu.tests.ui.HomePageUiTests" />
         </classes>
     </test>
 
@@ -66,10 +81,11 @@
         <groups>
             <run>
                 <include name="api" />
+                <exclude name="web setup" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.apitests.ListUsersTests" />
+            <class name="jpvu.tests.api.ListUsersTests" />
         </classes>
     </test>
 

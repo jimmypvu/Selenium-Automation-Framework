@@ -17,14 +17,14 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
-    protected JavascriptExecutor js;
+    protected JavascriptExecutor jse;
 
     public BasePage(WebDriver threadDriver){
         this.driver = threadDriver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(3), Duration.ofMillis(500));
-        wait.pollingEvery(Duration.ofMillis(500));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3), Duration.ofMillis(250));
+        wait.pollingEvery(Duration.ofMillis(250));
         actions = new Actions(driver);
-        js = (JavascriptExecutor) driver;
+        jse = (JavascriptExecutor) driver;
 
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 3), this);
 //        PageFactory.initElements(driver, this);
@@ -80,45 +80,52 @@ public class BasePage {
     }
 
     public void scrollIntoView(WebElement element){
-        js.executeScript("arguments[0].scrollIntoView()", element);
+        jse.executeScript("arguments[0].scrollIntoView()", element);
     }
 
     public void scrollToEnd(){
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
 
     public void scrollToTop(){
-        js.executeScript("window.scrollTo(0,0)");
+        jse.executeScript("window.scrollTo(0,0)");
     }
 
     public void scrollToMiddle(){
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight/2)");
+        jse.executeScript("window.scrollBy(0,document.body.scrollHeight/2)");
     }
 
     public void refreshPage(){
-        js.executeScript("history.go(0)");
+        jse.executeScript("history.go(0)");
     }
 
     public void navigateBack(){
-        js.executeScript("history.go(-1)");
+        jse.executeScript("history.go(-1)");
     }
 
     public void navigateForward(){
-        js.executeScript("history.go(1)");
+        jse.executeScript("history.go(1)");
     }
 
     public String getPageTitle() {
-        return js.executeScript("return document.title;").toString();
-    }
-    public boolean pageIsLoadedCompletely(){
-        return js.executeScript("return document.readyState").toString().equals("complete");
+        return jse.executeScript("return document.title;").toString();
     }
 
-    public void pause(int n){
+    public boolean isPageLoadComplete(){
+        return jse.executeScript("return document.readyState").toString().equals("complete");
+    }
+
+    public void pause(int millis){
         try{
-            Thread.sleep(n);
-        }catch(Exception e){
-            e.printStackTrace();
+            Thread.sleep(millis);
+        }catch(Exception ignored){
+        }
+    }
+
+    public void pause(){
+        try{
+            Thread.sleep(2000);
+        }catch(Exception ignored){
         }
     }
 

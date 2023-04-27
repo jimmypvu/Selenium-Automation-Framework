@@ -1,4 +1,4 @@
-package jpvu.tests.webtests;
+package jpvu.tests.ui;
 
 import jpvu.pages.HomePage;
 import framework.BaseTest;
@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class HomePageTests extends BaseTest {
+public class HomePageUiTests extends BaseTest {
 
     //this example test will fail bc there are several broken buttons on the page **fixed to pass for now**
     @Test(description = "finds all broken product buttons on home page (buttons that redirect instead of add item to cart)",
-            groups = {"web", "page", "homepage", "regression"})
+            groups = {"ui", "page", "homepage", "regression"})
     public void verifyAddToCartBtns(){
         HomePage hp = new HomePage(getDriver());
         List<WebElement> brokenBtns = hp.findBrokenBtns();

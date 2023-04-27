@@ -12,38 +12,18 @@
         <parameter name="browsers" value="chrome" />
         <groups>
             <run>
-                <include name="setup" />
-                <include name="web" />
+                <include name="web setup" />
+                <include name="smoke" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests">
-                <methods>
-                    <include name="registerValidInfo" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.LoginTests">
-                <methods>
-                    <include name="loginValidCredentials" />
-                    <include name="logoutSuccess" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.SearchTests">
-                <methods>
-                    <include name="searchForValidItem" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.CartTests">
-                <methods>
-                    <include name="addItemToCartFromHomePage" />
-                    <include name="verifyCartTotal" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.CheckoutTests">
-                <methods>
-                    <include name="validUserCheckout" />
-                </methods>
-            </class>
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
         </classes>
     </test>
 
@@ -51,38 +31,18 @@
         <parameter name="browsers" value="firefox" />
         <groups>
             <run>
-                <include name="setup" />
-                <include name="web" />
+                <include name="web setup" />
+                <include name="smoke" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests">
-                <methods>
-                    <include name="registerValidInfo" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.LoginTests">
-                <methods>
-                    <include name="loginValidCredentials" />
-                    <include name="logoutSuccess" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.SearchTests">
-                <methods>
-                    <include name="searchForValidItem" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.CartTests">
-                <methods>
-                    <include name="addItemToCartFromHomePage" />
-                    <include name="verifyCartTotal" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.CheckoutTests">
-                <methods>
-                    <include name="validUserCheckout" />
-                </methods>
-            </class>
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
         </classes>
     </test>
 
@@ -90,38 +50,18 @@
         <parameter name="browsers" value="edge" />
         <groups>
             <run>
-                <include name="setup" />
-                <include name="web" />
+                <include name="web setup" />
+                <include name="smoke" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests">
-                <methods>
-                    <include name="registerValidInfo" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.LoginTests">
-                <methods>
-                    <include name="loginValidCredentials" />
-                    <include name="logoutSuccess" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.SearchTests">
-                <methods>
-                    <include name="searchForValidItem" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.CartTests">
-                <methods>
-                    <include name="addItemToCartFromHomePage" />
-                    <include name="verifyCartTotal" />
-                </methods>
-            </class>
-            <class name="jpvu.tests.webtests.CheckoutTests">
-                <methods>
-                    <include name="validUserCheckout" />
-                </methods>
-            </class>
+            <class name="jpvu.tests.functional.RegistrationTests" />
+            <class name="jpvu.tests.functional.LoginTests" />
+            <class name="jpvu.tests.functional.SearchTests" />
+            <class name="jpvu.tests.functional.CartTests" />
+            <class name="jpvu.tests.functional.CheckoutTests" />
+
+            <class name="jpvu.tests.ui.CartUiTests" />
         </classes>
     </test>
 </suite>

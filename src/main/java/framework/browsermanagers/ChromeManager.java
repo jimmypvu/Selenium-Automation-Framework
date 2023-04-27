@@ -9,16 +9,17 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ChromeManager {
     private ChromeManager (){}
 
+
     public static WebDriver getChromeDriver(){
-        WebDriverManager.chromedriver().setup();
         ChromeOptions co = getChromeOptions();
+        WebDriverManager.chromedriver().setup();
 
         return new ChromeDriver(co);
     }
 
     public static ChromeOptions getChromeOptions(){
         ChromeOptions co = new ChromeOptions();
-        co.addArguments("--remote-allow-origins=*");
+//        co.addArguments("--remote-allow-origins=*");
         if(ConfigReader.getConfig("headless").equals("true")){
             co.addArguments("--window-size=1920,1080");
             co.addArguments("--start-maximized");

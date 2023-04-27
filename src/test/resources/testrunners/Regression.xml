@@ -11,12 +11,12 @@
     <test name="Regression Tests" preserve-order="false" parallel="methods" thread-count="4" enabled="true">
         <groups>
             <run>
-                <include name="setup" />
+                <include name="web setup" />
                 <include name="regression" />
             </run>
         </groups>
         <classes>
-            <class name="jpvu.tests.webtests.RegistrationTests">
+            <class name="jpvu.tests.functional.RegistrationTests">
                 <methods>
                     <include name="registerValidInfo" />
                     <include name="registerInvalidEmail" />
@@ -26,7 +26,7 @@
                     <include name="invalidRegistrationTests" />
                 </methods>
             </class>
-            <class name="jpvu.tests.webtests.LoginTests">
+            <class name="jpvu.tests.functional.LoginTests">
                 <methods>
                     <include name="loginValidCredentials" />
                     <include name="loginEmptyUsername" />
@@ -37,7 +37,7 @@
                     <include name="invalidLoginTests" />
                 </methods>
             </class>
-            <class name="jpvu.tests.webtests.SearchTests">
+            <class name="jpvu.tests.functional.SearchTests">
                 <methods>
                     <include name="searchForValidItem" />
                     <include name="searchForExistingItems" />
@@ -45,24 +45,31 @@
                     <include name="searchItemWithATypo" />
                 </methods>
             </class>
-            <class name="jpvu.tests.webtests.CartTests">
+            <class name="jpvu.tests.functional.CartTests">
                 <methods>
                     <include name="addItemToCartFromHomePage" />
-                    <include name="verifyCartTotal" />
                     <include name="updateItemQuantity" />
                 </methods>
             </class>
-            <class name="jpvu.tests.webtests.CheckoutTests">
+            <class name="jpvu.tests.functional.CheckoutTests">
                 <methods>
                     <include name="validUserCheckout" />
                     <include name="validGuestCheckout" />
                 </methods>
             </class>
-            <class name="jpvu.tests.webtests.HomePageTests">
+
+            <class name="jpvu.tests.ui.HomePageUiTests">
                 <methods>
                     <include name="verifyAddToCartBtns" />
                 </methods>
             </class>
+            <class name="jpvu.tests.ui.CartUiTests">
+                <methods>
+                    <include name="verifyItemCountBadge" />
+                    <include name="verifyCartTotal" />
+                </methods>
+            </class>
         </classes>
     </test>
+
 </suite>

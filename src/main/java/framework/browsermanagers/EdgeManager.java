@@ -10,8 +10,9 @@ public class EdgeManager {
     private EdgeManager (){}
 
     public static WebDriver getEdgeDriver(){
-        WebDriverManager.edgedriver().setup();
         EdgeOptions eo = getEdgeOptions();
+        WebDriverManager.edgedriver().setup();
+
         return new EdgeDriver(eo);
     }
 

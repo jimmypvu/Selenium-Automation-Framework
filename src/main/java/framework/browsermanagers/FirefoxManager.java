@@ -10,8 +10,8 @@ public class FirefoxManager {
     private FirefoxManager (){}
 
     public static WebDriver getFirefoxDriver(){
-        WebDriverManager.firefoxdriver().setup();
         FirefoxOptions fo = getFirefoxOptions();
+        WebDriverManager.firefoxdriver().setup();
 
         return new FirefoxDriver(fo);
     }

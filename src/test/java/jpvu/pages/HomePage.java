@@ -44,10 +44,11 @@ public class HomePage extends BasePage {
     public WebElement btnCheckout;
     @FindBy(css = "#block_frame_featured_1769 a[data-id='50']+div.price div.oneprice")
     public WebElement lblFeaturedItemPrice;
-    @FindBy(css = "i[class='fa fa-shopping-cart fa-fw']+span[class='label label-orange font14']")
+    @FindBy(css = "[class='nav topcart pull-left'] span.label-orange")
     public WebElement lblItemCount;
     @FindBy(css = "span.cart_total")
     public WebElement lblCartTotal;
+
 
 
     public HomePage(WebDriver givenDriver){
