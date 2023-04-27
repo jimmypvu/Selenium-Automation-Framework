@@ -8,9 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        plugin = {"html:src/test/resources/reports/cucumberreport.html",
-                "json:src/test/resources/reports/cucumberreport.json", "pretty"},
-        features = {"src/test/resources/features/Login.feature"},
+        plugin = {"html:src/test/resources/reports/cucumberreport.html", "json:src/test/resources/reports/cucumberreport.json", "pretty"},
+        features = {"src/test/resources/features"},
         glue = {"jpvu.stepdefinitions"},
         tags = "@smoke or @regression or @e2e"
 )

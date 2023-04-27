@@ -20,10 +20,14 @@ public class SauceLabsManager {
         ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName("Windows 11");
         browserOptions.setBrowserVersion("latest");
+        browserOptions.setCapability("unhandledPromptBehavior", "dismiss and notify");
 
         Map<String, Object> sauceOptions = new HashMap<>();
-        sauceOptions.put("build", "selenium4.");
+        sauceOptions.put("build", "Selenium");
         sauceOptions.put("name", method.getName());
+//        enable for performance logging, har files and console logs (chrome and firefox only), turn off if not needed (slows runtime down ~3x)
+//        sauceOptions.put("extendedDebugging", true);
+//        sauceOptions.put("capturePerformance", true);
 
         browserOptions.setCapability("sauce:options", sauceOptions);
 

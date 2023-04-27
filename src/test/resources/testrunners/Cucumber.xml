@@ -9,7 +9,7 @@
 <!--        <listener class-name="listeners.framework.AnnotationTransformer" />-->
 <!--    </listeners>-->
 
-    <test name="Cucumber" preserve-order="false" parallel="false" thread-count="6" enabled="true">
+    <test name="Cucumber" preserve-order="false" parallel="false" thread-count="3" enabled="true">
         <classes>
             <class name="jpvu.stepdefinitions.runner.CucumberRunner" />
         </classes>

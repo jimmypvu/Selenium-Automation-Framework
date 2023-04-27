@@ -34,7 +34,7 @@ public class SearchTests extends BaseTest {
         Assert.assertTrue(sp.lblNoMatchingResults.isDisplayed());
     }
 
-    //this example test will fail bc no partial match or close results are displayed if keyword is misspelled
+    //this demo test will fail bc no partial match or close results are displayed if keyword is misspelled
     @Test(description = "search should still display some close results if some keywords match but some are mistyped", groups = {"functional", "search", "regression"}, enabled = false)
     public void searchItemWithATypo(){
         HomePage hp = new HomePage(getDriver());

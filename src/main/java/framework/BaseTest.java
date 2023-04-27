@@ -2,6 +2,7 @@ package framework;
 
 import framework.browsermanagers.*;
 import framework.utils.ConfigReader;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -9,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -28,7 +30,7 @@ public class BaseTest {
     public void launchBrowser(@Optional String browsers, ITestContext context, Method method) throws MalformedURLException {
         WebDriver threadDriver;
 
-        //browser and run mode can be set via gradle script with -Dbrowser flag, config file, or TestNG params
+        //can set browser & suite via gradle script with flag or config file, or TestNG params if adding flag "all"
         if(System.getProperty("browser").equals("all")){
             threadDriver = setDriver(browsers, method);
         }else{
@@ -48,7 +50,15 @@ public class BaseTest {
     }
 
     @AfterMethod(groups = {"web setup"})
-    public void tearDown(){
+    public void tearDown(ITestResult result){
+        if(System.getProperty("browser").equals("sauce")){
+            ((JavascriptExecutor) getDriver()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
+        }
+
+        if(System.getProperty("browser").equals("lambda")){
+            ((JavascriptExecutor) getDriver()).executeScript("lambda-status=" + ((result.isSuccess()) ? "passed" : "failed"));
+        }
+
         getDriver().quit();
         threadLocal.remove();
     }
@@ -84,9 +94,9 @@ public class BaseTest {
                 EdgeOptions eo = EdgeManager.getEdgeOptions();
                 caps.setCapability(EdgeOptions.CAPABILITY, eo);
                 return new RemoteWebDriver(new URL(gridURL), caps);
-            case("cloud-lt"):
+            case("lambda"):
                 return LambdaTestManager.lambdaTest(method);
-            case("cloud-sauce"):
+            case("sauce"):
                 return SauceLabsManager.sauceLabs(method);
             default:
                 return ChromeManager.getChromeDriver();

@@ -15,8 +15,8 @@ public class CucumberHooks {
     protected static WebDriver driver;
     protected WebDriverWait wait;
 
-    @Before(order = 0)
-    public void setupBrowser(){
+    @Before
+    public void launchBrowser(){
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
         co.addArguments("--headless");
@@ -29,10 +29,7 @@ public class CucumberHooks {
         driver.manage().deleteAllCookies();
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-    }
 
-    @Before(order = 1)
-    public void launchBrowser(){
         driver.get(URL);
     }
 

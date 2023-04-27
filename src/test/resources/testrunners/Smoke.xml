@@ -12,7 +12,7 @@
         <groups>
             <run>
                 <include name="web setup" />
-                <include name="smoke" />
+                <include name="ui" />
             </run>
         </groups>
         <classes>
