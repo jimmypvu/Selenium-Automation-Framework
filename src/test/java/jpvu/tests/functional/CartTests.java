@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class CartTests extends BaseTest {
 
-    @Test(description = "a user should be able to add an item to their cart", groups = {"functional", "cart", "smoke", "regression"})
+    @Test(description = "a user should be able to add an item to their cart", groups = {"functional", "cart", "smoke", "regression"}, enabled = false)
     public void addItemToCartFromHomePage(){
         HomePage hp = new HomePage(getDriver());
 

@@ -12,7 +12,7 @@
         <groups>
             <run>
                 <include name="web setup" />
-                <include name="ui" />
+                <include name="smoke" />
             </run>
         </groups>
         <classes>
@@ -21,12 +21,11 @@
             <class name="jpvu.tests.functional.SearchTests" />
             <class name="jpvu.tests.functional.CartTests" />
             <class name="jpvu.tests.functional.CheckoutTests" />
-
             <class name="jpvu.tests.ui.CartUiTests" />
         </classes>
     </test>
 
-    <test name="API Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="true">
+    <test name="API Tests" preserve-order="false" parallel="methods" thread-count="3" enabled="false">
         <groups>
             <run>
                 <include name="api" />

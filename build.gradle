@@ -87,7 +87,6 @@ tasks.register('runAPI', Test) {
 
 tasks.register('runCucumber', Test) {
     useTestNG() {
-//        systemProperty "browser", System.getProperty("browser")
         suites "src/test/resources/testrunners/Cucumber.xml"
     }
 }

@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ConfigReader {
     private ConfigReader (){}
-    private static String propertiesPath = "configs/qa-env.properties";
+    private static String propertiesPath = "configs/envconfig.properties";
     private static Properties config = new Properties();
 
 

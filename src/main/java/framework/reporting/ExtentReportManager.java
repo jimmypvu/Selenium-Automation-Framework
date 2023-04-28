@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import framework.BaseTest;
+import framework.utils.ConfigReader;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -14,10 +15,9 @@ public class ExtentReportManager extends BaseTest {
 
 
     public synchronized static ExtentReports createExtentReport(){
-//        for timestamped reports instead
-//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd hh_mm_ss_a");
-//        LocalDateTime time = LocalDateTime.now();
-//        String timestamp = dtf.format(time);
+//        for timestamped reports
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss");
+//        String timestamp = LocalDateTime.now().format(dtf);
 //        ExtentSparkReporter spark = new ExtentSparkReporter("./reports/" + "Test Report " + timestamp + ".html");
 
         ExtentSparkReporter spark = new ExtentSparkReporter("./reports/Test Report.html");
@@ -29,8 +29,8 @@ public class ExtentReportManager extends BaseTest {
 
         report = new ExtentReports();
         report.attachReporter(spark);
-        report.setSystemInfo("Project", "automationteststore.com");
-        report.setSystemInfo("Reporter", "jimmy");
+        report.setSystemInfo("Project", ConfigReader.getConfig("url"));
+        report.setSystemInfo("Reporter", System.getProperty("user.name"));
 
         return report;
     }

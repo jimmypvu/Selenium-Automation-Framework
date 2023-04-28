@@ -18,10 +18,11 @@ public class ExtentTestManager {
     }
 
     public static synchronized ExtentTest startTest(String testName, String desc, ITestResult result){
-        String testClass = result.getTestClass().getName().replaceAll("org.jvu.tests.webtests.", "");
+        String testClass = result.getTestClass().getName().replaceAll("jpvu.tests.functional.", "").replaceAll("jpvu.tests.ui.", "");
 
         ExtentTest test = report.createTest(testClass + " - " + testName, desc);
         extentTestMap.put((int) Thread.currentThread().getId(), test);
+
         return test;
     }
 }

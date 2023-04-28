@@ -7,6 +7,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class LambdaTestManager {
@@ -16,6 +18,9 @@ public class LambdaTestManager {
             + System.getenv("LT_ACCESS_KEY") + "@hub.lambdatest.com/wd/hub";
 
     public static WebDriver lambdaTest(Method method) throws MalformedURLException {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String timestamp = LocalDateTime.now().format(dtf);
+
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("browserName", "Safari");
         caps.setCapability("browserVersion", "16.0");
@@ -23,7 +28,7 @@ public class LambdaTestManager {
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
         ltOptions.put("username", System.getenv("LT_USERNAME"));
         ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
-        ltOptions.put("build", "MacOS Ventura / Safari 16");   //build name
+        ltOptions.put("build", "Tests: " + timestamp);   //build name
         ltOptions.put("platformName", "MacOS Ventura");
         ltOptions.put("name", method.getName());   //test name
         ltOptions.put("video", true);   //enable video recording

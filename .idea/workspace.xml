@@ -7,18 +7,20 @@
     <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Test Report 2023-04-10 05_36_42_PM.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/LambdaTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/LambdaTestManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/SauceLabsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/SauceLabsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/stepdefinitions/runner/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/tests/functional/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/functional/SearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/reports/cucumberreport.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Cucumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentReportManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentTestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/utils/Screenshotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/Screenshotter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/tests/functional/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/functional/CartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/envconfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Smoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +91,7 @@
       <recent name="C:\Users\jimmy\OneDrive\Desktop\code\QA-Automation-Framework\src\test\resources\testrunners" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Login">
+  <component name="RunManager" selected="Gradle.CartTests.updateItemQuantity">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -129,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartUiTests.verifyCartTotal" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CartTests.updateItemQuantity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +144,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;jpvu.tests.ui.CartUiTests.verifyCartTotal&quot;" />
+            <option value="&quot;jpvu.tests.functional.CartTests.updateItemQuantity&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +155,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registerRequiredFieldsEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginValidCredentials" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +168,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;jpvu.tests.functional.RegistrationTests.registerRequiredFieldsEmpty&quot;" />
+            <option value="&quot;jpvu.tests.functional.LoginTests.loginValidCredentials&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CartTests.updateItemQuantity" />
+        <item itemvalue="Gradle.LoginTests.loginValidCredentials" />
         <item itemvalue="Cucumber Java.Feature: Login" />
         <item itemvalue="Cucumber Java.Scenario: User should be able to login successfully with valid credentials" />
         <item itemvalue="Gradle.SearchTests.searchForExistingItems" />
-        <item itemvalue="Gradle.RegistrationTests.registerRequiredFieldsEmpty" />
-        <item itemvalue="Gradle.CartUiTests.verifyCartTotal" />
       </list>
     </recent_temporary>
   </component>

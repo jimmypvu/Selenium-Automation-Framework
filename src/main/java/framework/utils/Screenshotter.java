@@ -15,9 +15,8 @@ public class Screenshotter {
 
     public static void screenshotAndSave(String methodName) {
         File screenshotFile = ((TakesScreenshot) BaseTest.getDriver()).getScreenshotAs(OutputType.FILE);
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yy hh-mm-ss-a SSS");
-        LocalDateTime time = LocalDateTime.now();
-        String timestamp = dtf.format(time);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss SSS");
+        String timestamp = LocalDateTime.now().format(dtf);
 
         try {
             FileHandler.copy(screenshotFile, new File(FILEPATH + methodName + " " + timestamp + ".png"));

@@ -112,7 +112,7 @@ public class BasePage {
     }
 
     public boolean isPageLoadComplete(){
-        return jse.executeScript("return document.readyState").toString().equals("complete");
+        return jse.executeScript("return document.readyState").equals("complete");
     }
 
     public void pause(int millis){

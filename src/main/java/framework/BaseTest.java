@@ -27,16 +27,17 @@ public class BaseTest {
 
     @BeforeMethod(groups = {"web setup"})
     @Parameters({"browsers"})
-    public void launchBrowser(@Optional String browsers, ITestContext context, Method method) throws MalformedURLException {
+    public void setupAndLaunchBrowser(@Optional String browsers, ITestContext context, Method method) throws MalformedURLException {
         WebDriver threadDriver;
 
         //can set browser & suite via gradle script with flag or config file, or TestNG params if adding flag "all"
         if(System.getProperty("browser").equals("all")){
             threadDriver = setDriver(browsers, method);
         }else{
-            threadDriver = System.getProperty("browser").equals("") ?
-                    setDriver(ConfigReader.getConfig("browser"), method)
-                    : setDriver(System.getProperty("browser"), method);
+            if(System.getProperty("browser").equals("")){
+                System.setProperty("browser", ConfigReader.getConfig("browser"));
+            }
+            threadDriver = setDriver(System.getProperty("browser"), method);
         }
 
         threadLocal.set(threadDriver);
@@ -50,14 +51,20 @@ public class BaseTest {
     }
 
     @AfterMethod(groups = {"web setup"})
-    public void tearDown(ITestResult result){
+    public void teardown(ITestResult result){
+
         if(System.getProperty("browser").equals("sauce")){
             ((JavascriptExecutor) getDriver()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
+
+            if(!result.isSuccess()){
+                ((JavascriptExecutor) getDriver()).executeScript("sauce:context=" + result.getThrowable());
+            }
         }
 
-        if(System.getProperty("browser").equals("lambda")){
-            ((JavascriptExecutor) getDriver()).executeScript("lambda-status=" + ((result.isSuccess()) ? "passed" : "failed"));
-        }
+        //if running on lambdatest cloud
+//        if(System.getProperty("browser").equals("lambda")){
+//            ((JavascriptExecutor) getDriver()).executeScript("lambda-status=" + ((result.isSuccess()) ? "passed" : "failed"));
+//        }
 
         getDriver().quit();
         threadLocal.remove();

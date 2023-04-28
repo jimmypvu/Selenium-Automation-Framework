@@ -2,7 +2,6 @@ package framework.listeners;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import framework.BaseTest;
 import framework.reporting.ExtentReportManager;
 import framework.utils.Screenshotter;
 import org.testng.ITestContext;
@@ -12,7 +11,7 @@ import org.testng.ITestResult;
 import static framework.reporting.ExtentTestManager.getTest;
 import static framework.reporting.ExtentTestManager.startTest;
 
-public class TestListener extends BaseTest implements ITestListener {
+public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context){
@@ -34,7 +33,8 @@ public class TestListener extends BaseTest implements ITestListener {
     public void onTestFailure(ITestResult result){
 //        to save screenshot locally
 //        Screenshotter.screenshotAndSave(result.getName());
-        getTest().log(Status.INFO, result.getTestContext().getName() + " ***** " + result.getInstanceName() + " ***** " + result.getMethod().getMethodName());
+
+        getTest().log(Status.INFO, result.getTestContext().getName() + " *** " + result.getInstanceName() + " *** " + result.getMethod().getMethodName());
         getTest().fail(result.getThrowable());
 
         if(!result.getTestContext().getName().contains("API")){
@@ -50,7 +50,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result){
-        getTest().log(Status.INFO, result.getTestContext().getName() + " ***** " + result.getInstanceName() + " ***** " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " *** " + result.getInstanceName() + " *** " + result.getMethod().getMethodName());
         getTest().log(Status.PASS, "Test passed!");
 
         if(!result.getTestContext().getName().contains("API")){
@@ -63,8 +63,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result){
-        System.out.println(result.getTestContext().getName() + " tests skipped");
-        getTest().log(Status.INFO, result.getTestContext().getName() + " ***** " + result.getInstanceName() + " ***** " + result.getMethod().getMethodName());
+        getTest().log(Status.INFO, result.getTestContext().getName() + " *** " + result.getInstanceName() + " *** " + result.getMethod().getMethodName());
         getTest().log(Status.SKIP, "Test ignored / skipped / retried");
         getTest().log(Status.INFO, "Retried: " + result.wasRetried());
         if(!result.wasRetried()){
@@ -76,7 +75,7 @@ public class TestListener extends BaseTest implements ITestListener {
             getTest().log(Status.INFO, "Thread ID: " + result.getTestContext().getAttribute("ThreadID"));
         }
 
-
+        System.out.println(result.getTestContext().getName() + " test skipped");
     }
 
 }
