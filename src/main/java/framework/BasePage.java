@@ -11,7 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BasePage {
     protected WebDriver driver;
@@ -115,6 +117,16 @@ public class BasePage {
         return jse.executeScript("return document.readyState").equals("complete");
     }
 
+    public void waitForPageLoad(){
+        boolean pageLoadComplete = false;
+
+        do{
+            pageLoadComplete = isPageLoadComplete();
+        }while(!pageLoadComplete);
+
+        System.out.println("Page load complete");
+    }
+
     public void pause(int millis){
         try{
             Thread.sleep(millis);
@@ -169,6 +181,64 @@ public class BasePage {
 
     public void click(By locator){
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+
+
+
+    public boolean doesElementContainClass(WebElement element, String value){
+        try{
+            List<String> classes = Arrays.asList(element.getAttribute("class").split(" "));
+            System.out.println(classes);
+            if(classes.contains(value)){
+                return true;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean isAttributePresent(WebElement element, String attribute){
+        try{
+            String attributeValue = element.getAttribute(attribute);
+            if(attributeValue == null || attributeValue.isEmpty()){
+                System.out.println("attribute not present");
+                return false;
+            }else{
+                System.out.println(attribute + " " + attributeValue);
+                return true;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public boolean doesElementAttributeContainValuePartialMatch(WebElement element, String attribute, String value){
+        try{
+            int trueCount = 0;
+            List<String> attributeValues = Arrays.stream(element.getAttribute(attribute).split(" ")).collect(Collectors.toList());
+            for(String atrVal : attributeValues){
+                if(atrVal.contains(value)) trueCount++;
+            }
+            if(trueCount > 0)
+                return true;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean doesElementAttributeContainValue(WebElement element, String attribute, String value){
+        try{
+            List<String> attributeValues = Arrays.stream(element.getAttribute(attribute).split(" ")).collect(Collectors.toList());
+            if(attributeValues.contains(value))
+                return true;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }

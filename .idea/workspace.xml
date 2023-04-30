@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8eb12b14-e288-4a41-96e0-70d31c587b6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/Test Report 2023-04-10 05_36_42_PM.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test Report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/LambdaTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/LambdaTestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/SauceLabsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/browsermanagers/SauceLabsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/RetryAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentReportManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/reporting/ExtentTestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/framework/utils/Screenshotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/utils/Screenshotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jpvu/tests/functional/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpvu/tests/functional/CartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/qa-env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/envconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testrunners/Smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testrunners/Smoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +77,7 @@
       <recent name="C:\Users\jimmy\OneDrive\Desktop\code\QA-Automation-Framework\src\test\resources\testrunners" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CartTests.updateItemQuantity">
+  <component name="RunManager" selected="Gradle.CartUiTests.verifyCartTotal">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -155,6 +141,30 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="CartUiTests.verifyCartTotal" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;jpvu.tests.ui.CartUiTests.verifyCartTotal&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="LoginTests.loginValidCredentials" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -179,37 +189,13 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SearchTests.searchForExistingItems" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;jpvu.tests.functional.SearchTests.searchForExistingItems&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CartUiTests.verifyCartTotal" />
         <item itemvalue="Gradle.CartTests.updateItemQuantity" />
         <item itemvalue="Gradle.LoginTests.loginValidCredentials" />
         <item itemvalue="Cucumber Java.Feature: Login" />
         <item itemvalue="Cucumber Java.Scenario: User should be able to login successfully with valid credentials" />
-        <item itemvalue="Gradle.SearchTests.searchForExistingItems" />
       </list>
     </recent_temporary>
   </component>
