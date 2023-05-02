@@ -7,11 +7,19 @@ import io.cucumber.java.en.When;
 import jpvu.pages.AccountPage;
 import jpvu.pages.HomePage;
 import jpvu.pages.LoginPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 import static jpvu.stepdefinitions.runner.CucumberHooks.getDriver;
 
 public class LoginSteps {
+    protected WebDriverWait wait;
+
+
     @Given("^user is on the login page$")
     public void iNavigateToLoginPage() {
         HomePage hp = new HomePage(getDriver());
@@ -23,7 +31,11 @@ public class LoginSteps {
     public void iEnterUsernameAndPassword() {
         LoginPage lp = new LoginPage(getDriver());
 
-        lp.setUsername("sirtestsalot").setPassword("1234iTestMore!");
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginFrm_loginname"))).sendKeys("sirtestsalot");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginFrm_password"))).sendKeys("1234iTestMore!");
+
+//        lp.setUsername("sirtestsalot").setPassword("1234iTestMore!");
     }
 
     @And("user clicks Login button")

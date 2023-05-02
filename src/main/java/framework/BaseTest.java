@@ -48,6 +48,8 @@ public class BaseTest {
         manageBrowser();
 
         getDriver().get(BASE_URL);
+
+        waitForPageLoad();
     }
 
     @AfterMethod(groups = {"web setup"})
@@ -108,6 +110,24 @@ public class BaseTest {
             default:
                 return ChromeManager.getChromeDriver();
         }
+    }
+
+    /************************
+     * reuseable test methods
+     ************************/
+
+    public boolean isPageLoadComplete(){
+        return ((JavascriptExecutor) getDriver()).executeScript("return document.readyState").equals("complete");
+    }
+
+    public void waitForPageLoad(){
+        boolean pageLoadComplete = false;
+
+        do{
+            pageLoadComplete = isPageLoadComplete();
+        }while(!pageLoadComplete);
+
+        System.out.println("Page load complete");
     }
 
 }

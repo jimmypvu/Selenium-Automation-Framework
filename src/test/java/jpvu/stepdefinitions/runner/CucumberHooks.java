@@ -6,14 +6,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class CucumberHooks {
     protected static final String URL = "https://automationteststore.com/";
     protected static WebDriver driver;
-    protected WebDriverWait wait;
+
 
     @Before
     public void launchBrowser(){
@@ -27,8 +24,6 @@ public class CucumberHooks {
         driver = new ChromeDriver(co);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-
-        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 
         driver.get(URL);
     }
